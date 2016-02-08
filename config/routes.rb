@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   resources :blogs
-  
+  root 'blogs#index'
+  get 'inquiry', to: 'inquiry#index'
+  post 'inquiry/confirm', to: 'inquiry#confirm'
+  post 'inquiry/thanks', to: 'inquiry#thanks'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -55,4 +58,6 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  
+  
 end
