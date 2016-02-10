@@ -6,6 +6,11 @@ class InquiryController < ApplicationController
     
     def confirm
       @inquiry = Inquiry.new(inquiry_params)
+      if @inquiry.valid?
+        render 'confirm'
+      else
+        render 'index'
+      end
     end
     
     def thanks
