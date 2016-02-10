@@ -3,13 +3,13 @@
 <% if @inquiry.errors.any? %>
   <div id="error_explanation">
     <div class="alert alert-error">
-      入力内容に <%= @inquiry.errors.count %>個のエラーがあります。
+      <strong></strong>入力内容に <%= @inquiry.errors.count %>個のエラーがあります。</strong>
     </div>
-    <ul>
+    <ol>
     <% @inquiry.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
     <% end %>
-    </ul>
+    </ol>
   </div>
 <% end %>
 
