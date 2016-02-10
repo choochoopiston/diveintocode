@@ -1,5 +1,19 @@
 <%= form_for @inquiry, :url => inquiry_confirm_path do |f| %>
 
+<% if @inquiry.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-error">
+      入力内容に <%= @inquiry.errors.count %>個のエラーがあります。
+    </div>
+    <ul>
+    <% @inquiry.errors.full_messages.each do |msg| %>
+      <li>* <%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+
 <h1>お問い合わせ</h1>
 
 <table class="table">
