@@ -21,7 +21,7 @@ class InquiryController < ApplicationController
       @inquiry = Inquiry.new(inquiry_params)
       
       if params[:back]
-        render 'index'
+        render 'confirm'
       else
         @inquiry.save(inquiry_params)
       end
