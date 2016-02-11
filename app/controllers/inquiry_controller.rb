@@ -6,26 +6,20 @@ class InquiryController < ApplicationController
     
     def confirm
       @inquiry = Inquiry.new(inquiry_params)
-      
       if @inquiry.valid?
-        render 'confirm'
+      render 'confirm'
       else
-        render 'index'
+      render 'index'
       end
-
     end
 
-    
-    
     def thanks
       @inquiry = Inquiry.new(inquiry_params)
-      
       if params[:back]
-        render 'confirm'
+      render 'index'
       else
-        @inquiry.save(inquiry_params)
+      @inquiry.save
       end
-      
     end
     
   private
