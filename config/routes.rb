@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  root to: "top#index"
+
+  devise_for :users
   resources :blogs
-  root 'blogs#index'
+
   get 'inquiry', to: 'inquiry#index'
   post 'inquiry/confirm', to: 'inquiry#confirm'
   post 'inquiry/thanks', to: 'inquiry#thanks'

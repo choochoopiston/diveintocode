@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja" >
-<meta charset="UTF-8"> 
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> 
 <head>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -35,6 +36,9 @@
 </head>
 
 <body>
+
+<p class="notice"><%= notice %></p> 
+<p class="alert"><%= alert %></p>
 
 <%= yield %>
 

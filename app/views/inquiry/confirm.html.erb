@@ -30,18 +30,6 @@
 
 <% end %>
 
-<%= form_for @inquiry, :url => inquiry_path do |f| %>
 
-
-    <%= f.hidden_field :name %>
-
-
-    <%= f.hidden_field :email %>
-
-
-    <%= f.hidden_field :content %>
- 
-
-<%= f.submit '内容を修正する', name: 'back', :class => 'btn btn-primary' %>
 
 <% end %>
