@@ -49,3 +49,6 @@ group :development do
   gem 'spring'
 end
 
+gem 'therubyracer', platforms: :ruby 
+gem 'bootstrap-sass', '~> 3.2.0' 
+gem 'autoprefixer-rails'
