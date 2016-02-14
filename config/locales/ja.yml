@@ -4,3 +4,12 @@ ja:
      inquiry:
       name: 名前
       email: メールアドレス
+     user:          
+      name: ユーザー名
+      password: パスワード
+      email: メールアドレス
+  
+  errors:
+   messages:
+    taken: はすでに存在します。
+    blank: が空欄です。
