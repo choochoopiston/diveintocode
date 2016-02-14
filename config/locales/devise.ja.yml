@@ -1,0 +1,6 @@
+ja:
+  devise:
+    mailer:
+      confirmation_instructions:
+        # Confirmation instructions
+        subject: "Dive into Code by Hara - 登録受付のお知らせ"
