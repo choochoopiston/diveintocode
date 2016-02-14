@@ -4,10 +4,12 @@ ja:
    inquiry:
     name: 名前
     email: メールアドレス
-   user:          
+   user:      
     name: ユーザー名
     password: パスワード
     email: メールアドレス
+  models:
+   user: ユーザー
   
   errors:
    messages:

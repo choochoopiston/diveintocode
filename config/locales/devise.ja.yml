@@ -1,5 +1,15 @@
 ja:
 
+  errors:
+    messages:
+      expired: "は有効期限が切れました。新たに要求してください。"
+      not_found: "は見つかりません。"
+      already_confirmed: "は登録済みです。ログインしてみてください。"
+      not_locked: "はロックされていません。"
+      not_saved:
+        one: "%{resource}を登録する時に１つのエラーが発生しました。"
+        other: "%{resource}を登録する時に%{count}つのエラーが発生しました。"
+
   devise:
     mailer:
       confirmation_instructions:
