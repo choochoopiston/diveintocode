@@ -1,10 +1,10 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<h2>ユーザー情報変更: </h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :メールアドレス %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
 
@@ -13,27 +13,33 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.label :ユーザー名 %> <br />
+    <%= f.text_field :name, autocomplete: "off" %>
+  </div>
+  
+
+  <div class="field">
+    <%= f.label :新パスワード %> <i>(変更しない場合は、何も入力しないでください)</i><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :確認のため、再度新パスワードを入力してください %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
   <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.label :パスワード %> <i>(ユーザー情報を変更するために、現在のパスワードを入力ください)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Update" %>
+    <%= f.submit "ユーザー情報を更新する" %>
   </div>
 <% end %>
 
-<h3>Cancel my account</h3>
+<h3>ユーザー情報（アカウント）の削除:</h3>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+<p>一度ユーザー情報を削除すると、すべての情報を失われ、ログインできなきなりますのでご了承ください<%= button_to "ユーザー情報（アカウント）を削除する", registration_path(resource_name), data: { confirm: "本当に削除してもよろしいですか？?" }, method: :delete %></p>
 
-<%= link_to "Back", :back %>
+<%= link_to "戻る", :back %>
