@@ -10,30 +10,44 @@ ja:
       unlock_instructions:
         subject: 'アカウントの解除'
 
-
     failure:
-      unauthenticated: 'ログインしてください。'
       unconfirmed: '本登録を行ってください。'
       locked: 'あなたのアカウントは凍結されています。'
       invalid: 'メールアドレスかパスワードが違います。'
       invalid_token: '認証キーが不正です。'
-      timeout: 'セッションがタイムアウトしました。もう一度ログインしてください。'
       inactive: 'アカウントがアクティベートされていません。'
+      already_authenticated: "既にログインしています。"
+      last_attempt: "あなたのアカウントがロックされる前に、もう1つの試みを持っています。"
+      not_found_in_database: "メールアドレスまたはパスワードが無効です。"
+      timeout: "一定時間が経過したため、再度ログインが必要です"
+      unauthenticated: "ログインまたは登録が必要です。"
+      
     sessions:
       signed_in: 'ログインしました。'
       signed_out: 'ログアウトしました。'
     passwords:
       send_instructions: 'パスワードのリセット方法を数分以内にメールでご連絡します。'
       updated: 'パスワードを変更しました。'
+      no_token: "このページにアクセスする事が出来ません。正しいURLでアクセスしている事を確認して下さい。"
+      send_paranoid_instructions: ""
+      updated_not_active: "パスワードを変更しました。"
     confirmations:
-      send_instructions: '登録方法を数分以内にメールでご連絡します。'
-      confirmed: 'アカウントを登録しました。'
+      confirmed: "アカウントが確認されました。ログインしています。"
+      send_instructions: "アカウントの確認方法を数分以内にメールでご連絡します。"
+      send_paranoid_instructions: "ご登録のメールアドレスが保存されている場合、アカウントの確認方法をメールでご連絡します"
+
     registrations:
       signed_up: 'アカウント登録を受け付けました。確認のメールをお送りします。'
       updated: 'アカウントを更新しました。'
-      destroyed: 'アカウントを削除しました。またのご利用をお待ちしております。'
+      signed_up_but_inactive: "アカウントは登録されていますが、アクティブになっていないため利用できません。"
+      signed_up_but_locked: "アカウントは登録されていますが、ロックされているため利用できません。"
+      signed_up_but_unconfirmed: "確認メールを登録したメールアドレス宛に送信しました。リンクを開いてアカウントを有効にして下さい。"
+      update_needs_confirmation: "アカウント情報が更新されました。更新の確認メールを新しいメールアドレス宛に送信しましたので、リンクを開いて更新を有効にして下さい。"
+      destroyed: "アカウントを削除しました。またのご利用をお待ちしております。"
     unlocks:
       send_instructions: 'アカウントの凍結解除方法を数分以内にメールでご連絡します。'
+      send_paranoid_instructions: "アカウントが存在する場合、ロックを解除する方法をメールでご連絡します。"
       unlocked: 'アカウントを凍結解除しました。'
-
-
+    omniauth_callbacks:
+      failure: "%{kind} から承認されませんでした。理由：%{reason}"
+      success: "%{kind} から承認されました。"
