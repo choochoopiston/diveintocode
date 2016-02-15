@@ -1,29 +1,10 @@
-<div class="boxA">
-    
-  <div class="box1">
-    <div class="site"> 
-      <h1><a href="#">Dive into Code by Hara</a></h1> 
-    </div>
-  </div>
+<div class="jumbotron">
+  <h1>achieve</h1>
+  <p>「経験ゼロからWebエンジニアになる！」</p>
+  <p>achieveは、目標達成を支援するWebアプリケーションです。</p>
+  <p><a class="btn btn-primary btn-lg" href="#" role="button">今すぐはじめる</a></p>
+</div>
 
-  <div class="box2"> 
-　　<nav class="menu"> 
-　　  <ul> 
-        <li><%= link_to "Top", root_path %></li> 
-        <li><%= link_to 'お問い合わせ',inquiry_path %></li>
-        <% if user_signed_in? %> 
-        <li><%= link_to "ユーザー情報変更", edit_user_registration_path %></li>
-        <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
-        <% else %>
-        <li><%= link_to "ログイン", new_user_session_path %></li>
-        <% end %>
-      </ul> 
-    </nav>
-  </div>
-
-  <div class="box3"> 
-  <%= image_tag("header.png", class: "topimg") %> 
-  </div>
 
   <div class="box4"> 
     <div class="box4-1"> 
@@ -51,7 +32,7 @@
           <h1>チームで実践「受託開発」</h1>
           <p>ひとりではなく開発チームを結成し、実ビジネスの受託開発を経験して卒業していただきます。</p>
         </a>
-      </div>」 
+      </div>
     </div>
   </div>
 
