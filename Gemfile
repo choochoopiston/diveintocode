@@ -26,6 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'pry-rails'
 gem 'i18n_generators'
 gem 'devise'
+gem 'rails_12factor'
 
 
 gem 'less-rails'
