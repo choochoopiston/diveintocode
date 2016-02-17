@@ -27,6 +27,15 @@ gem 'pry-rails'
 gem 'i18n_generators'
 gem 'devise'
 
+
+gem 'less-rails'
+
+gem 'sprockets-rails', '2.3.3'
+
+gem 'therubyracer', platforms: :ruby 
+gem 'bootstrap-sass', '~> 3.2.0' 
+gem 'autoprefixer-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -49,6 +58,6 @@ group :development do
   gem 'spring'
 end
 
-gem 'therubyracer', platforms: :ruby 
-gem 'bootstrap-sass', '~> 3.2.0' 
-gem 'autoprefixer-rails'
+
+
+
