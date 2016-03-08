@@ -4,11 +4,18 @@ Rails.application.routes.draw do
   get 'users/show'
 
   root to: "top#index"
+  
+  devise_for :users, controllers: {
+    auth: "/auth/:provider/callback",
+    sessions: "users/sessions",
+    registrations: "users/registrations",
 
-  devise_for :users
-  resources :users, only:[:index, :show]
+    omniauth_callbacks: "users/omniauth_callbacks"
+}
+
   resources :blogs
-
+  resources :users, only:[:index, :show]
+  
   get 'inquiry', to: 'inquiry#index'
   post 'inquiry/confirm', to: 'inquiry#confirm'
   post 'inquiry/thanks', to: 'inquiry#thanks'

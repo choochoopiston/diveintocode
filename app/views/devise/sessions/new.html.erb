@@ -13,12 +13,25 @@
               <%= f.check_box :remember_me %>
               <%= f.label :今後パスワードの自動入力を利用 %>
               <% end -%>
-			  
+              
 			  <%= f.submit "ログインする!", :class => 'btn btn-lg btn-primary btn-block' %>
 			  <% end %>
+			  
+
+			  
+			  <br>
+
 		<%= render "devise/shared/links" %>
 		</div>	
 		
 	</div>
 	
 </div>
+
+<a href="/users/auth/twitter" class="btn btn-lg btn-social btn-twitter">
+	<i class="fa fa-twitter"></i> Twitterで登録する
+</a>
+<a href="/users/auth/facebook" class="btn btn-lg btn-social btn-facebook">
+	<i class="fa fa-facebook"></i> Facebookで登録する
+</a>
+<%= link_to "facebook認証", user_omniauth_authorize_path(:facebook), class: 'btn btn-lg btn-social btn-twitter' %>

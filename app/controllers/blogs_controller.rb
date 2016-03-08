@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
-  before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  before_action :set_blog, only: [:show]
+  before_action :sameuser, only: [:edit, :update, :destroy]
 
   # GET /blogs
   # GET /blogs.json
@@ -24,7 +25,7 @@ class BlogsController < ApplicationController
   # POST /blogs
   # POST /blogs.json
   def create
-    @blog = Blog.new(blog_params)
+    @blog = current_user.blogs.build(blog_params)
 
     respond_to do |format|
       if @blog.save
@@ -69,6 +70,14 @@ class BlogsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
-      params.require(:blog).permit(:title, :content)
+      params.require(:blog).permit(:title, :content, :user_id)
     end
+    
+    def sameuser
+      @blog = Blog.find(params[:id])
+      if current_user.id != @blog.user_id
+        redirect_to root_path
+      end
+    end
+    
 end

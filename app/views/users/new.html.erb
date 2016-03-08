@@ -1,0 +1,14 @@
+<%= form_for(@user) do |f| %>
+
+　　<%= f.label :name %>
+　　<%= f.file_field :name %>
+
+　　<%= f.label :description %>
+　　<%= f.file_field :description %>
+
+    <%= f.label :image %>
+    <%= image_tag @user.image.thumb.url if @user.image? %>
+    <%= f.file_field :image %>
+    <%= f.hidden_field :image_cache %>
+
+<% end %>

@@ -2,11 +2,17 @@
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
+ 
 
-  <div class="field">
+    <% if @user.provider == "twitter" %>
+    <% elsif @user.provider == "facebook" %>
+
+    <% else %>
+    <div class="field">
     <%= f.label :メールアドレス %><br />
     <%= f.email_field :email, autofocus: true %>
-  </div>
+    </div>
+    <% end %>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
@@ -17,7 +23,29 @@
     <%= f.text_field :name, autocomplete: "off" %>
   </div>
   
+  <div class="field">
+    <%= f.label :プロフィール写真 %><br />
+    <%= profile_img(@user) %>
+    <%= f.file_field :image %>
+    <%= f.hidden_field :image_cache %>
+  </div>
+  
+   <div class="field">
+    <% if @user.persisted? && @user.image? %>
+        <%= f.label :画像を削除 %>
+        <%= f.check_box :remove_image %>
+    <% end %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :プロフィール紹介 %><br />
+    <%= f.text_field :profile, autocomplete: "off" %>
+  </div>
 
+    <% if @user.provider == "twitter" %>
+    <% elsif @user.provider == "facebook" %>
+    <% else %>
+    
   <div class="field">
     <%= f.label :新パスワード %> <i>(変更しない場合は、何も入力しないでください)</i><br />
     <%= f.password_field :password, autocomplete: "off" %>
@@ -32,6 +60,8 @@
     <%= f.label :パスワード %> <i>(ユーザー情報を変更するために、現在のパスワードを入力ください)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
+  
+  <% end %>
 
   <div class="actions">
     <%= f.submit "ユーザー情報を更新する" %>
