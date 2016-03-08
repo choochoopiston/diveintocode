@@ -9,6 +9,7 @@ ja:
       not_saved:
         one: "%{resource}を登録する時に１つのエラーが発生しました。"
         other: "%{resource}を登録する時に%{count}つのエラーが発生しました。"
+    　Current_password: "現在のパスワード"
 
   devise:
     mailer:
@@ -41,8 +42,9 @@ ja:
       no_token: "このページにアクセスする事が出来ません。正しいURLでアクセスしている事を確認して下さい。"
       send_paranoid_instructions: ""
       updated_not_active: "パスワードを変更しました。"
+      Current_password: "現在のパスワード"
     confirmations:
-      confirmed: "アカウントが確認されました。ログインしています。"
+      confirmed: "アカウントが確認されました。ログインが可能です。"
       send_instructions: "アカウントの確認方法を数分以内にメールでご連絡します。"
       send_paranoid_instructions: "ご登録のメールアドレスが保存されている場合、アカウントの確認方法をメールでご連絡します"
 

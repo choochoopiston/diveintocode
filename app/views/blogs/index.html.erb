@@ -9,8 +9,19 @@
      </div>
      <div class="panel-body">
          <%= blog.content %><br>
+
+
+         <P><% @user=User.find(blog.user_id) %>
+         <%= profile_img(@user) %>投稿者:<%= blog.user.name %></P>
+
          <em><%= blog.created_at %></em>
-         <p><em>投稿者:<%= blog.user.name %></em></p>
+
+          <% if current_user.id == blog.user_id %>
+　　　　　<%= link_to 'Edit', edit_blog_path(blog.id) %> | 
+          <%= link_to 'Delete', blog_path(blog.id), :method => :delete %>
+          <% else %>
+
+          <% end %>
      </div>
  </div>
 <% end %>

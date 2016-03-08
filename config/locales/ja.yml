@@ -8,6 +8,7 @@ ja:
     name: ユーザー名
     password: パスワード
     email: メールアドレス
+    current_password: 現行のパスワード
   models:
    user: ユーザー
   
@@ -15,3 +16,4 @@ ja:
    messages:
     taken: はすでに存在します。
     blank: が空欄です。
+    invalid: が間違っています。
