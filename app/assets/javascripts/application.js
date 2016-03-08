@@ -18,5 +18,6 @@
 //= require twitter/bootstrap/modal
 //= require twitter/bootstrap/button
 //= require twitter/bootstrap/collapse
+//= require jquery.turbolinks
 //= require turbolinks
 //= require_tree .

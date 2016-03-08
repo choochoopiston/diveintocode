@@ -68,6 +68,8 @@ end
 gem 'carrierwave'
 gem 'rmagick'
 
+gem 'jquery-turbolinks'
+
 
 
 
