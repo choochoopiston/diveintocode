@@ -36,6 +36,7 @@ ja:
     sessions:
       signed_in: 'ログインしました。'
       signed_out: 'ログアウトしました。'
+      already_signed_out: 'すでにログアウトしています。'
     passwords:
       send_instructions: 'パスワードのリセット方法を数分以内にメールでご連絡します。'
       updated: 'パスワードを変更しました。'
