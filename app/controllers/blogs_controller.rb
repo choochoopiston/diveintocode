@@ -62,6 +62,11 @@ class BlogsController < ApplicationController
     end
   end
 
+  def render_404
+    redirect_to root_path
+  end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_blog
@@ -74,7 +79,9 @@ class BlogsController < ApplicationController
     end
     
     def sameuser
+      
       @blog = Blog.find(params[:id])
+      
       if current_user.id != @blog.user_id
         redirect_to root_path
       end
