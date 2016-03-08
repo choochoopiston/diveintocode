@@ -9,7 +9,7 @@
         <p><%= profile_img(user) %></p>
         
 <% if current_user.id == user.id %>
-<%= link_to 'Edit', edit_user_registration_path(user.id) %>
+<%= link_to 'Edit', edit_user_registration_path %>
 <% else %>
 <% end %>
 
