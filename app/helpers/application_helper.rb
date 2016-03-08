@@ -9,7 +9,7 @@ module ApplicationHelper
 		img_url = user.profile_image_url
 		img_url.slice!("_bigger") || img_url.slice!("_normal")
 	    else
-		img_url = "no_image_available.png"
+		img_url = "noimage.png"
 		end
         image_tag(img_url, alt: user.name, size: '73x73')
     end
