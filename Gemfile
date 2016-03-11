@@ -69,7 +69,9 @@ gem 'carrierwave'
 gem 'rmagick'
 
 gem 'jquery-turbolinks'
+gem 'faker'
 
+gem 'rspec-rails'
+gem 'capybara'
 
-
-
+gem 'rambulance'
