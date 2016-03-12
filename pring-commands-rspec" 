@@ -1,0 +1,323 @@
+[33mcommit 74540e85bb6d5cbc1e9cea4da37b9ef2f32445a8[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Fri Mar 11 10:05:52 2016 +0000
+
+    rambulance install
+
+[33mcommit 10019ab1d63b28555608e1929dfcf8d74feb66ce[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Tue Mar 8 11:40:56 2016 +0000
+
+    dropdown yameta2
+
+[33mcommit e39b4ab6cbac7f92a9d6c23df02140ef3e94d94f[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Tue Mar 8 11:00:48 2016 +0000
+
+    dropdown yameta
+
+[33mcommit 6b8d3a08d21a55c8b2ddbeaa297922a114b6f83a[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Tue Mar 8 09:44:54 2016 +0000
+
+    precompile
+
+[33mcommit 521c956bbd4ee3c3024535e451cca15f18cad98a[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Tue Mar 8 09:34:39 2016 +0000
+
+    sai push
+
+[33mcommit 8d20ce16b050fa7ddc3ed584dff028b6e5a4b912[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Tue Mar 8 08:32:26 2016 +0000
+
+    dropdown sakujo
+
+[33mcommit 1b3b04091f738d209935532d1895909be613ff4d[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Tue Mar 8 08:21:12 2016 +0000
+
+    blog pass henkou
+
+[33mcommit 56cbaf44cd95c81d5d195bba90ae87717387bd06[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Tue Mar 8 07:02:33 2016 +0000
+
+    FB login email shusei
+
+[33mcommit 7ea2698e8dd1aeb4751d19876b3fc11e6eef69aa[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Tue Mar 8 05:43:11 2016 +0000
+
+    routing shusei
+
+[33mcommit f78e75bad974d3765a0b4c0a2b4bfc346ef8f305[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Tue Mar 8 05:37:31 2016 +0000
+
+    routing shusei
+
+[33mcommit f3a14b15e57cc2bd543fe008d7748e5aa2b142d7[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Tue Mar 8 05:18:52 2016 +0000
+
+    login gamen desing hekou
+
+[33mcommit 5654c61b2f422cd5c0e5d77cbf55101242f8e5ce[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Tue Mar 8 05:03:24 2016 +0000
+
+    Day7
+
+[33mcommit aee6174840fe251e7247567ca43f39c600035b41[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Mon Feb 29 07:35:09 2016 +0000
+
+    toukousha settei
+
+[33mcommit eb7d87e58046c5725f85fb9a723840e56e2715fd[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Mon Feb 29 05:09:35 2016 +0000
+
+    gem pry-rails uninstall
+
+[33mcommit 3d03669246cc40ab978353c90555645b9c5ed814[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Wed Feb 17 10:50:54 2016 +0000
+
+    pry
+
+[33mcommit e757323c482a334bc2f7b420eea3ecf0988c3898[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Wed Feb 17 10:48:38 2016 +0000
+
+    pry cloud9 only
+
+[33mcommit 05e3bbbbec3c89db96740f5f3f85b1217b69dec5[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Wed Feb 17 10:26:42 2016 +0000
+
+    migration file sakujo
+
+[33mcommit 207e1a12455c427967b437571b54d7550665af6b[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Wed Feb 17 09:59:02 2016 +0000
+
+    12factor tshuika
+
+[33mcommit c8a75a18bf101bec5addf63aabc1e11ed88d2f5d[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Wed Feb 17 09:49:20 2016 +0000
+
+    login design shusei
+
+[33mcommit 8fb3d6b5c90071fd597454a8b08a7017d2c75183[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Wed Feb 17 07:52:28 2016 +0000
+
+    login design henkou2
+
+[33mcommit b94e249a0d04e3aed64d98f3e9c1c06b072cf3b9[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Wed Feb 17 07:50:56 2016 +0000
+
+    login design henkou
+
+[33mcommit 4b6cd814c7f9f6fb6f4d40063820f7b5e0c7a0cb[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Mon Feb 15 14:09:03 2016 +0000
+
+    user ichirann sakusei
+
+[33mcommit 51eb388fb7cf2a091f7ff021f5edf1ddd3519111[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Mon Feb 15 12:52:18 2016 +0000
+
+    header sakusei
+
+[33mcommit 95588ec184812cf0c21fdf9d1f206778b7d83592[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sun Feb 14 23:02:52 2016 +0000
+
+    bootstrap install
+
+[33mcommit 0cb846615ab1360768e0dcb3d78eb3a5c99a6995[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sun Feb 14 14:17:11 2016 +0000
+
+    gem file henshu
+
+[33mcommit cfbdd1f6d85ae502051b165a91e14f5010adcb48[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sun Feb 14 14:08:18 2016 +0000
+
+    devise nihongoka
+
+[33mcommit af03ca1c16265c66b7f08e4ee327b115941a2a75[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sun Feb 14 14:05:02 2016 +0000
+
+    devise nihongoka
+
+[33mcommit 28740d0fc4978020bf5a70caf6bac5fe5b61e690[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sun Feb 14 12:49:20 2016 +0000
+
+    login username delete
+
+[33mcommit bfea8ebda676ee34a6dd4908ce8e5c1eaafc5272[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sun Feb 14 12:22:17 2016 +0000
+
+    devise nihongoka 4
+
+[33mcommit 3a6606872739977acbc76e845c66cbd2543aad42[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sun Feb 14 12:16:12 2016 +0000
+
+    devise nihongoka 3
+
+[33mcommit 19c7db363d1c7642c106b1a03dca609ec06089b2[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sun Feb 14 12:05:15 2016 +0000
+
+    devise nihongoka 3
+
+[33mcommit 44e345349be8e0f3fa079b8e29f4daa2a5b78818[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sun Feb 14 11:43:16 2016 +0000
+
+    devise nihongoka
+
+[33mcommit 9e8fde466dad9178c13c8589b9b805d393ccd153[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sun Feb 14 11:09:44 2016 +0000
+
+    try2
+
+[33mcommit a7a6ec9bdbc24dc6f4d608caff1582b263e83d08[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sun Feb 14 10:55:07 2016 +0000
+
+    login mawari nihongoka username tsuika
+
+[33mcommit e549c42e1abfe5f5439f9b45a2ff2f44ade1ffd9[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sun Feb 14 07:38:53 2016 +0000
+
+    confirmation mail nihongoka 2
+
+[33mcommit 1ec51a9c14aae5a04708060dd399e89f13cf1c45[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sun Feb 14 07:33:44 2016 +0000
+
+    confirmation mail nihongoka
+
+[33mcommit e8f4e73d32d5f3664eef33efe8a0781d075ae14b[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sat Feb 13 09:58:07 2016 +0000
+
+    postgre ni kakikae
+
+[33mcommit fa28853322a3a9c5d623ab846d53fbeab3b5367c[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sat Feb 13 09:30:23 2016 +0000
+
+    test
+
+[33mcommit 3058017731c1e5a43740165db6976efce82c7e19[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sat Feb 13 08:18:15 2016 +0000
+
+    SignUp自動メール送信設定
+
+[33mcommit 25726f9bc4326cb09185d39bf04040546371505e[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Thu Feb 11 06:27:51 2016 +0000
+
+    two form for
+
+[33mcommit 15deb358cf92709b7546a3f3ec58172bd0ee89ae[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Wed Feb 10 13:51:13 2016 +0000
+
+    back to confirm
+
+[33mcommit 31595d2bd3866842c05b5ad337818c58cb171935[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Wed Feb 10 11:58:29 2016 +0000
+
+    back button
+
+[33mcommit 511fc2be301dbc2255c6ff78dee103ee5d4c9d27[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Wed Feb 10 11:01:26 2016 +0000
+
+    pre compile wasure
+
+[33mcommit ba3ecba728f6906f63eb09b996d7820402889305[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Wed Feb 10 10:58:02 2016 +0000
+
+    error color
+
+[33mcommit 9dfa0c1e0ea31298b1e900e25912b634f5119ba0[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Wed Feb 10 10:46:45 2016 +0000
+
+    ja yml
+
+[33mcommit 3e40834f3ce7c97ccf19e47c7054f4992cd1bf58[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Wed Feb 10 09:19:29 2016 +0000
+
+    inquiry design4
+
+[33mcommit d4890b33aa8b34054d5d4a78af574872aca6dced[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Wed Feb 10 09:14:51 2016 +0000
+
+    inquiry design3
+
+[33mcommit ed0d6daa0beb94992341cb6791e2e5026bf55242[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Wed Feb 10 09:08:40 2016 +0000
+
+    inuiqry design
+
+[33mcommit 7a2582aac612cfee4e6150fdd54868e8c3c5da95[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Mon Feb 8 08:44:26 2016 +0000
+
+    precompile2
+
+[33mcommit c3c1b209438629f2b9f870b1d709ea5aafa629c2[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Mon Feb 8 08:13:04 2016 +0000
+
+    otoiawase
+
+[33mcommit eeba10af830c6cc78e67995fad6481ee0e4b4a6b[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Fri Feb 5 07:18:15 2016 +0000
+
+    content fukkatsu
+
+[33mcommit 36b14900ac7809b1a6c9cd30c6b2d4acc2c1da03[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Tue Dec 22 03:16:06 2015 +0000
+
+    database.yml登録
+
+[33mcommit 2121783d6162db7ca1dcb282233c15d5cd668aa6[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Tue Dec 22 02:55:37 2015 +0000
+
+    祝！初コミット
+
+[33mcommit 5008c409a793add432a834f80469a6ae4dc4a5b6[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Tue Dec 22 02:51:31 2015 +0000
+
+    祝！初コミット
