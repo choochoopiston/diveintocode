@@ -41,5 +41,6 @@ Rails.application.configure do
   
   # deviseの設定 
   config.action_mailer.default_url_options = { host: 'https://code-choochoopiston.c9users.io/' }  
+  BetterErrors::Middleware.allow_ip! '10.240.0.213'
   
 end
