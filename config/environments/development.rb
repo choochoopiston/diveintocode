@@ -10,7 +10,7 @@ Rails.application.configure do
   config.eager_load = false
 
   # Show full error reports and disable caching.
-  config.consider_all_requests_local       = false
+  config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send.
@@ -42,5 +42,16 @@ Rails.application.configure do
   # deviseの設定 
   config.action_mailer.default_url_options = { host: 'https://code-choochoopiston.c9users.io/' }  
   BetterErrors::Middleware.allow_ip! '10.240.0.213'
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :enable_starttls_auto => true,
+    :address => "smtp.gmail.com",
+    :port => 587,
+    :domain => 'gmail.com',
+    :user_name => "choochoopiston@gmail.com",
+    :password => "iqmqjfhvfhjiypot",
+    :authentication => 'login',
+  }
   
 end
