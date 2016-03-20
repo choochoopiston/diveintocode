@@ -16,7 +16,11 @@ Rails.application.routes.draw do
 }
 
   resources :blogs
-  resources :users, only:[:index, :show]
+  resources :users, only:[:index, :show, :edit, :update]
+  
+  as :user do
+  get 'users', to: 'users#show'
+  end
   
   
   get 'inquiry', to: 'inquiry#index'

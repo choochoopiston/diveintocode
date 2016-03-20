@@ -12,4 +12,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
      resource.update_with_password(params)
      end
     end
+
+  protected
+
+    def after_update_path_for(resource)
+      user_path(resource)
+    end
+    
 end
