@@ -1,7 +1,11 @@
 class InquiryController < ApplicationController
     
     def index
+      if params[:BTI]
+      @inquiry = Inquiry.new(inquiry_params)
+      else 
       @inquiry = Inquiry.new
+      end
     end
     
     def confirm
@@ -14,12 +18,9 @@ class InquiryController < ApplicationController
     end
 
     def thanks
-      @inquiry = Inquiry.new(inquiry_params)
-      if params[:back]
-      render 'index'
-      else
-      @inquiry.save
-      end
+      @inquiry = Inquiry.create(inquiry_params)
+      InquiryMailer.inquiry_email(@inquiry).deliver
+      
     end
     
     

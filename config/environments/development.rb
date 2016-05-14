@@ -41,7 +41,6 @@ Rails.application.configure do
   
   # deviseの設定 
   config.action_mailer.default_url_options = { host: 'https://code-choochoopiston.c9users.io/' }  
-  BetterErrors::Middleware.allow_ip! '10.240.0.213'
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
@@ -53,5 +52,7 @@ Rails.application.configure do
     :password => "iqmqjfhvfhjiypot",
     :authentication => 'login',
   }
+  
+  BetterErrors::Middleware.allow_ip! '10.240.0.213'
   
 end
