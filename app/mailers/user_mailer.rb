@@ -3,6 +3,6 @@ class UserMailer < ApplicationMailer
     
     def inquiry_thanks(user)
         @user = user
-        mail(to: @user.email, suject: 'お問い合わせありがとうございました。')
+        mail(to: @user.email, subject: 'お問い合わせありがとうございました。')
     end
 end

@@ -23,10 +23,11 @@ Rails.application.routes.draw do
   end
   
   
+
   get 'inquiry', to: 'inquiry#index'
+  post 'inquiry', to: 'inquiry#index'
   post 'inquiry/confirm', to: 'inquiry#confirm'
   post 'inquiry/thanks', to: 'inquiry#thanks'
-  post '/inquiry', to: 'inquiry#thanks'
   
   get 'about' => 'about#company_overview'
   
