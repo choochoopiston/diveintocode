@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
   get 'about/company_overview'
 
   get 'users/index'
