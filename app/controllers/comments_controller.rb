@@ -9,9 +9,8 @@ class CommentsController < ApplicationController
 
   # GET /comments/1
   # GET /comments/1.json
-  # showアクションが呼び起こされた際に、画面上に「コメントの入力フォーム」が表示。つまりshowアクション時に"該当ブログにひもづくコメントのモデルオブジェクト"を生成
+  
   def show
-    @comment = @blog.comments.build
   end
 
   # GET /comments/new
@@ -30,7 +29,7 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @comment, notice: 'Comment was successfully created.' }
+        format.html { redirect_to blog_path(@comment.blog_id), notice: 'Comment was successfully created.' }
         format.json { render :show, status: :created, location: @comment }
       else
         format.html { render :new }
@@ -44,7 +43,7 @@ class CommentsController < ApplicationController
   def update
     respond_to do |format|
       if @comment.update(comment_params)
-        format.html { redirect_to @comment, notice: 'Comment was successfully updated.' }
+        format.html { redirect_to blog_path(@comment.blog_id), notice: 'Comment was successfully updated.' }
         format.json { render :show, status: :ok, location: @comment }
       else
         format.html { render :edit }
