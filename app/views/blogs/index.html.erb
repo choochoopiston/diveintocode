@@ -5,7 +5,7 @@
 <% @blogs.each do |blog| %>
  <div class="panel panel-primary">
      <div class="panel-heading">
-         <h3 class="panel-title"><%= blog.title %></h3>
+         <h3 class="panel-title"><%= link_to blog.title, blog_path(blog.id) %></h3>
      </div>
      <div class="panel-body">
          <%= blog.content %><br>
