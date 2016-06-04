@@ -10,6 +10,10 @@
   <%= @blog.content %>
 </p>
 
+<div id="comment_area">
+  <%= render partial: 'comments/index', locals: { comments: @comments } %>
+</div>
+
 
 <p>
   <%= render partial: 'comments/form', locals: { comment: @comment } %>
