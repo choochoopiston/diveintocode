@@ -1,5 +1,5 @@
     <ul><% @comments.each do |comment| %>
-      <% unless commnet.id.nil? %>
+      <% unless comment.id.nil? %>
         <li><%= comment.user %></li>
         <li><%= comment.content %></li>
         <li><%= link_to 'Edit', edit_comment_path(comment) %></li>
