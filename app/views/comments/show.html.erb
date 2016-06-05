@@ -1,0 +1,17 @@
+<p>
+  <strong>Blog:</strong>
+  <%= @comment.blog %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @comment.user %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @comment.content %>
+</p>
+
+<%= link_to 'Edit', edit_blog_comment_path(@comment.blog_id, @comment) %> |
+<%= link_to 'Back', blog_path(@comment.blog_id) %>
