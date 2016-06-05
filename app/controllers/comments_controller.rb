@@ -32,7 +32,7 @@ class CommentsController < ApplicationController
         format.html { redirect_to blog_path(@comment.blog_id), notice: 'Comment was successfully created.' }
         format.json { render :show, status: :created, location: @comment }
         @blog = @comment.blog
-        format.js
+        format.js  { render :index, notice: 'Comment was successfully created.' }
       else
         format.html { render :new }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
@@ -61,6 +61,8 @@ class CommentsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to blog_path(@comment.blog_id), notice: 'Comment was successfully destroyed.' }
       format.json { head :no_content }
+      @blog = @comment.blog
+      format.js { render :index, notice: 'Comment was successfully destroyed.' }
     end
   end
 
