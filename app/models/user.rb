@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
          
   has_many :blogs, dependent: :destroy
   has_many :comments
+  has_many :questions, dependent: :destroy
 
   mount_uploader :image, ImageUploader
   
