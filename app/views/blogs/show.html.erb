@@ -8,8 +8,8 @@
   <%= @blog.content %>
 </p>
 
-<div id="comment_area">
-  <%= render partial: 'comments/index', locals: { comments: @comments } %>
+<div id="comments_area">
+  <%= render partial: 'comments/index', locals: { comments: @blog.comments } %>
 </div>
 
 
