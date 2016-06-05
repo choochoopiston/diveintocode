@@ -1,10 +1,8 @@
-<h1>Q&A一覧</h1>
+<div id="questions_area">
+<%= render partial: 'questions/indexlist', locals: { questions: @questions } %>
+</div>
 
-
-<%= render partial: 'questions/form', locals: { question: @question } %>
-
-
-<% @questions.order(created_at: :desc).each do |question| %>
+<% questions.order(created_at: :desc).each do |question| %>
  <div class="panel panel-primary">
      <div class="panel-heading">
          <h3 class="panel-title"><%= link_to question.title, question_path(question.id) %></h3>
@@ -27,6 +25,3 @@
      </div>
  </div>
 <% end %>
-
-
-
