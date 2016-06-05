@@ -31,6 +31,8 @@ class CommentsController < ApplicationController
       if @comment.save
         format.html { redirect_to blog_path(@comment.blog_id), notice: 'Comment was successfully created.' }
         format.json { render :show, status: :created, location: @comment }
+        @blog = @comment.blog
+        format.js
       else
         format.html { render :new }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
@@ -57,7 +59,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment.destroy
     respond_to do |format|
-      format.html { redirect_to blog_path(@commnet.blog_id), notice: 'Comment was successfully destroyed.' }
+      format.html { redirect_to blog_path(@comment.blog_id), notice: 'Comment was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
