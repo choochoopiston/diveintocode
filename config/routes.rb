@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  
+  resources :questions
+  
   resources :comments
   get 'about/company_overview'
 
