@@ -2,7 +2,7 @@
       <% unless comment.id.nil? %>
         <li><%= comment.user %></li>
         <li><%= comment.content %></li>
-        <li><%= link_to 'Edit', edit_comment_path(comment) %></li>
+        <li><%= link_to 'Edit', edit_blog_comment_path(@blog, comment) %></li>
         <li><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></li>
       <% end %>
     <% end %></ul>
