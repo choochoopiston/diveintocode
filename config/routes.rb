@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
   get 'about/company_overview'
 
   get 'users/index'
@@ -15,7 +16,10 @@ Rails.application.routes.draw do
     omniauth_callbacks: "users/omniauth_callbacks"
 }
 
-  resources :blogs
+  resources :blogs do
+    resources :comments
+  end
+  
   resources :users, only:[:index, :show, :edit, :update]
   
   as :user do

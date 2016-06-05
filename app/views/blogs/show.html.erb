@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Title:</strong>
   <%= @blog.title %>
@@ -8,6 +6,15 @@
 <p>
   <strong>Content:</strong>
   <%= @blog.content %>
+</p>
+
+<div id="comments_area">
+  <%= render partial: 'comments/index', locals: { comments: @blog.comments } %>
+</div>
+
+
+<p>
+  <%= render partial: 'comments/form', locals: { comment: @comment } %>
 </p>
 
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
