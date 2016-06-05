@@ -2,5 +2,6 @@
 
 <%= render 'editform' %>
 
-<%= link_to 'Show', blog_comment_path(@comment.blog_id, @comment) %> |
+<!-- blog_comment_path(@comment.blog_id, @comment) コメント個別ページにはリンクさせない --!>
+<%= link_to 'Show', blog_path(@comment.blog_id) %> |
 <%= link_to 'Back', blog_path(@comment.blog_id) %>
