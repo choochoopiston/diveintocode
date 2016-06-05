@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Blog:</strong>
   <%= @comment.blog %>
@@ -15,5 +13,5 @@
   <%= @comment.content %>
 </p>
 
-<%= link_to 'Edit', edit_comment_path(@comment) %> |
+<%= link_to 'Edit', edit_blog_comment_path(@comment.blog_id, @comment) %> |
 <%= link_to 'Back', blog_path(@comment.blog_id) %>
