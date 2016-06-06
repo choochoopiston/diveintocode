@@ -17,7 +17,7 @@
         <% if current_user.id == answer.user.id %>
         <div class="row">
           <div class="col-xs-12">
-            <%= link_to 'Edit', edit_answer_path(answer) %> | 
+            <%= link_to 'Edit', edit_question_answer_path(@blog, answer) %> | 
             <%= link_to 'Destroy', answer, method: :delete, data: { confirm: 'Are you sure?' } %>
           </div>
         </div>
