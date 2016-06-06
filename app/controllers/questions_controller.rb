@@ -34,7 +34,7 @@ class QuestionsController < ApplicationController
         format.html { redirect_to questions_path, notice: 'Question was successfully created.' }
         format.json { render :index, status: :created, location: @question }
         @questions = Question.all
-        format.js
+        format.js {render :index, notice: 'Question was successfully created.' }
       else
         format.html { render :new }
         format.json { render json: @question.errors, status: :unprocessable_entity }
@@ -63,6 +63,8 @@ class QuestionsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to questions_url, notice: 'Question was successfully destroyed.' }
       format.json { head :no_content }
+      @questions = Question.all
+      format.js {render :index, notice: 'Question was successfully destroyed.' }
     end
   end
 
