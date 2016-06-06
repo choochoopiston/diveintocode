@@ -32,7 +32,7 @@ class AnswersController < ApplicationController
         format.html { redirect_to question_path(@answer.question_id), notice: 'Answer was successfully created.' }
         format.json { render :show, status: :created, location: @answer }
         @question = @answer.question
-        format.js
+        format.js { render :index, notice: 'Answer was successfully created.' }
       else
         format.html { render :new }
         format.json { render json: @answer.errors, status: :unprocessable_entity }
@@ -61,6 +61,8 @@ class AnswersController < ApplicationController
     respond_to do |format|
       format.html { redirect_to question_path(@answer.question), notice: 'Answer was successfully destroyed.' }
       format.json { head :no_content }
+      @question = @answer.question
+      format.js { render :index, notice: 'Answer was successfully destroyed.' }
     end
   end
 
