@@ -3,6 +3,10 @@
 
 <%= render partial: 'questions/form', locals: { question: @question } %>
 
+<div id="questions_area">
+<%= render partial: 'questions/index', locals: { questions: @questions } %>
+</div>
+
 
 <% @questions.order(created_at: :desc).each do |question| %>
  <div class="panel panel-primary">
