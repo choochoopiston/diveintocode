@@ -1,0 +1,47 @@
+<%= form_for(question, remote: true) do |f| %>
+  <% if question.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(question.errors.count, "error") %> prohibited this question from being saved:</h2>
+
+      <ul>
+      <% question.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <h3></h3>
+  
+  <table class="table table-hover table-bordered table-condensed">
+    
+  <tr>
+    <th colspan="2" class="info"><h4>新規質疑の作成</h4></th>
+  </tr>
+    
+  <tr>
+    <th><%= f.label :件名 %></th>
+    <td><%= f.text_field :title %></td>
+  </tr>
+  
+  <tr>
+    <th><%= f.label :コース %></th>
+    <td><%= f.select :course, [["", 0], ["Ruby on Rails", 1], ["WordPress", 2], ["Webデザイン", 3], ["その他", 4]] %></td>
+  </tr>
+  <tr>
+    <th><%= f.label :カテゴリー %></th>
+    <td><%= f.select :category, [["", 0], ["カリキュラム", 1], ["教材", 2], ["授業料", 3], ["その他", 4]] %></td>
+  </tr>
+  <tr>
+    <th><%= f.label :質疑内容 %></th>
+    <td><%= f.text_area :content %>
+    <div class="actions"><%= f.submit %></div>
+    </td>
+  </tr>
+  </table>
+  
+  <div class="field">
+    <%= f.hidden_field :user_id %>
+  </div>
+
+<% end %>
