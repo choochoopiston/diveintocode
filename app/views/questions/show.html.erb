@@ -36,3 +36,7 @@
 <%= link_to 'Back', questions_path %>
 
 <%= render partial: 'answers/form', locals: { answer: @answer } %>
+
+<div id="answers_area">
+  <%= render partial: 'anwsers/index', locals: { answers: @answers } %>
+</div>
