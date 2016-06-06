@@ -53,6 +53,7 @@ Rails.application.configure do
     :authentication => 'plain',
     :user_name => ENV["GMAIL_ADDRESS"],
     :password => ENV["GMAIL_PASSWORD"],
+    :openssl_verify_mode  => 'none'
   }
   
 end
