@@ -1,10 +1,10 @@
-<%= form_for(@question) do |f| %>
-  <% if @question.errors.any? %>
+<%= form_for(question, remote: true) do |f| %>
+  <% if question.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@question.errors.count, "error") %> prohibited this question from being saved:</h2>
+      <h2><%= pluralize(question.errors.count, "error") %> prohibited this question from being saved:</h2>
 
       <ul>
-      <% @question.errors.full_messages.each do |message| %>
+      <% question.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -26,7 +26,7 @@
   
   <tr>
     <th><%= f.label :コース %></th>
-    <td><%= f.select :course, [["", 0], ["Runy on Rails", 1], ["WordPress", 2], ["Webデザイン", 3], ["その他", 4]] %></td>
+    <td><%= f.select :course, [["", 0], ["Ruby on Rails", 1], ["WordPress", 2], ["Webデザイン", 3], ["その他", 4]] %></td>
   </tr>
   <tr>
     <th><%= f.label :カテゴリー %></th>
