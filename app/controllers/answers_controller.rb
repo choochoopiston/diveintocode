@@ -29,6 +29,8 @@ class AnswersController < ApplicationController
 
     respond_to do |format|
       if @answer.save
+        @question = @answer.question
+        AnswerMailer.answer_email(@answer, @question).deliver
         format.html { redirect_to question_path(@answer.question_id), notice: 'Answer was successfully created.' }
         format.json { render :show, status: :created, location: @answer }
         @question = @answer.question
