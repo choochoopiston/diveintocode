@@ -31,6 +31,8 @@ class AnswersController < ApplicationController
       if @answer.save
         format.html { redirect_to question_path(@answer.question_id), notice: 'Answer was successfully created.' }
         format.json { render :show, status: :created, location: @answer }
+        @question = @answer.question
+        format.js
       else
         format.html { render :new }
         format.json { render json: @answer.errors, status: :unprocessable_entity }
