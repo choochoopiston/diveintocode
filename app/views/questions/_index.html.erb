@@ -1,7 +1,3 @@
-<div id="questions_area">
-<%= render partial: 'questions/indexlist', locals: { questions: @questions } %>
-</div>
-
 <% questions.order(created_at: :desc).each do |question| %>
  <div class="panel panel-primary">
      <div class="panel-heading">
