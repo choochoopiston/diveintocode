@@ -19,6 +19,7 @@ class AnswersController < ApplicationController
 
   # GET /answers/1/edit
   def edit
+    @question = Question.find(params[:question_id])
   end
 
   # POST /answers

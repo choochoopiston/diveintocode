@@ -1,3 +1,56 @@
+ <div class="panel panel-primary">
+
+     <div class="panel-heading">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8">
+          <h2 class="panel-title">#<%= link_to @question.title, question_path(@question.id) %></h2>
+        </div>
+        
+        <div class="col-xs-12 col-sm-2">コース：
+          <% if @question.course == "1" %>
+          	<%= "Ruby on Rails" %>
+          <% elsif @question.course == "2" %>
+          	<%= "WordPress" %>
+          <% elsif @question.course == "3" %>
+          	<%= "Webデザイン" %>
+          <% elsif @question.course == "4" %>
+          	<%= "その他" %>
+          <% else %>
+          <% end %>
+        </div>
+        <div class="col-xs-12 col-sm-2">カテゴリー：
+          <%= "" if @question.category == "0" %>
+          <%= "カリキュラム" if @question.category == "1" %>
+          <%= "教材" if @question.category == "2" %>
+          <%= "授業料" if @question.category == "3" %>
+          <%= "その他" if @question.category == "4" %>
+        </div>
+      </div>
+     </div>
+
+     <div class="panel-body">
+      
+        <div class="col-xs-12 col-sm-1 text-nowrap">
+           投稿者:<br />
+           <%= @question.user.name %><br />
+           <% @user = User.find(@question.user_id) %>
+           <%= profile_img(@user) %>
+        </div>
+        
+        <div class="col-xs-12 col-sm-11">
+           <%= simple_format(@question.content) %>
+        </div> 
+
+     </div>
+     
+     <div class="panel-footer text-right">
+      更新日:<%= @question.created_at %>
+     </div>
+     
+ </div>
+
+
+
 <div class="container-fluid">
  <div class="col-xs-12 bg-info text-danger"><h4>回答の編集</h4></div>
  <%= render 'editform'  %>
