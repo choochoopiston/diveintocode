@@ -55,10 +55,7 @@ gem 'bootstrap-social-rails'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-<<<<<<< HEAD
   gem 'dotenv'
-=======
->>>>>>> deccc4da04dab670391355a8a9349c6d7167786f
 end
 
 group :development do
