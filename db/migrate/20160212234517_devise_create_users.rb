@@ -36,10 +36,8 @@ class DeviseCreateUsers < ActiveRecord::Migration
 
     add_index :users, :email,                unique: true
     add_index :users, :reset_password_token, unique: true
-<<<<<<< HEAD
-=======
-    add_index :users,[:uid,:provider],unique:true
->>>>>>> deccc4da04dab670391355a8a9349c6d7167786f
+
+
     # add_index :users, :confirmation_token,   unique: true
     # add_index :users, :unlock_token,         unique: true
   end

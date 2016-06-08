@@ -1,9 +1,5 @@
 == README
-<<<<<<< HEAD
 テストGitFlowテスト
-=======
-
->>>>>>> deccc4da04dab670391355a8a9349c6d7167786f
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
