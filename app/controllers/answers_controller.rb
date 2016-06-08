@@ -1,5 +1,6 @@
 class AnswersController < ApplicationController
-  before_action :set_answer, only: [:show, :edit, :update, :destroy]
+  before_action :set_answer, only: [:show]
+  before_action :sameuser, only: [:edit, :update, :destroy]
 
   # GET /answers
   # GET /answers.json
@@ -67,6 +68,10 @@ class AnswersController < ApplicationController
     end
   end
 
+  def render_404
+    redirect_to root_path
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_answer
@@ -77,4 +82,13 @@ class AnswersController < ApplicationController
     def answer_params
       params.require(:answer).permit(:content, :question_id, :user_id)
     end
+
+    def sameuser
+      @answer = Answer.find(params[:id])
+      
+      if current_user.id != @answer.user_id
+        redirect_to root_path
+      end
+    end
+    
 end
