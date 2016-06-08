@@ -1,5 +1,8 @@
-<h1>回答を編集/h1>
+<div class="container-fluid">
+ <div class="col-xs-12 bg-info text-danger"><h4>回答の編集</h4></div>
+ <%= render 'editform'  %>
+</div>
 
-<%= render 'editform' %>
-
+<div class="container-fluid">
 <%= link_to 'Back', question_path(@answer.question) %>
+</div>
