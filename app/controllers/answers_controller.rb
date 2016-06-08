@@ -37,7 +37,7 @@ class AnswersController < ApplicationController
         @question = @answer.question
         format.js { render :index, notice: 'Answer was successfully created.' }
       else
-        format.html { render :new }
+        format.html { redirect_to question_path(@answer.question_id) }
         format.json { render json: @answer.errors, status: :unprocessable_entity }
       end
     end
