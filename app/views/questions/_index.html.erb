@@ -2,9 +2,33 @@
 
 
  <div class="panel panel-primary">
- 
+
      <div class="panel-heading">
-        <h2 class="panel-title">#<%= link_to question.title, question_path(question.id) %></h2>
+      <div class="row">
+        <div class="col-xs-12 col-sm-8">
+          <h2 class="panel-title">#<%= link_to question.title, question_path(question.id) %></h2>
+        </div>
+        
+        <div class="col-xs-12 col-sm-2">コース：
+          <% if question.course == "1" %>
+          	<%= "Ruby on Rails" %>
+          <% elsif question.course == "2" %>
+          	<%= "WordPress" %>
+          <% elsif question.course == "3" %>
+          	<%= "Webデザイン" %>
+          <% elsif question.course == "4" %>
+          	<%= "その他" %>
+          <% else %>
+          <% end %>
+        </div>
+        <div class="col-xs-12 col-sm-2">カテゴリー：
+          <%= "" if question.category == "0" %>
+          <%= "カリキュラム" if question.category == "1" %>
+          <%= "教材" if question.category == "2" %>
+          <%= "授業料" if question.category == "3" %>
+          <%= "その他" if question.category == "4" %>
+        </div>
+      </div>
      </div>
 
      <div class="panel-body">
@@ -20,9 +44,8 @@
            <%= simple_format(question.content) %>
         </div> 
 
-
-
      </div>
+     
      <div class="panel-footer text-right">
        <% if current_user.id == question.user_id %>
 　　　    <%= link_to 'Edit', edit_question_path(question.id) %> | 
@@ -31,5 +54,7 @@
        <% end %>
       更新日:<%= question.created_at %>
      </div>
+     
  </div>
+ 
 <% end %>
