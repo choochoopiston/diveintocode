@@ -4,7 +4,13 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> 
 <head>
 　<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+<<<<<<< HEAD
 　<%= javascript_include_tag 'application', 'data-turbolinks-eval' => false %>
+=======
+
+  
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+>>>>>>> deccc4da04dab670391355a8a9349c6d7167786f
   <%= csrf_meta_tags %>
 
     <meta charset="utf-8">
@@ -58,6 +64,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
+<<<<<<< HEAD
         <li><a href="#">
           <% if user_signed_in? %>
         　<li><%= link_to "ブログ一覧", blogs_path %></li><li><%= link_to "ユーザー一覧", users_path %></li>
@@ -65,12 +72,22 @@
           <li><%= link_to "お問い合わせ", inquiry_path %></li>
           <li><%= link_to "Q&A", questions_path %></li>
           <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+=======
+        <li>
+          <% if user_signed_in? %>
+        　<li><%= link_to "ブログ一覧", blogs_path %></li><li><%= link_to "ユーザー一覧", users_path %></li>
+          <li><%= link_to "ユーザー情報変更", edit_user_registration_path %></li><li><%= link_to "お問い合わせ", inquiry_path %></li><li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+>>>>>>> deccc4da04dab670391355a8a9349c6d7167786f
           <% else %>
           <li><%= link_to "ログイン", new_user_session_path %></li>
           <li><%= link_to "facebookログイン", user_omniauth_authorize_path(:facebook), class: 'navbar-link' %></li> 
           <li><%= link_to "twitterログイン", user_omniauth_authorize_path(:twitter), class: 'navbar-link' %></li>
           <% end %>
+<<<<<<< HEAD
         </a></li>
+=======
+        </li>
+>>>>>>> deccc4da04dab670391355a8a9349c6d7167786f
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

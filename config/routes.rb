@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
 
   root to: "top#index"
   
@@ -19,6 +20,16 @@ Rails.application.routes.draw do
   get 'users/index'
   get 'users/show'
 
+=======
+  get 'about/company_overview'
+
+  get 'users/index'
+
+  get 'users/show'
+
+  root to: "top#index"
+  
+>>>>>>> deccc4da04dab670391355a8a9349c6d7167786f
   devise_for :users, controllers: {
     auth: "/auth/:provider/callback",
     sessions: "users/sessions",
@@ -27,6 +38,10 @@ Rails.application.routes.draw do
     omniauth_callbacks: "users/omniauth_callbacks"
 }
 
+<<<<<<< HEAD
+=======
+  resources :blogs
+>>>>>>> deccc4da04dab670391355a8a9349c6d7167786f
   resources :users, only:[:index, :show, :edit, :update]
   
   as :user do
@@ -34,11 +49,18 @@ Rails.application.routes.draw do
   end
   
   
+<<<<<<< HEAD
 
+=======
+>>>>>>> deccc4da04dab670391355a8a9349c6d7167786f
   get 'inquiry', to: 'inquiry#index'
   post 'inquiry', to: 'inquiry#index'
   post 'inquiry/confirm', to: 'inquiry#confirm'
   post 'inquiry/thanks', to: 'inquiry#thanks'
+<<<<<<< HEAD
+=======
+
+>>>>>>> deccc4da04dab670391355a8a9349c6d7167786f
   
   get 'about' => 'about#company_overview'
   
