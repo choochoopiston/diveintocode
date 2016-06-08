@@ -1,42 +1,69 @@
+ <div class="panel panel-primary">
+ 
+     <div class="panel-heading">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8">
+          <h2 class="panel-title">#<%= @question.title %></h2>
+        </div>
+        
+        <div class="col-xs-12 col-sm-2">コース：
+          <% if @question.course == "1" %>
+          	<%= "Ruby on Rails" %>
+          <% elsif @question.course == "2" %>
+          	<%= "WordPress" %>
+          <% elsif @question.course == "3" %>
+          	<%= "Webデザイン" %>
+          <% elsif @question.course == "4" %>
+          	<%= "その他" %>
+          <% else %>
+          <% end %>
+        </div>
+        <div class="col-xs-12 col-sm-2">カテゴリー：
+          <%= "" if @question.category == "0" %>
+          <%= "カリキュラム" if @question.category == "1" %>
+          <%= "教材" if @question.category == "2" %>
+          <%= "授業料" if @question.category == "3" %>
+          <%= "その他" if @question.category == "4" %>
+        </div>
+      </div>
+     </div>
 
-<div class="row">
-  <div class="col-sm-2">質疑件名</div>
-  <div class="col-sm-10"><%= @question.title %></div>
+     <div class="panel-body">
+       
+        <div class="col-xs-12 col-sm-1 text-nowrap">
+           質疑者:<br />
+           <%= @question.user.name %><br />
+           <% @user = User.find(@question.user_id) %>
+           <%= profile_img(@user) %>
+        </div>
+        
+        <div class="col-xs-12 col-sm-11">
+           <%= simple_format(@question.content) %>
+        </div> 
+
+     </div>
+     
+     <div class="panel-footer text-right">
+       <%= link_to 'Back', questions_path %>
+       <% if current_user.id == @question.user_id %>
+　　　    <%= link_to 'Edit', edit_question_path(@question) %> | 
+          <%= link_to 'Delete', question_path(@question), :method => :delete, remote: true, data: { confirm: 'Are you sure?' } %>
+       <% else %>
+       <% end %>
+      更新日:<%= @question.created_at %>
+     </div>
+     
+ </div>
+
+<h1>回答一覧</h1>
+
+<div class="container-fluid">
+   <div class="col-xs-12 bg-info text-danger"><h4>回答作成</h4></div>
+   <%= render partial: 'answers/form', locals: { answer: @answer } %>
 </div>
 
-<div class="row">
-  <div class="col-sm-4">コース：
-    <% if @question.course == "1" %>
-    	<%= "Ruby on Rails" %>
-    <% elsif @question.course == "2" %>
-    	<%= "WordPress" %>
-    <% elsif @question.course == "3" %>
-    	<%= "Webデザイン" %>
-    <% elsif @question.course == "4" %>
-    	<%= "その他" %>
-    <% else %>
-    <% end %>
-  </div>
-  <div class="col-sm-4">カテゴリー：
-    <%= "" if @question.category == "0" %>
-    <%= "カリキュラム" if @question.category == "1" %>
-    <%= "教材" if @question.category == "2" %>
-    <%= "授業料" if @question.category == "3" %>
-    <%= "その他" if @question.category == "4" %>  
-  </div>
-  <div class="col-sm-4">質疑者：<%= @question.user.name %></div>
-</div>
-
-<div class="row">
-  <div class="col-sm-2">内容</div>
-  <div class="col-sm-10"><%= @question.content %></div>
-</div>
-
-<%= link_to 'Edit', edit_question_path(@question) %> |
-<%= link_to 'Back', questions_path %>
-
-<%= render partial: 'answers/form', locals: { answer: @answer } %>
-
-<div id="answers_area">
-  <%= render partial: 'answers/index', locals: { answers: @question.answers } %>
+<div class="container-fluid">
+    <div id="answers_area">
+      <%= render partial: 'answers/index', locals: { answers: @question.answers } %>
+    </div>
 </div>
