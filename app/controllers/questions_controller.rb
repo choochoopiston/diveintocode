@@ -1,5 +1,6 @@
 class QuestionsController < ApplicationController
-  before_action :set_question, only: [:show, :edit, :update, :destroy]
+  before_action :set_question, only: [:show]
+  before_action :sameuser, only: [:edit, :update, :destroy]
 
   # GET /questions
   # GET /questions.json
@@ -67,6 +68,10 @@ class QuestionsController < ApplicationController
       format.js {render :index, notice: 'Question was successfully destroyed.' }
     end
   end
+  
+  def render_404
+    redirect_to root_path
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -78,4 +83,14 @@ class QuestionsController < ApplicationController
     def question_params
       params.require(:question).permit(:title, :course, :category, :content, :user_id)
     end
+    
+    def sameuser
+      @question = Question.find(params[:id])
+      
+      if current_user.id != @question.user_id
+        redirect_to root_path
+      end
+    end
+
+
 end
