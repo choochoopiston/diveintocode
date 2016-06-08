@@ -1,11 +1,8 @@
 Rails.application.configure do
-<<<<<<< HEAD
   
 require 'dotenv'
 Dotenv.load
 
-=======
->>>>>>> deccc4da04dab670391355a8a9349c6d7167786f
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
