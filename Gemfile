@@ -28,6 +28,8 @@ gem 'i18n_generators'
 gem 'devise'
 gem 'rails_12factor'
 
+gem 'thin'
+
 
 gem 'less-rails'
 
@@ -99,4 +101,8 @@ gem "guard-rspec", require: false
 gem "rack-mini-profiler"
 gem "spring-commands-rspec" 
 gem "xray-rails" 
+end
+
+group :production do
+gem 'thin'
 end
