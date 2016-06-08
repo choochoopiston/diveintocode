@@ -5,13 +5,10 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable, :omniauthable
          
   has_many :blogs, dependent: :destroy
-<<<<<<< HEAD
   has_many :comments, dependent: :destroy
   has_many :questions, dependent: :destroy
   has_many :answers, dependent: :destroy
 
-=======
->>>>>>> deccc4da04dab670391355a8a9349c6d7167786f
 
   mount_uploader :image, ImageUploader
   
