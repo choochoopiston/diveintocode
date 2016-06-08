@@ -1,10 +1,14 @@
 <h1>Q&A一覧</h1>
 
+<div class="container-fluid">
+   <div class="col-xs-12 bg-info text-danger"><h4>新規質疑作成</h4></div>
+   <%= render partial: 'questions/form', locals: { question: @question } %>
+</div>
 
-<%= render partial: 'questions/form', locals: { question: @question } %>
-
-<div id="questions_area">
-<%= render partial: 'questions/index', locals: { questions: @questions } %>
+<div class="container-fluid">
+   <div id="questions_area">
+    <%= render partial: 'questions/index', locals: { questions: @questions } %>
+   </div>
 </div>
 
 
