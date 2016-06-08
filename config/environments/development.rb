@@ -1,4 +1,7 @@
 Rails.application.configure do
+  
+require 'dotenv'
+Dotenv.load
 
 
   # Settings specified here will take precedence over those in config/application.rb.
