@@ -4,7 +4,7 @@
       <h2><%= @question.errors.count %>個のエラーがあります:</h2>
 
       <ul>
-      <% @question.errors.each do |attribute, msg| %>
+      <% @question.errors.each do |attribute, message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
