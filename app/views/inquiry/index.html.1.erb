@@ -1,0 +1,26 @@
+<%= link_to work_yns_path(@work, q: 'yes'), method: :post, data: { disable_with: "投票中..." } 
+do image_tag("button/yn/yes_y3.gif", onmouseover: "this.src='#{asset_path('button/yn/yes_y5.gif')}'", 
+onmouseout: "this.src='#{asset_path('button/yn/yes_y3.gif')}'") end %></td>
+
+<%= form_for @inquiry, :url => inquiry_confirm_path do |f| %>
+<%= form_for [@work, @yn], :url => work_yns_path do |f| %>
+
+<% if @yn.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-error">
+      <strong></strong>入力内容に <%= @inquiry.errors.count %>個のエラーがあります。</strong>
+    </div>
+    <ol>
+    <% @yn.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ol>
+  </div>
+<% end %>
+
+<%= f.hidden_field :yes[1] %></td>
+ 
+</table>
+<%= f.submit do image_tag("button/yn/yes_y3.gif", onmouseover: "this.src='#{asset_path('button/yn/yes_y5.gif')}'", 
+onmouseout: "this.src='#{asset_path('button/yn/yes_y3.gif')}'") end %>
+<% end %>

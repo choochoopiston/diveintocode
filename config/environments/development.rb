@@ -1,8 +1,11 @@
 Rails.application.configure do
+<<<<<<< HEAD
   
 require 'dotenv'
 Dotenv.load
 
+=======
+>>>>>>> deccc4da04dab670391355a8a9349c6d7167786f
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -45,18 +48,35 @@ Dotenv.load
   
   # deviseの設定 
   config.action_mailer.default_url_options = { host: 'https://code-choochoopiston.c9users.io/' }  
+<<<<<<< HEAD
   BetterErrors::Middleware.allow_ip! '10.240.0.213'
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
 
+=======
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+>>>>>>> deccc4da04dab670391355a8a9349c6d7167786f
     :enable_starttls_auto => true,
     :address => "smtp.gmail.com",
     :port => 587,
     :domain => 'gmail.com',
+<<<<<<< HEAD
     :authentication => 'plain',
     :user_name => ENV["GMAIL_ADDRESS"],
     :password => ENV["GMAIL_PASSWORD"],
   }
   
 end
+=======
+    :user_name => "choochoopiston@gmail.com",
+    :password => "iqmqjfhvfhjiypot",
+    :authentication => 'login',
+  }
+  
+  BetterErrors::Middleware.allow_ip! '10.240.0.213'
+  
+end
+>>>>>>> deccc4da04dab670391355a8a9349c6d7167786f

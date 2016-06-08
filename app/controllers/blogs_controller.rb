@@ -10,11 +10,15 @@ class BlogsController < ApplicationController
 
   # GET /blogs/1
   # GET /blogs/1.json
+<<<<<<< HEAD
   # showアクションが呼び起こされた際に、画面上に「コメントの入力フォーム」が表示。つまりshowアクション時に"該当ブログにひもづくコメントのモデルオブジェクト"を生成
   def show
     @comment = @blog.comments.build
     @comments = @blog.comments
     
+=======
+  def show
+>>>>>>> deccc4da04dab670391355a8a9349c6d7167786f
   end
 
   # GET /blogs/new

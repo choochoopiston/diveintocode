@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160606005458) do
 
   create_table "answers", force: :cascade do |t|
@@ -23,6 +24,9 @@ ActiveRecord::Schema.define(version: 20160606005458) do
 
   add_index "answers", ["question_id"], name: "index_answers_on_question_id"
   add_index "answers", ["user_id"], name: "index_answers_on_user_id"
+=======
+ActiveRecord::Schema.define(version: 20160306084205) do
+>>>>>>> deccc4da04dab670391355a8a9349c6d7167786f
 
   create_table "blogs", force: :cascade do |t|
     t.string   "title"
@@ -32,6 +36,7 @@ ActiveRecord::Schema.define(version: 20160606005458) do
     t.integer  "user_id"
   end
 
+<<<<<<< HEAD
   create_table "comments", force: :cascade do |t|
     t.integer  "blog_id"
     t.integer  "user_id"
@@ -43,6 +48,8 @@ ActiveRecord::Schema.define(version: 20160606005458) do
   add_index "comments", ["blog_id"], name: "index_comments_on_blog_id"
   add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
+=======
+>>>>>>> deccc4da04dab670391355a8a9349c6d7167786f
   create_table "inquiries", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
@@ -51,6 +58,7 @@ ActiveRecord::Schema.define(version: 20160606005458) do
     t.datetime "updated_at", null: false
   end
 
+<<<<<<< HEAD
   create_table "questions", force: :cascade do |t|
     t.string   "title"
     t.string   "course"
@@ -63,6 +71,8 @@ ActiveRecord::Schema.define(version: 20160606005458) do
 
   add_index "questions", ["user_id"], name: "index_questions_on_user_id"
 
+=======
+>>>>>>> deccc4da04dab670391355a8a9349c6d7167786f
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false

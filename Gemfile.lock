@@ -96,7 +96,10 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
+<<<<<<< HEAD
     dotenv (2.1.1)
+=======
+>>>>>>> deccc4da04dab670391355a8a9349c6d7167786f
     erubis (2.7.0)
     execjs (2.6.0)
     factory_girl (4.5.0)
@@ -364,7 +367,10 @@ DEPENDENCIES
   colorize_unpermitted_parameters
   database_rewinder
   devise
+<<<<<<< HEAD
   dotenv
+=======
+>>>>>>> deccc4da04dab670391355a8a9349c6d7167786f
   factory_girl_rails
   faker
   guard-rspec

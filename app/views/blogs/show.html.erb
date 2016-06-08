@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<p id="notice"><%= notice %></p>
+
+>>>>>>> deccc4da04dab670391355a8a9349c6d7167786f
 <p>
   <strong>Title:</strong>
   <%= @blog.title %>
@@ -8,6 +13,7 @@
   <%= @blog.content %>
 </p>
 
+<<<<<<< HEAD
 <div id="comments_area">
   <%= render partial: 'comments/index', locals: { comments: @blog.comments } %>
 </div>
@@ -17,5 +23,7 @@
   <%= render partial: 'comments/form', locals: { comment: @comment } %>
 </p>
 
+=======
+>>>>>>> deccc4da04dab670391355a8a9349c6d7167786f
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
 <%= link_to 'Back', blogs_path %>

@@ -6,4 +6,8 @@ class InquiryMailer < ApplicationMailer
         @content = inquiry.content
         mail(to: inquiry.email, subject: "お問い合わせありがとうございました")
     end
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> deccc4da04dab670391355a8a9349c6d7167786f
