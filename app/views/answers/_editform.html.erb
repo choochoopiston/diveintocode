@@ -1,4 +1,9 @@
+
+
 <%= form_for(@answer) do |f| %>
+
+<form class="form-horizontal">
+  
   <% if @answer.errors.any? %>
     <div id="error_explanation">
       <h2><%= @answer.errors.count %>個のエラーがあります:</h2>
@@ -11,7 +16,7 @@
     </div>
   <% end %>
 
-<form class="form-horizontal">
+
   
   <div class="form-group form-group-sm has-warning">
     <div class="container-fluid">

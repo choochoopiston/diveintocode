@@ -1,17 +1,34 @@
-<%= form_for(@question) do |f| %>
-  <% if @question.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= @question.errors.count %>個のエラーがあります:</h2>
 
-      <ul>
-      <% @question.errors.each do |attribute, message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+  
+<%= form_for(@question) do |f| %>
+
+<form class="form-horizontal">
+  
+  <% if @question.errors.any? %>
+  <div class="container-fluid" style="border: 2px solid red;">
+    
+    <div class="row" style="background-color: #c00; color: #fff;">
+          <div class="col-12-xs">
+                <h5 style="padding-left: 10px"><%= @question.errors.count %>個のエラーがあります:</h5>
+          </div>
     </div>
+
+    <div class="row" style="background-color: #f0f0f0;">
+          <div class="col-12-xs">
+                <ul>
+                  <% @question.errors.each do |attribute, message| %>
+                    <div class="col-12-xs">
+                      <li style="color: #c00; list-style: square;"><%= message %></li>
+                    </div>
+                  <% end %>
+                </ul>
+          </div>
+     </div>
+  </div>
   <% end %>
   
-<form class="form-horizontal">
+
+
   
   <div class="form-group form-group-sm has-warning">
     <div class="container-fluid">

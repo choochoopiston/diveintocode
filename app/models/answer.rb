@@ -3,6 +3,6 @@ class Answer < ActiveRecord::Base
   belongs_to :user
 
   validates :content,  
-  presence: { message: "入力してください。" }
+  presence: { message: "内容を入力してください。" }
   
 end
