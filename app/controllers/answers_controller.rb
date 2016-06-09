@@ -52,7 +52,7 @@ class AnswersController < ApplicationController
         format.json { render :show, status: :ok, location: @answer }
       else
         @question = @answer.question
-        format.html { render :edit }
+        format.html { redirect_to edit_question_answer_path(@question, @answer) }
         format.json { render json: @answer.errors, status: :unprocessable_entity }
       end
     end

@@ -37,7 +37,7 @@ class QuestionsController < ApplicationController
         @questions = Question.all
         format.js {render :index, notice: 'Question was successfully created.' }
       else
-        format.html { redirect_to questions_path }
+        format.html { render :new }
         format.json { render json: @question.errors, status: :unprocessable_entity }
       end
     end
