@@ -1,6 +1,7 @@
 class AnswersController < ApplicationController
   before_action :set_answer, only: [:show]
   before_action :sameuser, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /answers
   # GET /answers.json
@@ -52,7 +53,7 @@ class AnswersController < ApplicationController
         format.json { render :show, status: :ok, location: @answer }
       else
         @question = @answer.question
-        format.html { redirect_to edit_question_answer_path(@question, @answer) }
+        format.html { render :edit  } 
         format.json { render json: @answer.errors, status: :unprocessable_entity }
       end
     end

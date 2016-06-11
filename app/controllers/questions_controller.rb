@@ -1,7 +1,8 @@
 class QuestionsController < ApplicationController
   before_action :set_question, only: [:show]
   before_action :sameuser, only: [:edit, :update, :destroy]
-
+  before_action :authenticate_user! 
+  
   # GET /questions
   # GET /questions.json
   def index

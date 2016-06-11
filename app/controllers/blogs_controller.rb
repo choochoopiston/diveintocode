@@ -1,6 +1,7 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show]
   before_action :sameuser, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /blogs
   # GET /blogs.json

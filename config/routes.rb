@@ -28,11 +28,17 @@ Rails.application.routes.draw do
 }
 
 
-  resources :users, only:[:index, :show, :edit, :update]
+  resources :users, only:[:index, :show, :edit, :update] do
+    member do
+      get :following, :followers
+    end
+  end
   
   as :user do
   get 'users', to: 'users#show'
   end
+  
+  resources :relationships, only: [:create, :destroy]
   
   
 
