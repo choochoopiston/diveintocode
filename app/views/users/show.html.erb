@@ -1,3 +1,9 @@
+<%= render partial: "follow_form", locals: { user: @user} if signed_in %>
+
+<% @friend_users ||= current_user %>
+<%= link_to '友達', following_user_path(@friend_users) %>
+<%= link_to 'Back', users_path %>
+
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
 
