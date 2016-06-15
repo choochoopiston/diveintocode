@@ -16,7 +16,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <% @users.order(id: :asc).limit(5).each do |user| %>
+                        <% @users.order(id: :asc).limit(10).each do |user| %>
                         <tr>
                             <td>
                                 <%= link_to profile_img(user), user %>
@@ -36,7 +36,7 @@
             </div>
         </div>
         
-        <% if @users.count >= 5 %>
+        <% if @users.count >= 10 %>
         <div class="col-xs-12 col-sm-6">
             <div class="container-fluid">
                 <table class="table table-hover">
@@ -47,7 +47,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <% @users.order(id: :asc).last(5).each do |user| %>
+                        <% @users.order(id: :asc).last(10).each do |user| %>
                         <tr>
                             <td>
                                 <%= link_to profile_img(user), user %>
