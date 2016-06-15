@@ -86,6 +86,13 @@ class User < ActiveRecord::Base
    where("id IN (#{followed_user_ids})", user_id: user.id)
   end
   
+  def each_other_friends
+	  User.each_other_follows(self)
+  end
+
+  def self.each_other_follows(user)
+  	user.followers&user.followed_users
+  end
 
 
 end
