@@ -16,4 +16,9 @@ ja:
    messages:
     taken: はすでに存在します。
     blank: が空欄です。
-    invalid: が間違っています。
+    invalid: が間違っています.
+  views:
+   pagination:
+    previous: "« 前ページ"
+    next: "次ページ »"
+    truncate: "..."
