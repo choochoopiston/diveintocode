@@ -1,14 +1,59 @@
-<%= render partial: "follow_form", locals: { user: @user} if signed_in %>
+<div class="container">
+    <div class="panel panel-primary">
+    
+         <div class="panel-heading">
+              <div class="container">
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-9">
+                       <h1 class="panel-title">#<%= @user.name %></h1>
+                    </div>
+                    <div class="col-xs-12 col-sm-1">
+                       <% unless @user == current_user %>
+                       <%= render partial: 'follow_form', locals: { user: @user } %>
+                       <% else %>
+                       <% end %>
+                    </div>
+                  </div>
+              </div>
+         </div>
+    
+         <div class="panel-body">
+           <div class="row">
+                <div class="col-xs-12 col-sm-1 text-nowrap">
+                    <%= profile_img(@user) %>
+                </div>
+                
+                <div class="col-xs-12 col-sm-11">
+                   プロフィール: <%= simple_format(@user.profile) %>
+                </div>
+            </div>
+         </div>
+         
+         <div class="panel-footer text-right">
 
-<% @friend_users ||= current_user %>
-<%= link_to '友達', following_user_path(@friend_users) %>
-<%= link_to 'Back', users_path %>
+           <% if current_user.id == @user.id %>
+    　　　 <%= link_to 'Edit', edit_user_registration_path(@user) %> | 
+           <% else %>
+           <% end %>
+          <%= link_to 'Back', users_path %>
+          ユーザー登録日:<%= @user.created_at %>
+         </div>
+         
+    </div>
+</div>
 
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
 
-　<% if @user.image? %>
-　　<%= image_tag @user.image.thumb.url %>
-　<% else %>
-　　<%= image_tag 'noimage.gif' %>
-　<% end %>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-xs-12 col-sm-6">
+            <h3><%= link_to "フォローワー一覧>>", followers_user_path(@user) %></h3>
+        </div>
+
+        <div class="col-xs-12 col-sm-6">
+            <h3><%= link_to "フォローしているユーザー一覧>>", following_user_path(@user) %></h3>
+        </div>
+        
+    </div>
+</div>

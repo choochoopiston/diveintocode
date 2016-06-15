@@ -1,0 +1,26 @@
+            
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>ユーザ名</th>
+                        <th>友達つながり</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% followed_users.each do |followed_user| %>
+                    <tr>
+                        <td>
+                            <%= link_to profile_img(followed_user), followed_user %>
+                            <%= link_to followed_user.name, followed_user %>
+                        </td>
+                        <td>
+                            <% unless followed_user == current_user %>
+                            <%= render partial: 'users/follow_form', locals: { user: followed_user } %>
+                            <% else %>
+                            <%= link_to "マイアカウント", followed_user, class: "btn btn-info btn-sm" %>
+                            <% end %>
+                        </td>
+                    </tr>
+                    <% end %>
+                </tbody>
+            </table>

@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
   
   #第3段階「相対的な参照関係を定義する」
   has_many :followed_users, through: :relationships, source: :followed
-  has_many :followers, through: :reverse_relationships, source: :followers
+  has_many :followers, :through => :reverse_relationships, :source => :follower
   
   mount_uploader :image, ImageUploader
   
@@ -56,19 +56,19 @@ class User < ActiveRecord::Base
     result
   end
   
-  #指定のユーザをフォローする
+  #指定のユーザをフォローする→必要ないのでは？
   def follow!(other_user)
     relationships.create!(followed_id: other_user.id)
   end
   
-  #指定のユーザのフォローを解除する
+  #指定のユーザのフォローを解除する→必要ないのでは？
   def unfollow!(other_user)
     relationships.find_by(followed_id: other_user.id).destroy
   end
   
   #フォローしているかどうかを確認する
   def following?(other_user)
-    relationshops.find_by(followed_id: other_user.id)
+    relationships.find_by(followed_id: other_user.id)
   end
   
   #「自分が」フォローしあっているユーザー一覧を取得する

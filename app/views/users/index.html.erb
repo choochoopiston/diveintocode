@@ -1,35 +1,45 @@
 <% provide(:title, 'All users') %>
 <h1>ユーザー一覧</h1>
-<ul class="users">
-  <ul class="users">
-    <% @users.each do |user| %>
-    <%= render @users, locals: { user: user }  %>
-    <% end %>
-  </ul>
-</ul>
 
-<% @users.each do |user| %>
-　
-<div class="row">
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <div class="caption">
-        <h3>ユーザー名:<%= user.name %></h3>
-        <p>プロフィール:<%= user.profile %></p>
-        <p><%= profile_img(user) %></p>
+
+<div class="container">
+    <table class="table table-hover">
         
-<% if current_user.id == user.id %>
-<%= link_to 'Edit', edit_user_registration_path %>
-<% else %>
-<% end %>
+        <thead>
+            <tr>
+                <th>ユーザ名</th>
+                <th>友達つながり</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @users.each do |user| %>
+            <tr>
+                <td>
+                    <%= link_to profile_img(user), user %>
+                    <%= link_to user.name, user %>
+                </td>
+                <td>
+                    <% unless user == current_user %>
+                    <%= render partial: 'follow_form', locals: { user: user } %>
+                    <% else %>
+                    <%= link_to "マイアカウント", user, class: "btn btn-info btn-sm" %>
+                    <% end %>
+                </td>
+            </tr>
+            <% end %>
+            <tr>
+                <td>
+                    <%= paginate @users %>
+                </td>
+            </tr>
 
-
-      </div>
-    </div>
-  </div>
+        </tbody>
+        
+    </table>
+    
 </div>
 
 
-<% end %>
+
 　
 　
