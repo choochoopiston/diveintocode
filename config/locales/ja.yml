@@ -11,14 +11,15 @@ ja:
     current_password: 現行のパスワード
   models:
    user: ユーザー
-  
   errors:
    messages:
     taken: はすでに存在します。
     blank: が空欄です。
     invalid: が間違っています.
+ja:
   views:
-   pagination:
-    previous: "« 前ページ"
-    next: "次ページ »"
-    truncate: "..."
+    pagination:
+      previous: "≪ 前ページ"
+      next: "次ページ ≫"
+      last: "最後のページ"
+      truncate: "..."
