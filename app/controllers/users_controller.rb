@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
-    @users = User.all
+    @users = User.page(params[:page]).per(20)
   end
 
   def show
@@ -13,14 +15,13 @@ class UsersController < ApplicationController
   
   def following
     @user = User.find(params[:id])
-    @users = @user.flowed_users
-    render 'show_follow'
+    render 'following'
   end
   
   def followers
     @user = User.find(params[:id])
     @users = @user.followers
-    render 'show_follow'
+    render 'follwers'
   end
   
   private
