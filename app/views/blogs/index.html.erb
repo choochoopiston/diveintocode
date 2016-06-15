@@ -1,28 +1,28 @@
 <h2>相互フォロー・ブログ一覧: <%= link_to "ブログを投稿する！", new_blog_path %></h2>
 
 <% @users.each do |user| %>
-   <% blog = Blog.find_by(user_id: user.id) %>
-   
- <div class="panel panel-primary">
-     <div class="panel-heading">
-         <h3 class="panel-title"><%= link_to blog.title, blog_path(blog.id) %></h3>
-     </div>
-     <div class="panel-body">
-         
-         <p><%= blog.content %></p>
-
-         <P><% @user=User.find(blog.user_id) %>
-         <%= profile_img(@user) %>投稿者:<%= blog.user.name %></P>
-
-         <em><%= blog.created_at %></em>
-
-          <% if current_user.id == blog.user_id %>
-　　　　　<%= link_to 'Edit', edit_blog_path(blog.id) %> | 
-          <%= link_to 'Delete', blog_path(blog.id), :method => :delete %>
-          <% else %>
-
-          <% end %>
-     </div>
- </div>
-
+   <% @blogs = user.blogs %>
+   <% @blogs.each do |blog| %>
+         <div class="panel panel-primary">
+             <div class="panel-heading">
+                 <h3 class="panel-title"><%= link_to blog.title, blog_path(blog.id) %></h3>
+             </div>
+             <div class="panel-body">
+                 
+                 <p><%= blog.content %></p>
+        
+                 <P><% @user=User.find(blog.user_id) %>
+                 <%= profile_img(@user) %>投稿者:<%= blog.user.name %></P>
+        
+                 <em><%= blog.created_at %></em>
+        
+                  <% if current_user.id == blog.user_id %>
+        　　　   　　<%= link_to 'Edit', edit_blog_path(blog.id) %> | 
+                  <%= link_to 'Delete', blog_path(blog.id), :method => :delete %>
+                  <% else %>
+        
+                  <% end %>
+             </div>
+         </div>
+    <% end %>
 <% end %>
