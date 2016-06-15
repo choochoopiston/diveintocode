@@ -1,42 +1,76 @@
 <% provide(:title, 'All users') %>
+
 <h1>ユーザー一覧</h1>
 
-
-<div class="container">
-    <table class="table table-hover">
+<div class="container-fluid">
+    <div class="row">
         
-        <thead>
-            <tr>
-                <th>ユーザ名</th>
-                <th>友達つながり</th>
-            </tr>
-        </thead>
-        <tbody>
-            <% @users.order(id: :asc).each do |user| %>
-            <tr>
-                <td>
-                    <%= link_to profile_img(user), user %>
-                    <%= link_to user.name, user %>
-                </td>
-                <td>
-                    <% unless user == current_user %>
-                    <%= render partial: 'follow_form', locals: { user: user } %>
-                    <% else %>
-                    <%= link_to "マイアカウント", user, class: "btn btn-info btn-sm" %>
-                    <% end %>
-                </td>
-            </tr>
-            <% end %>
-            <tr>
-                <td>
-                    <%= paginate @users %>
-                </td>
-            </tr>
-
-        </tbody>
+        <div class="col-xs-12 col-sm-6">
+            <div class="container-fluid">
+                <table class="table table-hover">
+                    
+                    <thead>
+                        <tr>
+                            <th>ユーザ名</th>
+                            <th>友達つながり</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @users.order(id: :asc).limit(5).each do |user| %>
+                        <tr>
+                            <td>
+                                <%= link_to profile_img(user), user %>
+                                <%= link_to user.name, user %>
+                            </td>
+                            <td>
+                                <% unless user == current_user %>
+                                <%= render partial: 'follow_form', locals: { user: user } %>
+                                <% else %>
+                                <%= link_to "マイアカウント", user, class: "btn btn-info btn-sm" %>
+                                <% end %>
+                            </td>
+                        </tr>
+                        <% end %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
         
-    </table>
-    
+        <% if @users.count >= 5 %>
+        <div class="col-xs-12 col-sm-6">
+            <div class="container-fluid">
+                <table class="table table-hover">
+                    <thead class="hidden-xs">
+                        <tr>
+                            <th>ユーザ名</th>
+                            <th>友達つながり</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @users.order(id: :asc).last(5).each do |user| %>
+                        <tr>
+                            <td>
+                                <%= link_to profile_img(user), user %>
+                                <%= link_to user.name, user %>
+                            </td>
+                            <td>
+                                <% unless user == current_user %>
+                                <%= render partial: 'follow_form', locals: { user: user } %>
+                                <% else %>
+                                <%= link_to "マイアカウント", user, class: "btn btn-info btn-sm" %>
+                                <% end %>
+                            </td>
+                        </tr>
+                        <% end %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <% else %>
+        <% end %>
+        
+    </div>
+    <%= paginate @users %>
 </div>
 
 

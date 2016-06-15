@@ -22,4 +22,5 @@ ja:
       previous: "≪ 前ページ"
       next: "次ページ ≫"
       last: "最後のページ"
+      first: "最初のページ"
       truncate: "..."
