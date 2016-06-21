@@ -1,7 +1,24 @@
 Rails.application.routes.draw do
 
-  get 'relationships/create'
+  get 'teams/create'
+  get 'teams/destroy'
 
+  resources :projects do
+    resources :tasks
+    get :teams
+  end
+  
+  namespace :taskline do
+    resources :task_comments
+    resources :tasks do
+    post "ungoodjob"
+    post "goodjob"
+  end
+  end
+  
+  resources :tasks
+  
+  get 'relationships/create'
   get 'relationships/destroy'
 
   root to: "top#index"
@@ -32,7 +49,8 @@ Rails.application.routes.draw do
 }
 
 
-  resources :users, only:[:index, :show, :edit, :update] do
+  resources :users, only:[:index, :show] do
+    resources :tasks
     member do
       get :following, :followers
     end

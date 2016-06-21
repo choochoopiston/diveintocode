@@ -54,7 +54,7 @@
 
 
 <div class="container">
-<h2>ブログ一覧: <%= link_to "ブログを投稿する！", new_blog_path %></h2>
+<h2>ブログ一覧: <small><%= link_to "ブログを投稿する！", new_blog_path %></small></h2>
 
 <% @blogs.each do |blog| %>
  <div class="panel panel-primary">

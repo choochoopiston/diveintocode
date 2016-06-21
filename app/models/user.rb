@@ -8,6 +8,10 @@ class User < ActiveRecord::Base
   has_many :comments, dependent: :destroy
   has_many :questions, dependent: :destroy
   has_many :answers, dependent: :destroy
+  has_many :tasks, dependent: :destroy
+  has_many :projects, dependent: :destroy
+  has_many :teams, foreign_key: "mate_id", class_name: "Team", dependent: :destroy
+  has_many :mate_projects, :through => :teams, :source => :project
   
   #第1段階「中間テーブルと関係を定義する」
   has_many :relationships, foreign_key: "follower_id", class_name: "Relationship", dependent: :destroy
@@ -89,10 +93,32 @@ class User < ActiveRecord::Base
   def each_other_friends
 	  User.each_other_follows(self)
   end
-
+  
   def self.each_other_follows(user)
-  	user.followers&user.followed_users
+    user.followers&user.followed_users
   end
+
+  def each_other_follows
+  	self.followers&self.followed_users
+  end
+  
+  #フォローしている人のタスクフィードを取得する
+  def task_feed
+    tasks = Task.where(user_id: self)
+  end
+
+  def taskfeed
+    each_other_follows = self.followers&self.followed_users
+    each_other_follows << self
+    Task.where(user: each_other_follows)
+  end
+
+  def projectfeed
+    my_projects = self.projects
+    mate_projects = self.mate_projects
+    my_projects << mate_projects
+  end
+
 
 
 end

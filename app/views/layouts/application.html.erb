@@ -38,7 +38,7 @@
 
 <body>
 
-<p class="notice"><%= notice %></p> 
+<p id="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 
 
@@ -61,9 +61,9 @@
         <li><a href="#">
           <% if user_signed_in? %>
         　<li><%= link_to "相互フォロー・ブログ一覧", blogs_path %></li><li><%= link_to "ユーザー一覧", users_path %></li>
-          <li><%= link_to "マイページ", current_user %></li>
-          <li><%= link_to "お問い合わせ", inquiry_path %></li>
-          <li><%= link_to "Q&A", questions_path %></li>
+          <li><%= link_to "マイページ", current_user %></li><li><%= link_to "マイタスク", user_tasks_path(current_user.id) %></li>
+          <li><%= link_to "タスクライン", taskline_tasks_path %></li><li><%= link_to "プロジェクト", projects_path %></li>
+          <li><%= link_to "お問い合わせ", inquiry_path %></li><li><%= link_to "Q&A", questions_path %></li>
           <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
           <% else %>
           <li><%= link_to "ログイン", new_user_session_path %></li>

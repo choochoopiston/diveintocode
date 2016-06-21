@@ -1,0 +1,34 @@
+<h1>タスクライン/タイムライン一覧</h1>
+
+<% if @feed_tasks.any? %>
+<p><%= page_entries_info(@feed_tasks) %></p>
+
+    <% @feed_tasks.order("created_at DESC").each do |feedtask| %>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h2 class="panel-title">「<%= feedtask.title %>」 by <%= feedtask.user.name %></h2>
+            </div>
+            <div class="panel-body">
+                
+                <p>タスク内容: <%= feedtask.content %></p>
+                
+                <%= render partial: 'taskline/tasks/goodjob', locals: {goodjob: feedtask.goodjobs.build} %>
+                <div id="goodjob_<%= feedtask.id %>">
+                    <%= render partial: 'taskline/tasks/gjbcount', locals: {gjb_count: feedtask.goodjobs.sum(:number)} %>             
+                </div>
+                
+                <%= render partial: 'taskline/task_comments/form', locals: {task_comment: feedtask.task_comments.build(user_id: current_user.id)} %>
+                <div id="feedtask_<%= feedtask.id %>">
+                <%= render partial: 'taskline/task_comments/index', locals: {task_comments: feedtask.task_comments} %>             
+                </div>
+
+            </div>
+        </div>
+        
+    <% end %>
+
+<p><%= paginate(@feed_tasks) %></p>
+
+<% else %>
+<% end %>
