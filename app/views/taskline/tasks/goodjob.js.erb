@@ -1,0 +1,1 @@
+$("#goodjob_<%= @gjb.task_id %>").html("<%= escape_javascript(render partial: 'taskline/tasks/gjbcount', locals: {gjb_count: @gjb_all_cnt}) %>");

@@ -6,7 +6,7 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @users = current_user.each_other_friends
+    @users = current_user.each_other_follows
   end
 
   # GET /blogs/1
