@@ -1,22 +1,34 @@
 Rails.application.routes.draw do
 
+  namespace :project do
+  get 'tasks/ungoodjob'
+  end
+
+  namespace :project do
+  get 'tasks/goodjob'
+  end
+
+  resources :teams, only: [:create, :destroy]
   get 'teams/create'
   get 'teams/destroy'
 
   resources :projects do
-    resources :tasks
-    get :teams
+    get :teammates, :team_index
+    namespace :project do
+      resources :tasks
+    end
   end
-  
+
   namespace :taskline do
     resources :task_comments
     resources :tasks do
     post "ungoodjob"
     post "goodjob"
-  end
+    end
   end
   
   resources :tasks
+  
   
   get 'relationships/create'
   get 'relationships/destroy'
@@ -47,7 +59,6 @@ Rails.application.routes.draw do
 
     omniauth_callbacks: "users/omniauth_callbacks"
 }
-
 
   resources :users, only:[:index, :show] do
     resources :tasks

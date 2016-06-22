@@ -35,5 +35,16 @@
   <%= if @task.status == 1 then "対応中" elsif @task.status == 0 then "未着手" end %>
 </p>
 
-<%= link_to 'Edit', edit_user_task_path(@task.user, @task) %> |
-<%= link_to 'Back', user_tasks_path(@task.user) %>
+<% unless @task.project.nil? %>
+<%= link_to 'タスク編集', edit_project_project_task_path(@task.project, @task) %>
+<% else %>
+<%= link_to 'タスク編集', edit_user_task_path(@task.user, @task) %>
+<% end %>
+
+<br />
+
+<%= link_to 'マイタスク一覧へ戻る', user_tasks_path(@task.user) %><br />
+<% unless @task.project.nil? %>
+<%= link_to 'プロジェクトタスク一覧へ戻る', project_path(@task.project) %>
+<% else %>
+<% end %>

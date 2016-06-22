@@ -1,0 +1,3 @@
+<%= form_for(project.teams.find_by(mate_id: user.id), html: { method: :delete}, remote: true) do |f| %>
+    <%= f.submit "メンバーから外す", class: "btn btn-sm btn-warning" %>
+<% end %>

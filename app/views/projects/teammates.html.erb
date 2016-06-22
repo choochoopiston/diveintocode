@@ -1,5 +1,5 @@
 <div class="container">
-<h2>プロジェクト概要:</h2>
+<h2>プロジェクトメンバー:</h2>
 </div>
 
 <div class="container">
@@ -28,13 +28,10 @@
 
             <div class="row">
                 <div class="col-xs-12 col-sm-6">
-                    <h5><%= link_to "プロジェクトメンバー一覧>>", project_teammates_path(@project) %></h5>
+                    <h5><%= link_to "プロジェクトメンバー一覧>>", project_project_teammates_path(@project) %></h5>
                 </div>
                 <div class="col-xs-12 col-sm-6">
-                    <% if @project.user = current_user %>
-                    <h5><%= link_to "プロジェクトメンバー管理>>", project_team_index_path(@project) %></h5>
-                    <% else %>
-                    <% end %>
+                    <h5><%= link_to "プロジェクトメンバー管理>>", project_project_team_in_path(@project) %></h5>
                 </div>
             </div>
 
