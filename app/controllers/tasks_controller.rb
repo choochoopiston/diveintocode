@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   before_action :authenticate_user!
-  before_action :correct_user
+  before_action :correct_user, only: [:edit, :update, :destroy]
   before_action :set_task, only: [:show, :edit, :update, :destroy]
 
   # GET /tasks
@@ -72,12 +72,12 @@ class TasksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def task_params
-      params.require(:task).permit(:user_id, :title, :content, :deadline, :charge_id, :done, :status)
+      params.require(:task).permit(:user_id, :title, :content, :deadline, :charge_id, :done, :status, :project_id)
     end
     
     def correct_user
       @user = User.find(params[:user_id])
-      redirect_to(user_tasks_pth(current_user)) unless current_user == @user
+      redirect_to(user_tasks_path(current_user)) unless current_user == @user
     end
     
 end

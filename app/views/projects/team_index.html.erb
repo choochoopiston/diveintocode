@@ -1,5 +1,5 @@
 <div class="container">
-<h2>プロジェクト概要:</h2>
+<h2>プロジェクトメンバー管理:</h2>
 </div>
 
 <div class="container">
@@ -31,10 +31,7 @@
                     <h5><%= link_to "プロジェクトメンバー一覧>>", project_teammates_path(@project) %></h5>
                 </div>
                 <div class="col-xs-12 col-sm-6">
-                    <% if @project.user = current_user %>
                     <h5><%= link_to "プロジェクトメンバー管理>>", project_team_index_path(@project) %></h5>
-                    <% else %>
-                    <% end %>
                 </div>
             </div>
 
@@ -52,28 +49,37 @@
 </div>
 
 <div class="container">
-<h2>タスクー覧: <small><%= link_to "タスクを新規作成", new_project_project_task_path(@project) %></small></h2>
 
-<% @tasks.each do |task| %>
- <div class="panel panel-primary">
-     <div class="panel-heading">
-         <h3 class="panel-title"><%= link_to task.title, user_task_path(task.user_id, task) %></h3>
-     </div>
-     <div class="panel-body">
-         
-         <p><%= task.content %></p>
+    <h3>メンバー候補:</h3>
 
-         <%= profile_img(task.user) %>投稿者:<%= task.user.name %></P>
-
-         <em><%= task.created_at %></em>
-
-          <% if current_user.id == task.user_id %>
-　　　　　<%= link_to 'Edit', edit_project_project_task_path(task.project_id, task) %> | 
-          <%= link_to 'Delete', project_project_task_path(task.project_id, task), :method => :delete %>
-          <% else %>
-
-          <% end %>
-     </div>
- </div>
-<% end %>
+<div class="container">
+    <table class="table table-hover">
+        
+        <thead>
+            <tr>
+                <th>ユーザ名</th>
+                <th>スタータス</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @users.each do |user| %>
+            <tr>
+                <td>
+                    <%= link_to profile_img(user), user %>
+                    <%= link_to user.name, user %>
+                </td>
+                <td>
+                    <% unless user == current_user %>
+                    <%= render partial: 'projects/teammate_form', locals: {project: @project, user: user} %>
+                    <% else %>
+                    <%= link_to "マイアカウント", user, class: "btn btn-info btn-sm" %>
+                    <% end %>
+                </td>
+            </tr>
+            <% end %>
+        </tbody>
+        
+    </table>
+    
+</div>
 </div>
