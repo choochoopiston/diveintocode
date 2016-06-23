@@ -1,4 +1,8 @@
 Rails.application.configure do
+
+  require 'dotenv'
+  Dotenv.load
+  
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -79,8 +83,8 @@ Rails.application.configure do
   
   config.action_mailer.default_url_options = { host: 'stark-chamber-8157.herokuapp.com' }
   
-  ActionMailer::Base.delivery_method = :smtp 
-ActionMailer::Base.smtp_settings =
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings =
 
 { 
 :user_name => ENV["SENDGRID_ADDRESS"],

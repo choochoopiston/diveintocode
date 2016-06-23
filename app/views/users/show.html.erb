@@ -1,8 +1,81 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="container">
+    <div class="panel panel-primary">
+    
+         <div class="panel-heading">
+              <div class="container">
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-9">
+                       <h1 class="panel-title">#<%= @user.name %></h1>
+                    </div>
+                    <div class="col-xs-12 col-sm-1">
+                       <% unless @user == current_user %>
+                       <%= render partial: 'follow_form', locals: { user: @user } %>
+                       <% else %>
+                       <% end %>
+                    </div>
+                  </div>
+              </div>
+         </div>
+    
+         <div class="panel-body">
+           <div class="row">
+                <div class="col-xs-12 col-sm-1 text-nowrap">
+                    <%= profile_img(@user) %>
+                </div>
+                
+                <div class="col-xs-12 col-sm-11">
+                   プロフィール: <%= simple_format(@user.profile) %>
+                </div>
+            </div>
 
-　<% if @user.image? %>
-　　<%= image_tag @user.image.thumb.url %>
-　<% else %>
-　　<%= image_tag 'noimage.gif' %>
-　<% end %>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <h5><%= link_to "フォロワー一覧>>", followers_user_path(@user) %></h5>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <h5><%= link_to "フォローしているユーザー一覧>>", following_user_path(@user) %></h5>
+        </div>
+    </div>
+
+         </div>
+         
+         <div class="panel-footer text-right">
+
+           <% if current_user.id == @user.id %>
+    　　　 <%= link_to 'Edit', edit_user_registration_path(@user) %> | 
+           <% else %>
+           <% end %>
+          <%= link_to 'Back', users_path %>
+          ユーザー登録日:<%= @user.created_at %>
+         </div>
+         
+    </div>
+</div>
+
+
+<div class="container">
+<h2>ブログ一覧: <small><%= link_to "ブログを投稿する！", new_blog_path %></small></h2>
+
+<% @blogs.each do |blog| %>
+ <div class="panel panel-primary">
+     <div class="panel-heading">
+         <h3 class="panel-title"><%= link_to blog.title, blog_path(blog.id) %></h3>
+     </div>
+     <div class="panel-body">
+         
+         <p><%= blog.content %></p>
+
+         <%= profile_img(blog.user) %>投稿者:<%= blog.user.name %></P>
+
+         <em><%= blog.created_at %></em>
+
+          <% if current_user.id == blog.user_id %>
+　　　　　<%= link_to 'Edit', edit_blog_path(blog.id) %> | 
+          <%= link_to 'Delete', blog_path(blog.id), :method => :delete %>
+          <% else %>
+
+          <% end %>
+     </div>
+ </div>
+<% end %>
+</div>

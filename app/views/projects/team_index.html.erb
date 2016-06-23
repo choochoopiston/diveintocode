@@ -1,0 +1,85 @@
+<div class="container">
+<h2>プロジェクトメンバー管理:</h2>
+</div>
+
+<div class="container">
+    <div class="panel panel-primary">
+         <div class="panel-heading">
+              <div class="container">
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                       <h1 class="panel-title">プロジェクト名＃<%= @project.title %></h1>
+                    </div>
+                  </div>
+              </div>
+         </div>
+    
+         <div class="panel-body">
+           <div class="row">
+                <div class="col-xs-12 col-sm-1 text-nowrap">
+                    <%= profile_img(@project.user) %>
+                </div>
+                <div class="col-xs-12 col-sm-11">
+                   ＜プロジェクト作成者(リーダー）＞: <%= @project.user.name %><br />
+                   ＜プロジェクト依頼元＞: <%= @project.client %><br />
+                   ＜プロジェクト内容＞: <%= @project.content %><br />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <h5><%= link_to "プロジェクトメンバー一覧>>", project_teammates_path(@project) %></h5>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <h5><%= link_to "プロジェクトメンバー管理>>", project_team_index_path(@project) %></h5>
+                </div>
+            </div>
+
+         </div>
+         
+         <div class="panel-footer text-right">
+           <% if current_user == @project.user %>
+    　   　 <%= link_to 'Edit', edit_project_path(@project) %>｜<%= link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' } %>
+           <% else %>
+           <% end %>
+           | <%= link_to 'Back', projects_path %> | 登録日:<%= @project.created_at %>
+         </div>
+         
+    </div>
+</div>
+
+<div class="container">
+
+    <h3>メンバー候補:</h3>
+
+<div class="container">
+    <table class="table table-hover">
+        
+        <thead>
+            <tr>
+                <th>ユーザ名</th>
+                <th>スタータス</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @users.each do |user| %>
+            <tr>
+                <td>
+                    <%= link_to profile_img(user), user %>
+                    <%= link_to user.name, user %>
+                </td>
+                <td>
+                    <% unless user == current_user %>
+                    <%= render partial: 'projects/teammate_form', locals: {project: @project, user: user} %>
+                    <% else %>
+                    <%= link_to "マイアカウント", user, class: "btn btn-info btn-sm" %>
+                    <% end %>
+                </td>
+            </tr>
+            <% end %>
+        </tbody>
+        
+    </table>
+    
+</div>
+</div>

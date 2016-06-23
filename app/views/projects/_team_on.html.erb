@@ -1,0 +1,5 @@
+<%= form_for(project.teams.build(mate_id: user.id), remote: true) do |f| %>
+    <%= f.submit "メンバーに加える", class: "btn btn-success btn-sm" %>
+    <div><%= f.hidden_field :mate_id %></div>
+    <div><%= f.hidden_field :project_id %></div>
+<% end %>

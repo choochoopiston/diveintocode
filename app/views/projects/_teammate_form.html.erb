@@ -1,0 +1,7 @@
+<div id="teammate_form_<%= user.id %>">
+    <% if project.teams.find_by(mate_id: user.id).present? %>
+        <%= render partial: 'projects/team_off', locals: {project: project, user: user} %>
+    <% else %>
+        <%= render partial: 'projects/team_on', locals: {project: project, user: user} %>
+    <% end %>
+</div>

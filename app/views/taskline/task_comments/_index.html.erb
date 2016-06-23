@@ -1,0 +1,15 @@
+<h4>このタスクに対するコメント一覧 Comments</h4>
+
+<% task_comments.each do |task_comment| %>
+  <% unless task_comment.id.nil? %>
+  <ul>
+    <li>
+    "<%= task_comment.content %>" by <%= task_comment.user.name %>
+    <% if task_comment.user = current_user %>
+      <%= link_to 'Edit', edit_taskline_task_comment_path(task_comment) %> | <%= link_to 'Destroy', taskline_task_comment_path(task_comment), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% else %>
+    <% end %>
+    </li>
+  </ul>
+  <% end %>
+<% end %>

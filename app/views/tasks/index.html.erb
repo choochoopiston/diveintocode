@@ -1,0 +1,125 @@
+<div class="container">
+<h2>マイタスク一覧: <small><%= link_to "タスクを作成する！", new_user_task_path(@user) %></small></h2>
+
+<% if @tasks.any? %>
+<% @tasks.order("created_at DESC").each do |task| %>
+<div class="container">
+    <div class="panel panel-primary">
+         <div class="panel-heading">
+              <div class="container">
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                       <h1 class="panel-title">タスク名#  <%= link_to task.title, user_task_path(task.user, task) %>
+                       <% unless task.project.nil? %>
+                       in プロジェクト: <%= link_to task.project.title, project_path(task.project) %>
+                       <% else %>
+                       <% end %>
+                       </h1>
+                    </div>
+                  </div>
+              </div>
+         </div>
+    
+         <div class="panel-body">
+           <div class="row">
+                <% unless task.charge.nil? %>
+                <div class="col-xs-12 col-sm-1 text-nowrap">
+                    <%= profile_img(task.charge) %>
+                </div>
+                <div class="col-xs-12 col-sm-11">
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                    ＜タスク担当者＞: <%= task.charge.name %>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                    ＜タスク期限＞: <%= task.deadline %>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                    完了チェック: <%= task.done_display_name %>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                    ステータス: <%= task.status_display_name %>
+                    </div>
+                  </div>
+                </div>
+                <% else %>
+                <div class="col-xs-12">
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                    ＜タスク担当者＞: 未設定
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                    ＜タスク期限＞: <%= task.deadline %>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                    完了チェック: <%= task.done_display_name %>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                    ステータス: <%= task.status_display_name %>
+                    </div>
+                  </div>
+                </div>
+                <% end %>
+            </div>
+
+         </div>
+         
+         <div class="panel-footer text-right">
+           <% if current_user == task.user %>
+    　   　 <%= link_to 'Edit', edit_user_task_path(task.user, task) %>| <%= link_to 'Destroy', user_task_path(task.user, task), method: :delete, data: { confirm: 'Are you sure?' } %>
+           <% else %>
+           <% end %>
+           作成日:<%= task.created_at %>
+         </div>
+         
+    </div>
+</div>
+<% end %>
+<% else %>
+<% end %>
+</div>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Title</th>
+      <th>Content</th>
+      <th>Deadline</th>
+      <th>Charge</th>
+      <th>Done</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tasks.each do |task| %>
+      <tr>
+        <td><%= task.user.name %></td>
+        <td><%= task.title %></td>
+        <td><%= task.content %></td>
+        <td><%= task.deadline %></td>
+        <% unless task.charge.nil? %>
+        <td><%= task.charge.name %></td>
+        <% else %>
+        <td>担当者未設定</td>
+        <% end %>
+        <td><%= task.done_display_name %></td>
+        <td><%= task.status_display_name %></td>
+        <td><%= link_to 'Show', user_task_path(task.user, task) %></td>
+        <td><%= link_to 'Edit', edit_user_task_path(task.user, task) %></td>
+        <td><%= link_to 'Destroy', user_task_path(task.user, task), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Task', new_user_task_path(@user) %>

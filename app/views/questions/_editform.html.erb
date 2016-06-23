@@ -1,39 +1,66 @@
-<%= form_for(@question) do |f| %>
-  <% if @question.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@question.errors.count, "error") %> prohibited this question from being saved:</h2>
 
-      <ul>
-      <% @question.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+  
+<%= form_for(@question) do |f| %>
+
+<form class="form-horizontal">
+  
+  <% if @question.errors.any? %>
+  <div class="container-fluid" style="border: 2px solid red;">
+    
+    <div class="row" style="background-color: #c00; color: #fff;">
+          <div class="col-12-xs">
+                <h5 style="padding-left: 10px"><%= @question.errors.count %>個のエラーがあります:</h5>
+          </div>
     </div>
+
+    <div class="row" style="background-color: #f0f0f0;">
+          <div class="col-12-xs">
+                <ul>
+                  <% @question.errors.each do |attribute, message| %>
+                    <div class="col-12-xs">
+                      <li style="color: #c00; list-style: square;"><%= message %></li>
+                    </div>
+                  <% end %>
+                </ul>
+          </div>
+     </div>
+  </div>
   <% end %>
   
-  <table class="table table-hover table-bordered table-condensed">
 
-  <tr>
-    <th><%= f.label :件名 %></th>
-    <td><%= f.text_field :title %></td>
-  </tr>
+
   
-  <tr>
-    <th><%= f.label :コース %></th>
-    <td><%= f.select :course, [["", 0], ["Runy on Rails", 1], ["WordPress", 2], ["Webデザイン", 3], ["その他", 4]] %></td>
-  </tr>
-  <tr>
-    <th><%= f.label :カテゴリー %></th>
-    <td><%= f.select :category, [["", 0], ["カリキュラム", 1], ["教材", 2], ["授業料", 3], ["その他", 4]]  %></td>
-  </tr>
-  <tr>
-    <th><%= f.label :質疑内容 %></th>
-    <td><%= f.text_area :content %>
-    <div class="actions"><%= f.submit %></div>
-    </td>
-  </tr>
-  </table>
+  <div class="form-group form-group-sm has-warning">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-1 text-nowrap"><%= f.label "件名:", :class => "control-label" %></div>
+        <div class="col-xs-12 col-sm-11"><%= f.text_field :title, :class => "form-control" %></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-1 text-nowrap control-label"><%= f.label "コース:" %></div>
+        <div class="col-xs-12 col-sm-1 col-sm-offset-10 col-sm-pull-10 text-nowrap">
+          <%= f.select :course, [["", 0], ["Ruby on Rails", 1], ["WordPress", 2], ["Webデザイン", 3], ["その他", 4]] %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-1 text-nowrap"><%= f.label "カテゴリー:", :class => "control-label" %></div>
+        <div class="col-xs-12 col-sm-1 col-sm-offset-10 col-sm-pull-10 text-nowrap">
+          <%= f.select :category, [["", 0], ["カリキュラム", 1], ["教材", 2], ["授業料", 3], ["その他", 4]] %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-1 text-nowrap"><%= f.label "質疑内容:", :class => "control-label" %></div>
+        <div class="col-xs-12 col-sm-11"><%= f.text_area :content, :class => "form-control" %></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-offset-1 col-sm-1"><div class="actions"><%= f.submit %></div></div>
+        <div class="hidden-xs col-sm-10"><p></p></div>
+      </div>
+    </div>
+  </div>
   
+</form>
+
   <div class="field">
     <%= f.hidden_field :user_id %>
   </div>

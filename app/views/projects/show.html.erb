@@ -1,0 +1,79 @@
+<div class="container">
+<h2>プロジェクト概要:</h2>
+</div>
+
+<div class="container">
+    <div class="panel panel-primary">
+         <div class="panel-heading">
+              <div class="container">
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                       <h1 class="panel-title">プロジェクト名＃<%= @project.title %></h1>
+                    </div>
+                  </div>
+              </div>
+         </div>
+    
+         <div class="panel-body">
+           <div class="row">
+                <div class="col-xs-12 col-sm-1 text-nowrap">
+                    <%= profile_img(@project.user) %>
+                </div>
+                <div class="col-xs-12 col-sm-11">
+                   ＜プロジェクト作成者(リーダー）＞: <%= @project.user.name %><br />
+                   ＜プロジェクト依頼元＞: <%= @project.client %><br />
+                   ＜プロジェクト内容＞: <%= @project.content %><br />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <h5><%= link_to "プロジェクトメンバー一覧>>", project_teammates_path(@project) %></h5>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <% if @project.user = current_user %>
+                    <h5><%= link_to "プロジェクトメンバー管理>>", project_team_index_path(@project) %></h5>
+                    <% else %>
+                    <% end %>
+                </div>
+            </div>
+
+         </div>
+         
+         <div class="panel-footer text-right">
+           <% if current_user == @project.user %>
+    　   　 <%= link_to 'Edit', edit_project_path(@project) %>｜<%= link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' } %>
+           <% else %>
+           <% end %>
+           | <%= link_to 'Back', projects_path %> | 登録日:<%= @project.created_at %>
+         </div>
+         
+    </div>
+</div>
+
+<div class="container">
+<h2>タスクー覧: <small><%= link_to "タスクを新規作成", new_project_project_task_path(@project) %></small></h2>
+
+<% @tasks.each do |task| %>
+ <div class="panel panel-primary">
+     <div class="panel-heading">
+         <h3 class="panel-title"><%= link_to task.title, user_task_path(task.user_id, task) %></h3>
+     </div>
+     <div class="panel-body">
+         
+         <p><%= task.content %></p>
+
+         <%= profile_img(task.user) %>投稿者:<%= task.user.name %></P>
+
+         <em><%= task.created_at %></em>
+
+          <% if current_user.id == task.user_id %>
+　　　　　<%= link_to 'Edit', edit_project_project_task_path(task.project_id, task) %> | 
+          <%= link_to 'Delete', project_project_task_path(task.project_id, task), :method => :delete %>
+          <% else %>
+
+          <% end %>
+     </div>
+ </div>
+<% end %>
+</div>

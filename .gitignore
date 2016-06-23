@@ -17,6 +17,10 @@
 /tmp
 
 /public/assets/*
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> develop
 
 
 
@@ -59,3 +63,8 @@ bower.json
 
 # Ignore Byebug command history file.
 .byebug_history
+<<<<<<< HEAD
+=======
+>>>>>>> deccc4da04dab670391355a8a9349c6d7167786f
+=======
+>>>>>>> develop
