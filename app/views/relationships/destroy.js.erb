@@ -1,0 +1,2 @@
+$("#follow_form_"+"<%= @user.id %>").html("<%= escape_javascript(render partial: 'users/follow', locals: { user: @user })%>")
+$("#followed_users_area").html("<%= escape_javascript(render partial: "users/followed_users", locals: { followed_users: @follower.followed_users })%>")

@@ -1,5 +1,7 @@
 class AnswersController < ApplicationController
-  before_action :set_answer, only: [:show, :edit, :update, :destroy]
+  before_action :set_answer, only: [:show]
+  before_action :sameuser, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /answers
   # GET /answers.json
@@ -18,6 +20,7 @@ class AnswersController < ApplicationController
 
   # GET /answers/1/edit
   def edit
+    @question = Question.find(params[:question_id])
   end
 
   # POST /answers
@@ -35,7 +38,7 @@ class AnswersController < ApplicationController
         @question = @answer.question
         format.js { render :index, notice: 'Answer was successfully created.' }
       else
-        format.html { render :new }
+        format.html { redirect_to question_path(@answer.question_id) }
         format.json { render json: @answer.errors, status: :unprocessable_entity }
       end
     end
@@ -49,7 +52,8 @@ class AnswersController < ApplicationController
         format.html { redirect_to question_path(@answer.question_id), notice: 'Answer was successfully updated.' }
         format.json { render :show, status: :ok, location: @answer }
       else
-        format.html { render :edit }
+        @question = @answer.question
+        format.html { render :edit  } 
         format.json { render json: @answer.errors, status: :unprocessable_entity }
       end
     end
@@ -67,6 +71,10 @@ class AnswersController < ApplicationController
     end
   end
 
+  def render_404
+    redirect_to root_path
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_answer
@@ -77,4 +85,13 @@ class AnswersController < ApplicationController
     def answer_params
       params.require(:answer).permit(:content, :question_id, :user_id)
     end
+
+    def sameuser
+      @answer = Answer.find(params[:id])
+      
+      if current_user.id != @answer.user_id
+        redirect_to root_path
+      end
+    end
+    
 end

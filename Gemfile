@@ -28,6 +28,8 @@ gem 'i18n_generators'
 gem 'devise'
 gem 'rails_12factor'
 
+gem 'dotenv'
+
 
 gem 'less-rails'
 
@@ -43,6 +45,8 @@ gem 'omniauth-facebook'
 
 gem 'bootstrap-social-rails'
 
+gem 'kaminari'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -55,6 +59,7 @@ gem 'bootstrap-social-rails'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+
   gem 'dotenv'
 end
 

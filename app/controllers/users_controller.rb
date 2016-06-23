@@ -1,14 +1,28 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
-    @users = User.all
+    @users = User.page(params[:page]).per(20)
   end
 
   def show
     @user = User.find(params[:id])
+    @blogs = @user.blogs
   end
   
   def edit
     @user = User.find(params[:id])
+  end
+  
+  def following
+    @user = User.find(params[:id])
+    render 'following'
+  end
+  
+  def followers
+    @user = User.find(params[:id])
+    @users = @user.followers
+    render 'follwers'
   end
   
   private

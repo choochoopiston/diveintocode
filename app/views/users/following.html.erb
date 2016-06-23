@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="panel panel-primary">
+    
+         <div class="panel-heading">
+          <div class="row">
+            <div class="col-xs-12 col-sm-8">
+              <h2 class="panel-title">#<%= @user.name %></h2>
+            </div>
+          </div>
+         </div>
+    
+         <div class="panel-body">
+           
+            <div class="col-xs-12 col-sm-1 text-nowrap">
+               <%= profile_img(@user) %>
+            </div>
+            
+            <div class="col-xs-12 col-sm-11">
+               プロフィール: <%= simple_format(@user.profile) %>
+            </div> 
+    
+         </div>
+         
+         <div class="panel-footer text-right">
+
+           <% if current_user.id == @user.id %>
+    　　　 <%= link_to 'Edit', edit_user_registration_path(@user) %> | 
+           <% else %>
+           <% end %>
+          <%= link_to 'Back', user_path(@user) %>
+          ユーザー登録日:<%= @user.created_at %>
+         </div>
+         
+    </div>
+</div>
+
+<div class="container">
+
+    <h3>フォローしているユーザー:</h3>
+    <div id="followed_users_area">
+        <%= render partial: 'users/followed_users', locals: { followed_users: @user.followed_users } %>
+    </div>
+</div>
+            
+

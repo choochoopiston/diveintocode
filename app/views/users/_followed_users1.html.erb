@@ -1,0 +1,18 @@
+                    <% followed_users.each do |followed_user| %>
+                        <% unless followed_user.id.nil? %>
+                            <tr>
+                                <td>
+                                    <%= link_to profile_img(followed_user), followed_user %>
+                                    <%= link_to followed_user.name, followed_user %>
+                                </td>
+                                <td>
+                                    <% unless followed_user == current_user %>
+                                    <% @relationship = current_user.relationships.find_by(followed_id: followed_user.id) %>
+                                    <%= link_to "アンフォロー", relationship_path(@relationship), :method => :delete, remote: true, class: "btn btn-sm btn-warning" %>
+                                    <% else %>
+                                    <%= link_to "マイアカウント", followed_user, class: "btn btn-info btn-sm" %>
+                                    <% end %>
+                                </td>
+                            </tr>
+                        <% end %>
+                    <% end %>
