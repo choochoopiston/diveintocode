@@ -3,8 +3,9 @@ class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
   def teammates
-    @users = User.all
-    render "user_index"
+    @project = Project.find(params[:project_id])
+    @users = @project.mates
+    render "teammates"
   end
 
   def team_index
@@ -17,7 +18,8 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = current_user.projectfeed
+    @my_projects = current_user.projects
+    @mate_projects = current_user.mate_projects
   end
 
   # GET /projects/1
@@ -79,7 +81,6 @@ class ProjectsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_project
       @project = Project.find(params[:id])
-      @user = User.find(current_user.id)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

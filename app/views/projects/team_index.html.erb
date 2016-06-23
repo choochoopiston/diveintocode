@@ -31,7 +31,10 @@
                     <h5><%= link_to "プロジェクトメンバー一覧>>", project_teammates_path(@project) %></h5>
                 </div>
                 <div class="col-xs-12 col-sm-6">
+                    <% if @project.user = current_user %>
                     <h5><%= link_to "プロジェクトメンバー管理>>", project_team_index_path(@project) %></h5>
+                    <% else %>
+                    <% end %>
                 </div>
             </div>
 

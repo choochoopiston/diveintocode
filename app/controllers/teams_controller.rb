@@ -1,7 +1,7 @@
 class TeamsController < ApplicationController
   before_action :authenticate_user!
   before_action :sameuser0, only: [:create]
-  before_action :sameuser, only: [:create, :destroy]
+  before_action :sameuser, only: [:destroy]
   respond_to :html, :js
   
   def create

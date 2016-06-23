@@ -3,9 +3,7 @@ class Project < ActiveRecord::Base
   belongs_to :user
   has_many :tasks, dependent: :destroy
   has_many :teams, dependent: :destroy
+  has_many :mates, :through => :teams, :source => :mate
   
-  def mates(user)
-    teams.find_by(mate_id: user.id)
-  end
   
 end

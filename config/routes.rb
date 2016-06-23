@@ -53,26 +53,6 @@ Rails.application.routes.draw do
   get 'users/show'
 
 
-  root to: "top#index"
-  
-  resources :answers
-
-  resources :questions do
-    resources :answers
-  end
-  
-  resources :comments
-
-  resources :blogs do
-    resources :comments
-  end
-  
-  get 'about/company_overview'
-
-  get 'users/index'
-  get 'users/show'
-
->>>>>>> develop
   devise_for :users, controllers: {
     auth: "/auth/:provider/callback",
     sessions: "users/sessions",
@@ -81,20 +61,20 @@ Rails.application.routes.draw do
     omniauth_callbacks: "users/omniauth_callbacks"
 }
 
-<<<<<<< HEAD
+
   resources :users, only:[:index, :show] do
     resources :tasks
     member do
       get :following, :followers
     end
   end
-=======
-  resources :users, only:[:index, :show, :edit, :update]
->>>>>>> develop
+
   
   as :user do
   get 'users', to: 'users#show'
   end
+  
+  resources :relationships, only: [:create, :destroy]
   
   resources :relationships, only: [:create, :destroy]
   
@@ -104,6 +84,7 @@ Rails.application.routes.draw do
   post 'inquiry', to: 'inquiry#index'
   post 'inquiry/confirm', to: 'inquiry#confirm'
   post 'inquiry/thanks', to: 'inquiry#thanks'
+
 
   
   get 'about' => 'about#company_overview'
