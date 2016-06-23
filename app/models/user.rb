@@ -119,6 +119,4 @@ class User < ActiveRecord::Base
     my_projects << mate_projects
   end
 
-
-
 end
