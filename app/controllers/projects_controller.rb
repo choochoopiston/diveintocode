@@ -1,6 +1,8 @@
 class ProjectsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_action :correct_project_mate, only: [:show]
+  before_action :correct_user, only: [:edit, :update, :destroy]
 
   def teammates
     @project = Project.find(params[:project_id])
@@ -86,5 +88,19 @@ class ProjectsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
       params.require(:project).permit(:user_id, :title, :content, :client_id, :client)
+    end
+    
+    def correct_user
+      @Project = Project.find(params[:id])
+      if current_user != @project.user
+        redirect_to root_path
+      end
+    end
+
+    def correct_project_mate
+      @Project = Project.find(params[:id])
+      unless current_user == @project.user || @project.mates.include?(current_user)
+        redirect_to root_path
+      end
     end
 end

@@ -45,7 +45,7 @@
     　   　 <%= link_to 'Edit', edit_project_path(@project) %>｜<%= link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' } %>
            <% else %>
            <% end %>
-           | <%= link_to 'Back', projects_path %> | 登録日:<%= @project.created_at %>
+           | <%= link_to 'Back', project_path(@project) %> | 登録日:<%= @project.created_at %>
          </div>
          
     </div>
