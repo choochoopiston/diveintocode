@@ -96,6 +96,8 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
+    domain_name (0.5.20160615)
+      unf (>= 0.0.5, < 1.0.0)
     dotenv (2.1.1)
     erubis (2.7.0)
     execjs (2.6.0)
@@ -131,6 +133,8 @@ GEM
     hirb-unicode (0.0.5)
       hirb (~> 0.5)
       unicode-display_width (~> 0.1.1)
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
     i18n (0.7.0)
     i18n_generators (2.1.1)
       rails (>= 3.0.0)
@@ -173,6 +177,7 @@ GEM
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     nenv (0.3.0)
+    netrc (0.11.0)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     notiffany (0.0.8)
@@ -265,6 +270,10 @@ GEM
     ref (2.0.0)
     responders (2.1.1)
       railties (>= 4.2.0, < 5.1)
+    rest-client (1.8.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     rmagick (2.15.4)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
@@ -334,6 +343,9 @@ GEM
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.2)
     unicode-display_width (0.1.1)
     warden (1.2.6)
       rack (>= 1.0)
@@ -392,6 +404,7 @@ DEPENDENCIES
   rails (= 4.2.4)
   rails_12factor
   rambulance
+  rest-client
   rmagick
   rspec-rails
   sass-rails (~> 5.0)
