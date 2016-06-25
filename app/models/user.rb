@@ -102,6 +102,7 @@ class User < ActiveRecord::Base
   
   def self.non_mates(project)
     mates = project.mates
+    mates << project.user
     User.where.not(id: mates)
   end
 
