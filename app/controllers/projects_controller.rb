@@ -2,17 +2,17 @@ class ProjectsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_project, only: [:show, :edit, :update, :destroy]
   before_action :correct_project_mate, only: [:show]
-  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :correct_user, only: [:team_index, :edit, :update, :destroy]
 
   def teammates
-    @project = Project.find(params[:project_id])
-    @users = @project.mates
+    @project = Project.find(params[:id])
+    @users = User.teammembers(@project).page(params[:page])
     render "teammates"
   end
 
   def team_index
-    @project = Project.find(params[:project_id])
-    @users = User.non_mates(@project).page(params[:page])
+    @project = Project.find(params[:id])
+    @users = User.nonmembers(@project).page(params[:page])
     render "team_index"
   end
 
@@ -95,7 +95,7 @@ class ProjectsController < ApplicationController
     end
     
     def correct_user
-      @Project = Project.find(params[:id])
+      @project = Project.find(params[:id])
       if current_user != @project.user
         redirect_to root_path
       end

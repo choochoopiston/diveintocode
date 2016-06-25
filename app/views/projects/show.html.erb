@@ -28,11 +28,11 @@
 
             <div class="row">
                 <div class="col-xs-12 col-sm-6">
-                    <h5><%= link_to "プロジェクトメンバー一覧>>", project_teammates_path(@project) %></h5>
+                    <h5><%= link_to "プロジェクトメンバー一覧>>", teammates_project_path(@project) %></h5>
                 </div>
                 <div class="col-xs-12 col-sm-6">
                     <% if current_user == @project.user %>
-                    <h5><%= link_to "プロジェクトメンバー管理>>", project_team_index_path(@project) %></h5>
+                    <h5><%= link_to "プロジェクトメンバー管理>>", team_index_project_path(@project) %></h5>
                     <% else %>
                     <% end %>
                 </div>

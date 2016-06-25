@@ -13,7 +13,9 @@ Rails.application.routes.draw do
   get 'teams/destroy'
 
   resources :projects do
+    member do
     get :teammates, :team_index
+   end
     namespace :project do
       resources :tasks
     end

@@ -100,10 +100,14 @@ class User < ActiveRecord::Base
     user.followers&user.followed_users
   end
   
-  def self.non_mates(project)
-    mates = project.mates
-    mates << project.user
-    User.where.not(id: mates)
+  def self.teammembers(project)
+    t_members = project.mates
+    User.where(id: t_members)
+  end
+  
+  def self.nonmembers(project)
+    n_members = User.all-project.mates
+    User.where(id: n_members)
   end
 
   def each_other_follows

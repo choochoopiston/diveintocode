@@ -28,11 +28,11 @@
 
             <div class="row">
                 <div class="col-xs-12 col-sm-6">
-                    <h5><%= link_to "プロジェクトメンバー一覧>>", project_teammates_path(@project) %></h5>
+                    <h5><%= link_to "プロジェクトメンバー一覧>>", teammates_project_path(@project) %></h5>
                 </div>
                 <div class="col-xs-12 col-sm-6">
                     <% if @project.user = current_user %>
-                    <h5><%= link_to "プロジェクトメンバー管理>>", project_team_index_path(@project) %></h5>
+                    <h5><%= link_to "プロジェクトメンバー管理>>", team_index_project_path(@project) %></h5>
                     <% else %>
                     <% end %>
                 </div>
@@ -56,9 +56,9 @@
     <h3>メンバー候補:</h3>
 
 </div>
-
+<% @users1 = @users.where.not(id: current_user.id) %>
 <div class="container">
-<%= paginate(@users) %>
+<%= paginate(@users1) %>
 
     <div class="row">
         
@@ -69,18 +69,17 @@
                 <table class="table table-hover">
                     
                     <tbody>
-                        <% @users.order(created_at: :asc).in_groups_of(5) do |row| %>
+                        
+                        <% @users1.order(created_at: :asc).in_groups_of(5) do |row| %>
                         <tr>
                             <% row.each do |user| %>
                             <td>
                                 <% if user %>
+                                    <% unless user == current_user %>
                                     <%= link_to profile_img(user), user %>
                                     <%= link_to user.name, user %>
-                                    <br/>
-                                    <% unless user == current_user %>
                                     <%= render partial: 'projects/teammate_form', locals: {project: @project, user: user} %>
                                     <% else %>
-                                    <%= link_to "マイアカウント", user, class: "btn btn-info btn-sm" %>
                                     <% end %>
                                 <% end %>
                             </td>
