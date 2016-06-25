@@ -12,7 +12,7 @@ class ProjectsController < ApplicationController
 
   def team_index
     @project = Project.find(params[:project_id])
-    @users = User.non_mates(@project).page(params[:page]).per(10)
+    @users = User.non_mates(@project).page(params[:page])
     render "team_index"
   end
 
