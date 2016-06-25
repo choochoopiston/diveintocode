@@ -1,11 +1,10 @@
-
-<%= form_for([@user, @task]) do |f| %>
-  <% if @task.errors.any? %>
+<%= form_for([@project, @project_task], url: project_project_task_path) do |f| %>
+  <% if @project_task.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:</h2>
+      <h2><%= pluralize(@project_task.errors.count, "error") %> prohibited this task from being saved:</h2>
 
       <ul>
-      <% @task.errors.full_messages.each do |message| %>
+      <% @project_task.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -16,7 +15,13 @@
     <%= f.hidden_field :user_id %>
   </div>
   <div class="form-group">
-    <%= f.label :title %><br>
+    <%= f.label :Project_Title%><br>
+    <%= f.hidden_field :project_id %>
+    <%= @project.title %>
+    
+  </div>
+  <div class="form-group">
+    <%= f.label :Task_Title %><br>
     <%= f.text_field :title, :class => "form-control" %>
   </div>
   <div class="form-group">
@@ -25,14 +30,14 @@
   </div>
   <div class="form-group">
     <%= f.label :deadline %><br>
-    <%= f.datetime_select :deadline, :use_month_numbers => true %>
+    <%= f.datetime_select :deadline %>
   </div>
-  <div class="form-group">
+  <div class="fform-group">
     <%= f.hidden_field :charge_id %>
   </div>
   <div class="form-group">
     <%= f.label :status %><br>
-    <%= f.select :status, [["未着手","0"],["対応開始済み","1"]] %>
+    <%= f.select :status, [["未着手","0"],["対応中","1"]] %>
   </div>
   <div class="form-group">
     <%= f.label :完了チェック %><br>

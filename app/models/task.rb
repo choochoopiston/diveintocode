@@ -19,7 +19,7 @@ class Task < ActiveRecord::Base
   
   def check_deadline
     if done == false && deadline.present?
-      errors.add(:deadline, "デットライン期日過ぎています") if deadline < Time.now
+      errors.add(:deadline, :is_short) if deadline < Time.now
     end
   end
   

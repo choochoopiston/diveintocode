@@ -29,7 +29,7 @@ ja:
     blank: "が空欄です。"
     invalid: "が間違っています。"
    models:
-    tasks:
+    task:
      attributes:
       deadline:
        is_short: "はすでに過ぎています。"

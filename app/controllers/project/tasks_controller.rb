@@ -26,6 +26,7 @@ class Project::TasksController < ApplicationController
   
   def create
     @project_task = current_user.tasks.build(task_params)
+    @project = Project.find(params[:project_id])
 
     respond_to do |format|
       if @project_task.save
@@ -40,6 +41,7 @@ class Project::TasksController < ApplicationController
 
 
   def update
+    @project = Project.find(params[:project_id])
     respond_to do |format|
       if @project_task.update(task_params)
         format.html { redirect_to project_path(@project_task.project), notice: 'Task was successfully updated.' }
