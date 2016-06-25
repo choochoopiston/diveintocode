@@ -69,7 +69,7 @@
                 <table class="table table-hover">
                     
                     <tbody>
-                        <% @users.in_groups_of(5) do |row| %>
+                        <% @users.order(created_at: :asc).in_groups_of(5) do |row| %>
                         <tr>
                             <% row.each do |user| %>
                             <td>

@@ -7,7 +7,7 @@ class Task < ActiveRecord::Base
   validates :title, presence: true
   validate :check_deadline
   validate :check_done
-  
+
   #やっぱり、statusカラムはintegerなのでこれは使えない。
   def status_display_name
     self.status ? "未着手" : "対応開始済み"

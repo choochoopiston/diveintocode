@@ -23,6 +23,8 @@ class User < ActiveRecord::Base
   
   mount_uploader :image, ImageUploader
   
+  paginates_per 20
+  
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil) 
     user = User.where(provider: auth.provider, uid: auth.uid).first
     unless user 

@@ -2,7 +2,7 @@
 <h1>タスクタイムライン一覧</h1>
 
 <% if @feed_tasks.any? %>
-<%= paginate(@feed_tasks) %>
+<%= will_paginate @feed_tasks %>
 
     <% @feed_tasks.order("created_at DESC").each do |feedtask| %>
 
@@ -29,7 +29,7 @@
         
     <% end %>
 
-<%= paginate(@feed_tasks) %>
+<%= will_paginate @feed_tasks %>
 
 <% else %>
 <% end %>

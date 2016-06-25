@@ -24,7 +24,7 @@ class Taskline::TasksController < ApplicationController
 
   def index
     #自分とフォロー相手のタスクを表示する
-    @feed_tasks = current_user.taskfeed.page(params[:page]).per(5)
+    @feed_tasks = current_user.taskfeed.paginate(:page => params[:page], :per_page => 5)
     #タスクにコメントするためのモデルオブジェクト生成
     @taskline_task_comment = TaskComment.new
     #タスクにグッジョブするためのモデルオブジェクト生成
