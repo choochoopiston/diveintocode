@@ -55,34 +55,44 @@
 
     <h3>メンバー候補:</h3>
 
-<div class="container">
-    <table class="table table-hover">
-        
-        <thead>
-            <tr>
-                <th>ユーザ名</th>
-                <th>スタータス</th>
-            </tr>
-        </thead>
-        <tbody>
-            <% @users.each do |user| %>
-            <tr>
-                <td>
-                    <%= link_to profile_img(user), user %>
-                    <%= link_to user.name, user %>
-                </td>
-                <td>
-                    <% unless user == current_user %>
-                    <%= render partial: 'projects/teammate_form', locals: {project: @project, user: user} %>
-                    <% else %>
-                    <%= link_to "マイアカウント", user, class: "btn btn-info btn-sm" %>
-                    <% end %>
-                </td>
-            </tr>
-            <% end %>
-        </tbody>
-        
-    </table>
-    
 </div>
+
+<div class="container">
+<%= paginate(@users) %>
+
+    <div class="row">
+        
+        
+        
+        <div class="col-xs-12">
+            <div class="container-fluid">
+                <table class="table table-hover">
+                    
+                    <tbody>
+                        <% @users.in_groups_of(5) do |row| %>
+                        <tr>
+                            <% row.each do |user| %>
+                            <td>
+                                <% if user %>
+                                    <%= link_to profile_img(user), user %>
+                                    <%= link_to user.name, user %>
+                                    <br/>
+                                    <% unless user == current_user %>
+                                    <%= render partial: 'projects/teammate_form', locals: {project: @project, user: user} %>
+                                    <% else %>
+                                    <%= link_to "マイアカウント", user, class: "btn btn-info btn-sm" %>
+                                    <% end %>
+                                <% end %>
+                            </td>
+                            <% end %>
+                        </tr>
+                        <% end %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+    </div>
+
+
 </div>

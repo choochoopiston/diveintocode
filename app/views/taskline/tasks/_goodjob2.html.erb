@@ -1,0 +1,19 @@
+<div class="container form-horizontal" role="form">
+<%= form_for(goodjob, url: taskline_task_goodjob_path(task_id: goodjob.task_id), remote: true) do |f| %>
+    <div class="form-group">
+
+        <div class="col-xs-12 col-sm-2">
+          <div id="goodjob_<%= @task.id %>">
+              <%= render partial: 'taskline/tasks/gjbcount', locals: {gjb_count: task.goodjobs.sum(:number)} %>             
+          </div>
+        </div>
+        
+        <div class="col-xs-12 col-sm-10">
+        <%= f.submit 'Goodjob!!' %>
+        </div>
+        
+    </div>
+<%= f.hidden_field :user_id %>
+<%= f.hidden_field :task_id %>
+<% end %>
+</div>

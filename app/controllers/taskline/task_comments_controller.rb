@@ -1,5 +1,6 @@
 class Taskline::TaskCommentsController < ApplicationController
   before_action :set_taskline_task_comment, only: [:show, :edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
 
   # GET /taskline/task_comments
   # GET /taskline/task_comments.json
@@ -71,4 +72,10 @@ class Taskline::TaskCommentsController < ApplicationController
     def taskline_task_comment_params
       params.require(:task_comment).permit(:user_id, :task_id, :content)
     end
+    
+    def correct_user
+      @task_comment = TaskComment.find(params[:id])
+      redirect_to(user_tasks_path(current_user)) unless current_user == @task_comment.user
+    end
+
 end

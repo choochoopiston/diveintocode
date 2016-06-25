@@ -5,13 +5,26 @@ class Task < ActiveRecord::Base
   belongs_to :user
   belongs_to :charge, class_name: 'User', foreign_key: 'charge_id'
   validates :title, presence: true
+  validate :check_deadline
+  validate :check_done
   
+  #やっぱり、statusカラムはintegerなのでこれは使えない。
   def status_display_name
-    self.status ? "対応中" : "未着手"
+    self.status ? "未着手" : "対応開始済み"
   end
   
   def done_display_name
     self.done ? "完了" : "未完了"
+  end
+  
+  def check_deadline
+    if done == false && deadline.present?
+      errors.add(:deadline, "デットライン期日過ぎています") if deadline < Time.now
+    end
+  end
+  
+  def check_done
+      errors.add(:done, "未着手なのに完了ですか？") if status == 0 && done == true
   end
   
   

@@ -12,7 +12,7 @@ class ProjectsController < ApplicationController
 
   def team_index
     @project = Project.find(params[:project_id])
-    @users = User.all
+    @users = User.non_mates(@project).page(params[:page]).per(10)
     render "team_index"
   end
 
@@ -77,6 +77,10 @@ class ProjectsController < ApplicationController
       format.html { redirect_to projects_url, notice: 'Project was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+  
+  def render_404
+    redirect_to root_path
   end
 
   private

@@ -97,6 +97,11 @@ class User < ActiveRecord::Base
   def self.each_other_follows(user)
     user.followers&user.followed_users
   end
+  
+  def self.non_mates(project)
+    mates = project.mates
+    User.where.not(id: mates)
+  end
 
   def each_other_follows
   	self.followers&self.followed_users

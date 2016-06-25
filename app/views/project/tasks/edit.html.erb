@@ -1,6 +1,8 @@
-<h1>Editing Project Task</h1>
+<div class="container">
+<h1>プロジェクトタスク編集</h1>
 
-<%= render 'form2' %>
+<%= render 'form' %>
 
-<%= link_to 'Show', user_task_path(@project_task.user, @project_task) %> |
-<%= link_to 'Back', project_path(@project_task.project_id) %>
+<%= link_to '>>タスク詳細ページへ', user_task_path(@project_task.user, @project_task) %><br />
+<%= link_to '>>プロジェクト概要(プロジェクトタスク）ページへ', project_path(@project_task.project_id) %>
+</div>

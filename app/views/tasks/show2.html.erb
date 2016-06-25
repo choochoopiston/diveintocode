@@ -82,14 +82,7 @@
             </div>
             
             <div class="row">
-                <div class="col-xs-12">
-                  <%= render partial: 'taskline/tasks/goodjob', locals: {goodjob: @task.goodjobs.build} %>
-                </div>
-                <div class="col-xs-12">
-                  <div id="goodjob_<%= @task.id %>">
-                      <%= render partial: 'taskline/tasks/gjbcount', locals: {gjb_count: @task.goodjobs.sum(:number)} %>             
-                  </div>
-                </div>
+                  <%= render partial: 'taskline/tasks/goodjob', locals: {task: @task, goodjob: @task.goodjobs.build} %>
             </div>
             
             <div class="row">

@@ -1,7 +1,8 @@
+<div class="container">
 <h1>タスクタイムライン一覧</h1>
 
 <% if @feed_tasks.any? %>
-<p><%= paginate(@feed_tasks) %></p>
+<%= paginate(@feed_tasks) %>
 
     <% @feed_tasks.order("created_at DESC").each do |feedtask| %>
 
@@ -11,7 +12,7 @@
             </div>
             <div class="panel-body">
                 
-                <p>タスク内容: <%= feedtask.content %></p>
+                タスク内容: <%= feedtask.content %>
                 
                 <%= render partial: 'taskline/tasks/goodjob', locals: {goodjob: feedtask.goodjobs.build} %>
                 <div id="goodjob_<%= feedtask.id %>">
@@ -20,7 +21,7 @@
                 
                 <%= render partial: 'taskline/task_comments/form', locals: {task_comment: feedtask.task_comments.build(user_id: current_user.id)} %>
                 <div id="feedtask_<%= feedtask.id %>">
-                <%= render partial: 'taskline/task_comments/index', locals: {task_comments: feedtask.task_comments} %>             
+                <%= render partial: 'taskline/task_comments/index', locals: {task_comments: feedtask.task_comments} %>
                 </div>
 
             </div>
@@ -28,7 +29,8 @@
         
     <% end %>
 
-<p><%= paginate(@feed_tasks) %></p>
+<%= paginate(@feed_tasks) %>
 
 <% else %>
 <% end %>
+</div>
