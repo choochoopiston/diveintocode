@@ -39,14 +39,16 @@
 <body>
 
 <div class="row">
-  <div class="col-xs-12 col-sm-6">
-    <p id="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-  </div>
-  <div class="col-xs-12 col-sm-6 text-right">
+
+  <div class="col-xs-12 col-sm-6 col-sm-push-6 text-right">
     <% if current_user && current_user.name.present? %>
     <p><%= link_to current_user.name + "さん", current_user %> | <%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p>
     <% end %>
+  </div>
+  
+  <div class="col-xs-12 col-sm-6 col-sm-pull-6">
+    <p id="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
   </div>
 
 </div>
