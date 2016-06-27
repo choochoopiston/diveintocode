@@ -36,7 +36,7 @@
             </div>
         </div>
         
-        <% if @users.count > 10 %>
+        <% if @users.count == 20 %>
         <div class="col-xs-12 col-sm-6">
             <div class="container-fluid">
                 <table class="table table-hover">
@@ -66,8 +66,280 @@
                 </table>
             </div>
         </div>
+        <% elsif @users.count == 19 %>
+        <div class="col-xs-12 col-sm-6">
+            <div class="container-fluid">
+                <table class="table table-hover">
+                    <thead class="hidden-xs">
+                        <tr>
+                            <th>ユーザ名</th>
+                            <th>友達つながり</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @users.order(id: :asc).last(9).each do |user| %>
+                        <tr>
+                            <td>
+                                <%= link_to profile_img(user), user %>
+                                <%= link_to user.name, user %>
+                            </td>
+                            <td>
+                                <% unless user == current_user %>
+                                <%= render partial: 'follow_form', locals: { user: user } %>
+                                <% else %>
+                                <%= link_to "マイアカウント", user, class: "btn btn-info btn-sm" %>
+                                <% end %>
+                            </td>
+                        </tr>
+                        <% end %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <% elsif @users.count == 18 %>
+        <div class="col-xs-12 col-sm-6">
+            <div class="container-fluid">
+                <table class="table table-hover">
+                    <thead class="hidden-xs">
+                        <tr>
+                            <th>ユーザ名</th>
+                            <th>友達つながり</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @users.order(id: :asc).last(8).each do |user| %>
+                        <tr>
+                            <td>
+                                <%= link_to profile_img(user), user %>
+                                <%= link_to user.name, user %>
+                            </td>
+                            <td>
+                                <% unless user == current_user %>
+                                <%= render partial: 'follow_form', locals: { user: user } %>
+                                <% else %>
+                                <%= link_to "マイアカウント", user, class: "btn btn-info btn-sm" %>
+                                <% end %>
+                            </td>
+                        </tr>
+                        <% end %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <% elsif @users.count == 17 %>
+        <div class="col-xs-12 col-sm-6">
+            <div class="container-fluid">
+                <table class="table table-hover">
+                    <thead class="hidden-xs">
+                        <tr>
+                            <th>ユーザ名</th>
+                            <th>友達つながり</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @users.order(id: :asc).last(7).each do |user| %>
+                        <tr>
+                            <td>
+                                <%= link_to profile_img(user), user %>
+                                <%= link_to user.name, user %>
+                            </td>
+                            <td>
+                                <% unless user == current_user %>
+                                <%= render partial: 'follow_form', locals: { user: user } %>
+                                <% else %>
+                                <%= link_to "マイアカウント", user, class: "btn btn-info btn-sm" %>
+                                <% end %>
+                            </td>
+                        </tr>
+                        <% end %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <% elsif @users.count == 16 %>
+        <div class="col-xs-12 col-sm-6">
+            <div class="container-fluid">
+                <table class="table table-hover">
+                    <thead class="hidden-xs">
+                        <tr>
+                            <th>ユーザ名</th>
+                            <th>友達つながり</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @users.order(id: :asc).last(6).each do |user| %>
+                        <tr>
+                            <td>
+                                <%= link_to profile_img(user), user %>
+                                <%= link_to user.name, user %>
+                            </td>
+                            <td>
+                                <% unless user == current_user %>
+                                <%= render partial: 'follow_form', locals: { user: user } %>
+                                <% else %>
+                                <%= link_to "マイアカウント", user, class: "btn btn-info btn-sm" %>
+                                <% end %>
+                            </td>
+                        </tr>
+                        <% end %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <% elsif @users.count == 15 %>
+        <div class="col-xs-12 col-sm-6">
+            <div class="container-fluid">
+                <table class="table table-hover">
+                    <thead class="hidden-xs">
+                        <tr>
+                            <th>ユーザ名</th>
+                            <th>友達つながり</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @users.order(id: :asc).last(5).each do |user| %>
+                        <tr>
+                            <td>
+                                <%= link_to profile_img(user), user %>
+                                <%= link_to user.name, user %>
+                            </td>
+                            <td>
+                                <% unless user == current_user %>
+                                <%= render partial: 'follow_form', locals: { user: user } %>
+                                <% else %>
+                                <%= link_to "マイアカウント", user, class: "btn btn-info btn-sm" %>
+                                <% end %>
+                            </td>
+                        </tr>
+                        <% end %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <% elsif @users.count == 14 %>
+        <div class="col-xs-12 col-sm-6">
+            <div class="container-fluid">
+                <table class="table table-hover">
+                    <thead class="hidden-xs">
+                        <tr>
+                            <th>ユーザ名</th>
+                            <th>友達つながり</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @users.order(id: :asc).last(4).each do |user| %>
+                        <tr>
+                            <td>
+                                <%= link_to profile_img(user), user %>
+                                <%= link_to user.name, user %>
+                            </td>
+                            <td>
+                                <% unless user == current_user %>
+                                <%= render partial: 'follow_form', locals: { user: user } %>
+                                <% else %>
+                                <%= link_to "マイアカウント", user, class: "btn btn-info btn-sm" %>
+                                <% end %>
+                            </td>
+                        </tr>
+                        <% end %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <% elsif @users.count == 13 %>
+        <div class="col-xs-12 col-sm-6">
+            <div class="container-fluid">
+                <table class="table table-hover">
+                    <thead class="hidden-xs">
+                        <tr>
+                            <th>ユーザ名</th>
+                            <th>友達つながり</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @users.order(id: :asc).last(3).each do |user| %>
+                        <tr>
+                            <td>
+                                <%= link_to profile_img(user), user %>
+                                <%= link_to user.name, user %>
+                            </td>
+                            <td>
+                                <% unless user == current_user %>
+                                <%= render partial: 'follow_form', locals: { user: user } %>
+                                <% else %>
+                                <%= link_to "マイアカウント", user, class: "btn btn-info btn-sm" %>
+                                <% end %>
+                            </td>
+                        </tr>
+                        <% end %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <% elsif @users.count == 12 %>
+        <div class="col-xs-12 col-sm-6">
+            <div class="container-fluid">
+                <table class="table table-hover">
+                    <thead class="hidden-xs">
+                        <tr>
+                            <th>ユーザ名</th>
+                            <th>友達つながり</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @users.order(id: :asc).last(2).each do |user| %>
+                        <tr>
+                            <td>
+                                <%= link_to profile_img(user), user %>
+                                <%= link_to user.name, user %>
+                            </td>
+                            <td>
+                                <% unless user == current_user %>
+                                <%= render partial: 'follow_form', locals: { user: user } %>
+                                <% else %>
+                                <%= link_to "マイアカウント", user, class: "btn btn-info btn-sm" %>
+                                <% end %>
+                            </td>
+                        </tr>
+                        <% end %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <% elsif @users.count == 11 %>
+        <div class="col-xs-12 col-sm-6">
+            <div class="container-fluid">
+                <table class="table table-hover">
+                    <thead class="hidden-xs">
+                        <tr>
+                            <th>ユーザ名</th>
+                            <th>友達つながり</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @users.order(id: :asc).last(1).each do |user| %>
+                        <tr>
+                            <td>
+                                <%= link_to profile_img(user), user %>
+                                <%= link_to user.name, user %>
+                            </td>
+                            <td>
+                                <% unless user == current_user %>
+                                <%= render partial: 'follow_form', locals: { user: user } %>
+                                <% else %>
+                                <%= link_to "マイアカウント", user, class: "btn btn-info btn-sm" %>
+                                <% end %>
+                            </td>
+                        </tr>
+                        <% end %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
         <% else %>
         <% end %>
+        
+ 
         
     </div>
     <%= paginate @users %>
