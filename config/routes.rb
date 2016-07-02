@@ -69,6 +69,16 @@ Rails.application.routes.draw do
     member do
       get :following, :followers
     end
+    resources :submit_requests, shallow: true do
+      member do
+      get 'approve'
+      get 'unapprove'
+      get 'reject'
+      end
+      collection do
+        get 'inbox'
+      end
+    end
   end
 
   

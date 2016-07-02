@@ -1,0 +1,12 @@
+<div class="container">
+<<h1 class="page-header">依頼内容編集:</h1>
+
+<dl class="dl-horizontal">
+<%= render 'editform' %>
+
+<dd><%= link_to '>>依頼内容ページへ', submit_request_path(@submit_request) %></dd>
+<dd><%= link_to '>>依頼タスク一覧へ戻る', user_submit_requests_path(@submit_request.user) %></dd>
+        
+</dl>
+
+</div>

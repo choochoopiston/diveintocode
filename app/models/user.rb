@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
   has_many :projects, dependent: :destroy
   has_many :teams, foreign_key: "mate_id", class_name: "Team", dependent: :destroy
   has_many :mate_projects, :through => :teams, :source => :project
+  has_many :submit_requests, dependent: :destroy
   
   #第1段階「中間テーブルと関係を定義する」
   has_many :relationships, foreign_key: "follower_id", class_name: "Relationship", dependent: :destroy

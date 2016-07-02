@@ -1,0 +1,87 @@
+<% if submit_requests.present? %>
+    <div class="table-responsible">
+        <table class="table table-hover">
+            <thead>
+                <th class="text-nowrap">ステータス</th>
+                <th class="text-nowrap">タスク・タイトル</th>
+                <th class="text-nowrap">依頼者</th>
+                <th class="text-nowrap">担当者</th>
+                <th class="text-nowrap">デットライン期日</th>
+                <th class="text-nowrap">完了チェック</th>
+                <th class="text-nowrap info" colspan="4">トータル:<%= submit_requests.count %>件</th>
+            </thead>
+            <tbody>
+            <% submit_requests.each do |sr| %>
+            <div class="sr_tbl">
+                <tr>
+                    <td>
+                        <% if sr.status == 1 %>未承認
+                        <% elsif sr.status == 2 %>承認済
+                        <% elsif sr.status == 8 %>取消済
+                        <% else %>却下
+                        <% end %>
+                    </td>
+                    <td>
+                        <%= link_to sr.task.title, task_path(sr.task) %>
+                    </td>
+                    <td>
+                        <% if sr.user == current_user %>
+                        (自分)
+                        <% else %>
+                        <%= sr.task.user.name %>
+                        <% end %>
+                    </td>
+                    <td>
+                        <% if sr.charge_id == current_user.id %>
+                        (自分)
+                        <% else %>
+                        <%= sr.charger.name %>
+                        <% end %>
+                    </td>
+                    <td>
+                        <%= sr.created_at.strftime("%Y年%m月%d日 %H時%M分") %>
+                    </td>
+                    <td>
+                        <% if sr.task.done == true %>完了
+                        <% else %>未完了
+                        <% end %>
+                    </td>
+                    
+                    <td>
+                        <%= link_to '[詳細]', submit_request_path(sr) %>
+                    </td>
+                    <% if sr.task.status == 2 %>
+                        <td colspan="3"></td>
+                    <% elsif sr.task.status == 9 || sr.task.status == 8 %>
+                        <td>
+                            <%= link_to '[削除]', submit_request_path(sr), method: :delete, remote: true, data: { confirm: 'Are you sure?' } %>
+                        </td>
+                        <td colspan="2"></td>
+                    <% else %>
+                        <% if sr.task.user_id == current_user.id %>
+                        <td>
+                            <%= link_to '[編集]', edit_submit_request_path(sr) %>
+                        </td>
+                        <td>
+                            <%= link_to '[削除]', submit_request_path(sr), method: :delete, remote: true, data: { confirm: 'Are you sure?' } %>
+                        </td>
+                        <td>
+                            <%= link_to '[取消]', reject_submit_request_path(sr), data: sr.id, remote: true if sr.status == 1 %>
+                        </td>
+                        <% elsif sr.task.charge_id == current_user.id %>
+                        <td>
+                            <%= link_to '[承認]', approve_submit_request_path(sr), remote: true %>
+                        </td>
+                        <td>
+                            <%= link_to '[却下]', unapprove_submit_request_path(sr), remote: true %>
+                        </td>
+                        <% else %>
+                        <% end %>
+                    <% end %>
+                </tr>
+            </div>
+            <% end %>
+            </tbody>
+        </table>
+    </div>
+<% end %>

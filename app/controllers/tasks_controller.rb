@@ -1,12 +1,13 @@
 class TasksController < ApplicationController
   before_action :authenticate_user!
-  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :correct_user, only: [:index, :edit, :update, :destroy]
+  before_action :after_approve, only: [:edit, :update, :destroy]
   before_action :set_task, only: [:show, :edit, :update, :destroy]
 
   # GET /tasks
   # GET /tasks.json
   def index
-    @tasks = Task.where(user_id: params[:user_id])
+    @tasks = Task.where(charge_id: params[:user_id]).where(status: [0,2,8,9])
     @user = User.find(params[:user_id])
   end
 
@@ -78,6 +79,11 @@ class TasksController < ApplicationController
     def correct_user
       @user = User.find(params[:user_id])
       redirect_to(user_tasks_path(current_user)) unless current_user == @user
+    end
+    
+    def after_approve
+      @task = Task.find(params[:id])
+      redirect_to(user_tasks_path(current_user)) if @task.status  == 2
     end
     
     

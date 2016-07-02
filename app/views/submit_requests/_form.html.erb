@@ -1,0 +1,12 @@
+<%= form_for([@user, @submit_request]) do |f| %>
+
+    <dt><%= f.label :タスクタイトル %></dt>
+    <dd><%= f.collection_select(:task_id, @tasks, :id, :title) %></dd>
+    <dt><%= f.label :タスク担当者 %></dt>
+    <dd><%= f.collection_select(:charge_id, @users, :id, :name) %></dd>
+    <dd><%= f.text_area :message, placeholder: "依頼メッセージ", size: "50*100" %></dd>
+    <dd><%= f.submit "依頼する", class: "btn btn-primary" %></dd>
+    <%= f.hidden_field :status %>
+    <%= f.hidden_field :user_id %>
+
+<% end %>

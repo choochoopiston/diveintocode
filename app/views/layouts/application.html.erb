@@ -38,12 +38,19 @@
 
 <body>
 
-<div class="row">
+<div class="container-fluid">
+
 
   <div class="col-xs-12 col-sm-6 col-sm-push-6 text-right">
-    <% if current_user && current_user.name.present? %>
-    <p><%= link_to current_user.name + "さん", current_user %> | <%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p>
+    <p>
+    <% if user_signed_in? %>
+      <% if current_user.name.present? %>
+      <%= link_to current_user.name + "さん", current_user %> | 
+      <% end %>
+    <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+    <% else %>
     <% end %>
+    </p>
   </div>
   
   <div class="col-xs-12 col-sm-6 col-sm-pull-6">
@@ -51,8 +58,8 @@
     <p class="alert"><%= alert %></p>
   </div>
 
-</div>
 
+</div>
 
 
 <nav class="navbar navbar-default">
@@ -76,8 +83,8 @@
         　<li><%= link_to "相互フォロー・ブログ一覧", blogs_path %></li><li><%= link_to "ユーザー一覧", users_path %></li>
           <li><%= link_to "マイページ", current_user %></li><li><%= link_to "マイタスク", user_tasks_path(current_user.id) %></li>
           <li><%= link_to "タスクライン", taskline_tasks_path %></li><li><%= link_to "プロジェクト", projects_path %></li>
+          <li><%= link_to "タスク依頼", user_submit_requests_path(current_user) %></li>
           <li><%= link_to "お問い合わせ", inquiry_path %></li><li><%= link_to "Q&A", questions_path %></li>
-          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
           <% else %>
           <li><%= link_to "ログイン", new_user_session_path %></li>
           <li><%= link_to "facebookログイン", user_omniauth_authorize_path(:facebook), class: 'navbar-link' %></li> 

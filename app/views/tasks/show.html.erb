@@ -42,12 +42,12 @@
                     ＜タスク担当者＞: <%= @task.charge.name %>
                     </div>
                     <div class="col-xs-12 col-sm-6">
-                    ＜タスク期限＞: <%= @task.deadline %>
+                    ＜タスク期限＞: <%= @task.deadline.strftime("%Y年%m月%d日 %H時%M分")  %>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-xs-12 col-sm-6">
-                    ＜ステータス＞: <%= if @task.status == 1 then "対応開始済み" elsif @task.status == 0 then "未着手" end %>
+                    ＜ステータス＞: <%= @task.status_name %>
                     </div>
                     <div class="col-xs-12 col-sm-6">
                     ＜完了チェック＞: <%= @task.done_display_name %>
@@ -61,12 +61,12 @@
                     ＜タスク担当者＞: 未設定
                     </div>
                     <div class="col-xs-12 col-sm-6">
-                    ＜タスク期限＞: <%= @task.deadline %>
+                    ＜タスク期限＞: <%= @task.deadline.strftime("%Y年%m月%d日 %H時%M分")  %>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-xs-12 col-sm-6">
-                    ＜ステータス＞: <%= if @task.status == 1 then "対応開始済み" elsif @task.status == 0 then "未着手" end %>
+                    ＜ステータス＞: <%= @task.status_name %>
                     </div>
                     <div class="col-xs-12 col-sm-6">
                     ＜完了チェック＞: <%= if @task.done? then "完了" else "未完了" end %>
@@ -110,15 +110,16 @@
          </div>
          
          <div class="panel-footer text-right">
-           <% if current_user == @task.user %>
-              <% unless @task.project.nil? %>
-              <%= link_to 'タスク編集', edit_project_project_task_path(@task.project, @task) %>｜<%= link_to 'タスク削除', @task, method: :delete, data: { confirm: 'Are you sure?' } %>
-              <% else %>
-              <%= link_to 'タスク編集', edit_user_task_path(@task.user, @task) %>｜<%= link_to 'タスク削除', @task, method: :delete, data: { confirm: 'Are you sure?' } %>
-              <% end %>
+           <% if @task.status != 2 && current_user == @task.user %>
+
+                  <% unless @task.project.nil? %>
+                  <%= link_to 'タスク編集', edit_project_project_task_path(@task.project, @task) %>｜<%= link_to 'タスク削除', user_task_path(@task.user, @task), method: :delete, data: { confirm: 'Are you sure?' } %>
+                  <% else %>
+                  <%= link_to 'タスク編集', edit_user_task_path(@task.user, @task) %>｜<%= link_to 'タスク削除', user_task_path(@task.user, @task), method: :delete, data: { confirm: 'Are you sure?' } %>
+                  <% end %>
            <% else %>
            <% end %>
-           | <%= link_to 'マイタスク一覧へ戻る', user_tasks_path(@task.user) %>
+           | <%= link_to 'マイタスク一覧へ戻る', user_tasks_path(current_user) %>
            <% unless @task.project.nil? %>
            | <%= link_to 'プロジェクトタスク一覧へ戻る', project_path(@task.project) %>
            <% else %>

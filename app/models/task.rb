@@ -4,6 +4,8 @@ class Task < ActiveRecord::Base
   belongs_to :project
   belongs_to :user
   belongs_to :charge, class_name: 'User', foreign_key: 'charge_id'
+  has_many :submit_requests, dependent: :destroy
+  
   validates :title, presence: true
   validate :check_deadline
   validate :check_done
@@ -11,6 +13,20 @@ class Task < ActiveRecord::Base
   #やっぱり、statusカラムはintegerなのでこれは使えない。
   def status_display_name
     self.status ? "未着手" : "対応開始済み"
+  end
+
+  def status_name
+    if self.status == 0
+      "未着手/未依頼"
+    elsif self.status == 1
+      "対応中/依頼中"
+    elsif self.status == 2
+      "承認済み"
+    elsif self.status == 8
+      "取り消し"
+    elsif self.status == 9
+      "却下"
+    end
   end
   
   def done_display_name
@@ -24,7 +40,7 @@ class Task < ActiveRecord::Base
   end
   
   def check_done
-      errors.add(:done, "未着手なのに完了ですか？") if status == 0 && done == true
+      errors.add(:done, "未着手/未依頼なのに完了ですか？") if status == 0 && done == true
   end
   
   

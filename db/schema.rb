@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160621121011) do
+ActiveRecord::Schema.define(version: 20160628002707) do
 
   create_table "answers", force: :cascade do |t|
     t.text     "content"
@@ -96,6 +96,19 @@ ActiveRecord::Schema.define(version: 20160621121011) do
   add_index "relationships", ["followed_id"], name: "index_relationships_on_followed_id"
   add_index "relationships", ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
   add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id"
+
+  create_table "submit_requests", force: :cascade do |t|
+    t.integer  "task_id"
+    t.integer  "user_id"
+    t.integer  "charge_id",  null: false
+    t.integer  "status"
+    t.text     "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "submit_requests", ["task_id"], name: "index_submit_requests_on_task_id"
+  add_index "submit_requests", ["user_id"], name: "index_submit_requests_on_user_id"
 
   create_table "task_comments", force: :cascade do |t|
     t.integer  "user_id"

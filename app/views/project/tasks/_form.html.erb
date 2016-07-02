@@ -37,7 +37,7 @@
   </div>
   <div class="form-group">
     <%= f.label :status %><br>
-    <%= f.select :status, [["未着手","0"],["対応中","1"]] %>
+    <%= f.select :status, [["未着手/未依頼","0"],["対応中/依頼中","1"],["承認済み","2"],["取り消し","8"],["却下","9"]] %>
   </div>
   <div class="form-group">
     <%= f.label :完了チェック %><br>

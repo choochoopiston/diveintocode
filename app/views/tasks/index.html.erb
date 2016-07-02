@@ -32,7 +32,7 @@
                     ＜タスク担当者＞: <%= task.charge.name %>
                     </div>
                     <div class="col-xs-12 col-sm-6">
-                    ＜タスク期限＞: <%= task.deadline %>
+                    ＜タスク期限＞: <%= task.deadline.strftime("%Y年%m月%d日 %H時%M分")  %>
                     </div>
                   </div>
                   <div class="row">
@@ -40,7 +40,7 @@
                     完了チェック: <%= task.done_display_name %>
                     </div>
                     <div class="col-xs-12 col-sm-6">
-                    ステータス: <%= task.status_display_name %>
+                    ステータス: <%= task.status_name %>
                     </div>
                   </div>
                 </div>
@@ -59,7 +59,7 @@
                     完了チェック: <%= task.done_display_name %>
                     </div>
                     <div class="col-xs-12 col-sm-6">
-                    ステータス: <%= task.status_display_name %>
+                    ステータス: <%= task.status_name %>
                     </div>
                   </div>
                 </div>
@@ -81,4 +81,10 @@
 <% end %>
 <% else %>
 <% end %>
+
+
+
+
+
+
 </div>

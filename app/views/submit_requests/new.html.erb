@@ -1,0 +1,14 @@
+<div class="container">
+<h1 class="page-header">依頼内容:</h1>
+
+<dl class="dl-horizontal">
+<% if @tasks.present? %>
+    <%= render 'form' %>
+<% else %>
+    <dd>依頼できるものがありません。</dd>
+<% end %>
+
+<dd><%= link_to '>>依頼タスク一覧へ戻る', user_submit_requests_path(@submit_request.user) %></dd>
+
+</dl>
+</div>

@@ -1,0 +1,41 @@
+<div class="container">
+<h1 class="page-header">依頼内容詳細:</h1>
+    <dl class="dl-horizontal">
+        <dt>タスクタイトル</dt>
+        <dd><%= link_to @submit_request.task.title, task_path(@submit_request.task) %></dd>
+        <dt>依頼者</dt>
+        <dd><%= link_to @submit_request.user.name, @submit_request.user %></dd>
+        <dd><%= link_to profile_img(@submit_request.user),@submit_request.user %></dd>
+        <dt>依頼先</dt>
+        <dd><%= link_to @submit_request.task.charge.name, @submit_request.charger %></dd>
+        <dd><%= link_to profile_img(@submit_request.charger), @submit_request.charger %></dd>
+        <dt>ステータス</dt>
+        <dd>
+            <%= if @submit_request.status == 0 then "未依頼"
+            elsif @submit_request.status == 1 then "依頼中"
+            elsif @submit_request.status == 2 then "承認済み"
+            elsif @submit_request.status == 8 then "取消済み"
+            elsif @submit_request.status == 9 then "却下済み"
+            end %>
+        </dd>
+        <dt>依頼メッセージ</dt>
+        <dd><%= simple_format(@submit_request.message, {}, wrapper_tag: "div") %></dd>
+        
+        <% unless @submit_request.user == current_user %>
+        <dt><%= link_to '戻る', inbox_user_submit_requests_path(current_user) %></dt>
+        <% else %>
+            <% if @submit_request.status == 2 %>
+            <% elsif @submit_request.status == 8 || @submit_request.status == 9 %>
+            <dt><%= link_to '削除', submit_request_path(@submit_request), method: :delete, data: { confirm: 'Are you sure?' } %></dt>
+            <% else %>
+            <dt><%= link_to '編集', edit_submit_request_path(@submit_request) %></dt>
+            <dt><%= link_to '削除', submit_request_path(@submit_request), method: :delete, data: { confirm: 'Are you sure?' } %></dt>
+            <% end %>
+        <dt><%= link_to '戻る', user_submit_requests_path(@submit_request.user) %></dt>
+        <% end %>
+        
+        
+        
+        
+    </dl>
+</div>
