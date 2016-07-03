@@ -18,7 +18,6 @@
     <%= f.label :Project_Title%><br>
     <%= f.hidden_field :project_id %>
     <%= @project.title %>
-    
   </div>
   <div class="form-group">
     <%= f.label :Task_Title %><br>
@@ -30,7 +29,7 @@
   </div>
   <div class="form-group">
     <%= f.label :deadline %><br>
-    <%= f.datetime_select :deadline %>
+    <%= f.datetime_select :deadline, :use_month_numbers => true, :default => Time.now + 1.day + 9.hour  %>
   </div>
   <div class="fform-group">
     <%= f.hidden_field :charge_id %>

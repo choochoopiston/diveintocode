@@ -1,6 +1,8 @@
-<h1>Editing Task</h1>
+<div class="container">
+<h1>タスク内容編集</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', user_task_path(@task.user, @task) %> |
-<%= link_to 'Back', user_tasks_path(@task.user) %>
+<%= link_to '>>タスク詳細画面へ', user_task_path(@task.user, @task) %> |
+<%= link_to '>>マイタスク一覧へ戻る', user_tasks_path(@task.user) %>
+</div>
