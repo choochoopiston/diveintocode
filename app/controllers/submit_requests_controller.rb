@@ -94,7 +94,7 @@ class SubmitRequestsController < ApplicationController
   end
 
   def inbox
-    @submit_requests = SubmitRequest.where(charge_id: current_user.id).order("updated_at DESC")
+    @submit_requests = SubmitRequest.where(charge_id: current_user.id).where.not(status: 8).order("updated_at DESC")
   end
   
   private
