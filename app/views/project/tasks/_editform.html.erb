@@ -11,6 +11,7 @@
     </div>
   <% end %>
 
+<% if @project_task.user == current_user %>
   <div class="form-group">
     <%= f.hidden_field :user_id %>
   </div>
@@ -38,6 +39,36 @@
     <%= f.label :status %><br>
     <%= f.select :status, [["未着手","0"],["対応中","1"]] %>
   </div>
+<% else %>
+  <div class="form-group">
+    <%= f.hidden_field :user_id %>
+  </div>
+  <div class="form-group">
+    <%= f.label :Project_Title%><br>
+    <%= f.hidden_field :project_id %>
+    <%= @project.title %>
+  </div>
+  <div class="form-group">
+    <%= f.label :Task_Title %><br>
+    <%= @project_task.title %>
+  </div>
+  <div class="form-group">
+    <%= f.label :content %><br>
+    <%= @project_task.content %>
+  </div>
+  <div class="form-group">
+    <%= f.label :deadline %><br>
+    <%= @project_task.deadline.strftime("%Y年%m月%d日 %H時%M分") %>
+  </div>
+  <div class="fform-group">
+    <%= f.hidden_field :charge_id %>
+  </div>
+  <div class="form-group">
+    <%= f.label :status %><br>
+    <%= @project_task.status_name %>
+<% end %>
+  
+  
   <div class="form-group">
     <%= f.label :完了チェック %><br>
     <%= f.check_box :done %>

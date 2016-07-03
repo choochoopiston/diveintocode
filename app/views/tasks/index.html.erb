@@ -24,12 +24,12 @@
            <div class="row">
                 <% unless task.charge.nil? %>
                 <div class="col-xs-12 col-sm-1 text-nowrap">
-                    <%= profile_img(task.charge) %>
+                    <%= profile_img(task.user) %>
                 </div>
                 <div class="col-xs-12 col-sm-11">
                   <div class="row">
                     <div class="col-xs-12 col-sm-6">
-                    ＜タスク担当者＞: <%= task.charge.name %>
+                    ＜タスク作成者＞: <%= task.user.name %>
                     </div>
                     <div class="col-xs-12 col-sm-6">
                     ＜タスク期限＞: <%= task.deadline.strftime("%Y年%m月%d日 %H時%M分")  %>
@@ -70,7 +70,9 @@
          
          <div class="panel-footer text-right">
            <% if current_user == task.user %>
-    　   　 <%= link_to 'Edit', edit_user_task_path(task.user, task) %>| <%= link_to 'Destroy', user_task_path(task.user, task), method: :delete, data: { confirm: 'Are you sure?' } %>
+    　   　 <%= link_to '編集', edit_user_task_path(task.user, task) %> | <%= link_to '削除', user_task_path(task.user, task), method: :delete, data: { confirm: 'Are you sure?' } %>
+           <% elsif current_user == task.charge %>
+    　   　 <%= link_to '編集', edit_task_path(task) %>｜
            <% else %>
            <% end %>
            作成日:<%= task.created_at %>

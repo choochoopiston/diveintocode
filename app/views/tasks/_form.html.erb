@@ -11,10 +11,11 @@
       </ul>
     </div>
   <% end %>
-  
+
+<% if @task.user == current_user %>
   <% if @task.project.present? %>
   <div class="form-group">
-    <%= f.label :タスクタイトル%><br>
+    <%= f.label :プロジェクトタイトル%><br>
     <%= @task.project.title %>
   </div>
   <% end %>
@@ -39,8 +40,41 @@
   </div>
   <div class="form-group">
     <%= f.label :ステータス %><br>
-    <%= f.select :status, [["未着手/未依頼","0"],["対応中/依頼中","1"],["承認済み","2"],["取り消し","8"],["却下","9"]] %>
+    <%= f.select :status, [["未着手/未依頼","0"],["対応中/依頼中","1"]]%>
   </div>
+<% else %>
+  <% if @task.project.present? %>
+  <div class="form-group">
+    <%= f.label :プロジェクトタイトル%><br>
+    <%= @task.project.title %>
+  </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.hidden_field :user_id %>
+  </div>
+  
+  <div class="form-group">
+    <%= f.label :タスクタイトル %><br>
+    <%= @task.title %>
+  </div>
+  <div class="form-group">
+    <%= f.label :タスク内容 %><br>
+    <%= @task.content %>
+  </div>
+  <div class="form-group">
+    <%= f.label :deadline %><br>
+    <%= @task.deadline.strftime("%Y年%m月%d日 %H時%M分") %>
+  </div>
+  <div class="form-group">
+    <%= f.hidden_field :charge_id %>
+  </div>
+  <div class="form-group">
+    <%= f.label :ステータス %><br>
+    <%= @task.status_name %>
+  </div>
+<% end %>
+
   <div class="form-group">
     <%= f.label :完了チェック %><br>
     <%= f.check_box :done %>

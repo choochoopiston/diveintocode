@@ -1,7 +1,8 @@
 class Project::TasksController < ApplicationController
   before_action :authenticate_user!
   before_action :set_project_task, only: [:show, :edit, :update, :destroy]
-  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :correct_user, only: [:destroy]
+  before_action :correct_user1, only: [:edit, :update, :destroy]
   
   def ungoodjob
   end
@@ -71,10 +72,19 @@ class Project::TasksController < ApplicationController
     def task_params
       params.require(:task).permit(:user_id, :title, :content, :deadline, :charge_id, :done, :status, :project_id)
     end
-  
+
     def correct_user
       @task = Task.find(params[:id])
       redirect_to(user_tasks_path(current_user)) unless current_user == @task.user
+    end
+  
+    def correct_user1
+      @task = Task.find(params[:id])
+      if @task.status != 2
+      redirect_to(user_tasks_path(current_user)) unless current_user == @task.user
+      elsif @task.status == 2
+      redirect_to(user_tasks_path(current_user)) unless current_user == @task.charge
+      end
     end
 
     

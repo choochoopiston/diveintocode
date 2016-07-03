@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
   before_action :authenticate_user!
-  before_action :correct_user, only: [:index, :edit, :update, :destroy]
-  before_action :after_approve, only: [:edit, :update, :destroy]
+  before_action :correct_user, only: [:index, :destroy]
+  before_action :correct_user1, only: [:edit, :update]
   before_action :set_task, only: [:show, :edit, :update, :destroy]
 
   # GET /tasks
@@ -81,10 +81,14 @@ class TasksController < ApplicationController
       redirect_to(user_tasks_path(current_user)) unless current_user == @user
     end
     
-    def after_approve
+    def correct_user1
       @task = Task.find(params[:id])
-      redirect_to(user_tasks_path(current_user)) if @task.status  == 2
+      if @task.status != 2
+      redirect_to(user_tasks_path(current_user)) unless current_user == @task.user
+      elsif @task.status == 2
+      redirect_to(user_tasks_path(current_user)) unless current_user == @task.charge
+      end
     end
     
-    
+
 end
