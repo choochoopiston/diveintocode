@@ -2,10 +2,10 @@
 <h1 class="page-header">依頼内容:</h1>
 
 <dl class="dl-horizontal">
-<% if @tasks.present? %>
+<% if @tasks.present? && @users.present? %>
     <%= render 'form' %>
 <% else %>
-    <dd>依頼できるものがありません。</dd>
+    <dd>依頼できるタスクが存在しないか、タスクを依頼できるユーザー（お互いにフォロー）がいません。</dd>
 <% end %>
 
 <dd><%= link_to '>>依頼タスク一覧へ戻る', user_submit_requests_path(@submit_request.user) %></dd>

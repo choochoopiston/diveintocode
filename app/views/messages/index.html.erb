@@ -1,0 +1,52 @@
+<% if @over_ten %>
+    <P><%= link_to '以前のメッセージ', '?m=all' %></P>
+<% end %>
+
+
+
+<div class="ui segment">
+<% @messages.each do |message| %>
+<% if message.created_at %>
+    <div class="item">
+        <div class="content">
+            <div class="header">
+                
+                <strong><%= link_to message.user.name, message.user %></strong>
+                <%= message.message_time %>
+            </div>
+            <div class="list">
+                <div class="item">
+                    <i class="right triangle icon"></i>
+                    <%= link_to profile_img(message.user), message.user %><%= message.body %>
+                </div>
+            </div>
+        </div>
+    </div>
+<% end %>
+<% end %>
+</div>
+
+<br>
+
+<%= form_for [@conversation, @message], html: { class: "ui reply form" } do |f| %>
+
+  <% if @message.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@message.errors.count, "error") %> prohibited this blog from being saved:</h2>
+
+      <ul>
+      <% @message.errors.each do |atr, message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+    <div class="field">
+        <%= f.text_area :body, class: "form-control" %>
+    </div>
+        <%= f.text_field :user_id, value: current_user.id, type: "hidden" %>
+    <div>
+        <%= f.submit "メッセージを送る" %>
+    </div>
+<% end %>

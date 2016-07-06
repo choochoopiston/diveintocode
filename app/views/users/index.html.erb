@@ -25,6 +25,7 @@
                             <td>
                                 <% unless user == current_user %>
                                 <%= render partial: 'follow_form', locals: { user: user } %>
+                                <%= link_to '>>メッセージ送信', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post' %>
                                 <% else %>
                                 <%= link_to "マイアカウント", user, class: "btn btn-info btn-sm" %>
                                 <% end %>
@@ -56,6 +57,7 @@
                             <td>
                                 <% unless user == current_user %>
                                 <%= render partial: 'follow_form', locals: { user: user } %>
+                                <%= link_to '>>メッセージ送信', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post' %>
                                 <% else %>
                                 <%= link_to "マイアカウント", user, class: "btn btn-info btn-sm" %>
                                 <% end %>
@@ -86,6 +88,7 @@
                             <td>
                                 <% unless user == current_user %>
                                 <%= render partial: 'follow_form', locals: { user: user } %>
+                                <%= link_to '>>メッセージ送信', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post' %>
                                 <% else %>
                                 <%= link_to "マイアカウント", user, class: "btn btn-info btn-sm" %>
                                 <% end %>
@@ -116,6 +119,7 @@
                             <td>
                                 <% unless user == current_user %>
                                 <%= render partial: 'follow_form', locals: { user: user } %>
+                                <%= link_to '>>メッセージ送信', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post' %>
                                 <% else %>
                                 <%= link_to "マイアカウント", user, class: "btn btn-info btn-sm" %>
                                 <% end %>
@@ -146,6 +150,7 @@
                             <td>
                                 <% unless user == current_user %>
                                 <%= render partial: 'follow_form', locals: { user: user } %>
+                                <%= link_to '>>メッセージ送信', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post' %>
                                 <% else %>
                                 <%= link_to "マイアカウント", user, class: "btn btn-info btn-sm" %>
                                 <% end %>
@@ -176,6 +181,7 @@
                             <td>
                                 <% unless user == current_user %>
                                 <%= render partial: 'follow_form', locals: { user: user } %>
+                                <%= link_to '>>メッセージ送信', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post' %>
                                 <% else %>
                                 <%= link_to "マイアカウント", user, class: "btn btn-info btn-sm" %>
                                 <% end %>
@@ -206,6 +212,7 @@
                             <td>
                                 <% unless user == current_user %>
                                 <%= render partial: 'follow_form', locals: { user: user } %>
+                                <%= link_to '>>メッセージ送信', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post' %>
                                 <% else %>
                                 <%= link_to "マイアカウント", user, class: "btn btn-info btn-sm" %>
                                 <% end %>
@@ -236,6 +243,7 @@
                             <td>
                                 <% unless user == current_user %>
                                 <%= render partial: 'follow_form', locals: { user: user } %>
+                                <%= link_to '>>メッセージ送信', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post' %>
                                 <% else %>
                                 <%= link_to "マイアカウント", user, class: "btn btn-info btn-sm" %>
                                 <% end %>
@@ -266,6 +274,7 @@
                             <td>
                                 <% unless user == current_user %>
                                 <%= render partial: 'follow_form', locals: { user: user } %>
+                                <%= link_to '>>メッセージ送信', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post' %>
                                 <% else %>
                                 <%= link_to "マイアカウント", user, class: "btn btn-info btn-sm" %>
                                 <% end %>
@@ -296,6 +305,7 @@
                             <td>
                                 <% unless user == current_user %>
                                 <%= render partial: 'follow_form', locals: { user: user } %>
+                                <%= link_to '>>メッセージ送信', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post' %>
                                 <% else %>
                                 <%= link_to "マイアカウント", user, class: "btn btn-info btn-sm" %>
                                 <% end %>
@@ -326,6 +336,7 @@
                             <td>
                                 <% unless user == current_user %>
                                 <%= render partial: 'follow_form', locals: { user: user } %>
+                                <%= link_to '>>メッセージ送信', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post' %>
                                 <% else %>
                                 <%= link_to "マイアカウント", user, class: "btn btn-info btn-sm" %>
                                 <% end %>

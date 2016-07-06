@@ -49,6 +49,7 @@ gem 'bootstrap-social-rails'
 
 gem 'kaminari'
 gem 'will_paginate'
+gem 'pusher'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

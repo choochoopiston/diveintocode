@@ -1,0 +1,21 @@
+<div class="ui segment">
+    <h3>メッセージ一覧</h3>
+    <div class="ui list">
+        <div class="item">
+            <ul>
+            <% @conversations.each do |conversation| %>
+                
+                <% if conversation.sender_id == current_user.id || conversation.recipient_id == current_user.id %>
+                    <% if conversation.sender_id == current_user.id %>
+                        <% recipient = User.find(conversation.recipient_id) %>
+                    <% else %>
+                        <% recipient = User.find(conversation.sender_id) %>
+                    <% end %>
+                <li><%= link_to recipient.name, conversation_messages_path(conversation) %></li>
+                <% end %>
+                
+            <% end %>
+            </ul>
+        </div>
+    </div>
+</div>
