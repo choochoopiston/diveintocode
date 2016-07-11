@@ -1,0 +1,15 @@
+<h1>お知らせ受信履歴</h1>
+
+<ul>
+    <% @notifications.each do |notification| %>
+        <% unless notification.comment.nil? %>
+            <li>
+                ブログ「<%= notification.comment.blog.title %>」に<%= notification.sender.name %>さんがコメントしました。<i class="fa fa-clock-o"></i>&ensp;<%= notification.message_time %>
+            </li>
+        <% else %>
+            <li>
+                タスク「<%= notification.submit_request.task.title %>」を<%= notification.sender.name %>さんから依頼されました。<i class="fa fa-clock-o"></i>&ensp;<%= notification.message_time %>
+            </li>
+        <% end %>
+    <% end %>
+</ul>

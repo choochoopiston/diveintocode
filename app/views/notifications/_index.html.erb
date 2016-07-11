@@ -1,0 +1,22 @@
+<li>
+    <% if notifications.present? %>
+        <% notifications.each do |notification| %>
+            <% if notification.read != true %>
+                <% unless notification.comment.nil? %>
+                <span class="label label-pill label-warning">未読</span>
+                <small>ブログ「<%= notification.comment.blog.title %>」に<%= notification.sender.name %>さんがコメントしました。</small><br>
+                <small class="palette-paragraph text-right">
+                <i class="fa fa-clock-o"></i>&ensp;<%= notification.message_time %>
+                </small>
+                <% else %>
+                <span class="label label-pill label-warning">未読</span>
+                <small>タスク「<%= notification.submit_request.task.title %>」を<%= notification.sender.name %>さんから依頼されました。</small><br>
+                <small class="palette-paragraph text-right">
+                <i class="fa fa-clock-o"></i>&ensp;<%= notification.message_time %>
+                </small>
+                <% end %>
+            <% else %>
+            <% end %>
+        <% end %>
+    <% end %>
+</li>

@@ -18,5 +18,8 @@
   <%= render partial: 'comments/form', locals: { comment: @comment } %>
 </p>
 
+<% if @blog.user == current_user %>
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
 <%= link_to 'Back', user_path(@blog.user) %>
+<% else %>
+<% end %>

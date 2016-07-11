@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160704035606) do
+ActiveRecord::Schema.define(version: 20160707072942) do
 
   create_table "answers", force: :cascade do |t|
     t.text     "content"
@@ -80,6 +80,23 @@ ActiveRecord::Schema.define(version: 20160704035606) do
 
   add_index "messages", ["conversation_id"], name: "index_messages_on_conversation_id"
   add_index "messages", ["user_id"], name: "index_messages_on_user_id"
+
+  create_table "notifications", force: :cascade do |t|
+    t.integer  "sender_id"
+    t.integer  "recipient_id"
+    t.integer  "comment_id"
+    t.boolean  "read"
+    t.integer  "conversation_id"
+    t.integer  "message_id"
+    t.integer  "project_id"
+    t.integer  "task_id"
+    t.integer  "follower_id"
+    t.integer  "followed_id"
+    t.integer  "goodjob_id"
+    t.integer  "submit_request_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
 
   create_table "projects", force: :cascade do |t|
     t.integer  "user_id"

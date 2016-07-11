@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+
+  
+  get 'notifications/index'
+
   resources :conversations do
     resources :messages
   end
@@ -70,6 +74,7 @@ Rails.application.routes.draw do
 
   resources :users, only:[:index, :show] do
     resources :tasks
+    resources :notifications, only: [:index]
     member do
       get :following, :followers
     end

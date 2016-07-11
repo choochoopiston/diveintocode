@@ -4,7 +4,7 @@ class SubmitRequestsController < ApplicationController
   before_action :correct_user1, only: [:index, :new, :inbox, :create]
   before_action :after_approve, only: [:edit, :update, :destroy]
   before_action :after_unapprove, only: [:edit, :update]
-  
+  after_action :sending_pusher, only: [:create]  
   
   def index
     @submit_requests = SubmitRequest.where(user_id: current_user.id).order(updated_at: :desc)
@@ -19,6 +19,7 @@ class SubmitRequestsController < ApplicationController
 
   def create
     @submit_request = SubmitRequest.new(submit_request_params)
+    @notification = @submit_request.notifications.build(recipient_id: @submit_request.charge_id, sender_id: current_user.id)
     respond_to do |format|
       if @submit_request.save
          @submit_request.task.update_attribute(:status, 1)
@@ -124,6 +125,10 @@ class SubmitRequestsController < ApplicationController
     def after_unapprove
       @submit_request = SubmitRequest.find(params[:id])
       redirect_to root_path if @submit_request.status  == 9 || @submit_request.status  == 8
+    end
+    
+    def sending_pusher
+      Notification.sending_pusher(@notification.recipient_id)
     end
     
 end

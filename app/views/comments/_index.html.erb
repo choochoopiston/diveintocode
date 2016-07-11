@@ -1,8 +1,11 @@
     <ul><% comments.each do |comment| %>
       <% unless comment.id.nil? %>
-        <li><%= comment.user %>
-        <%= comment.content %>
+        <li>
+        <%= comment.content %> by <%= comment.user.name %>
+        <% if comment.user == current_user %>
         <%= link_to 'Edit', edit_blog_comment_path(@blog, comment) %>
         <%= link_to 'Destroy', blog_comment_path(@blog, comment), method: :delete, remote: true, data: { confirm: 'Are you sure?' } %></li>
+        <% else %>
+        <% end %>
       <% end %>
     <% end %></ul>
