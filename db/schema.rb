@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160707072942) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "answers", force: :cascade do |t|
     t.text     "content"
     t.integer  "question_id"
@@ -21,8 +24,8 @@ ActiveRecord::Schema.define(version: 20160707072942) do
     t.datetime "updated_at",  null: false
   end
 
-  add_index "answers", ["question_id"], name: "index_answers_on_question_id"
-  add_index "answers", ["user_id"], name: "index_answers_on_user_id"
+  add_index "answers", ["question_id"], name: "index_answers_on_question_id", using: :btree
+  add_index "answers", ["user_id"], name: "index_answers_on_user_id", using: :btree
 
   create_table "blogs", force: :cascade do |t|
     t.string   "title"
@@ -40,8 +43,8 @@ ActiveRecord::Schema.define(version: 20160707072942) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "comments", ["blog_id"], name: "index_comments_on_blog_id"
-  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
+  add_index "comments", ["blog_id"], name: "index_comments_on_blog_id", using: :btree
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "conversations", force: :cascade do |t|
     t.integer  "sender_id"
@@ -58,8 +61,8 @@ ActiveRecord::Schema.define(version: 20160707072942) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "goodjobs", ["task_id"], name: "index_goodjobs_on_task_id"
-  add_index "goodjobs", ["user_id"], name: "index_goodjobs_on_user_id"
+  add_index "goodjobs", ["task_id"], name: "index_goodjobs_on_task_id", using: :btree
+  add_index "goodjobs", ["user_id"], name: "index_goodjobs_on_user_id", using: :btree
 
   create_table "inquiries", force: :cascade do |t|
     t.string   "name"
@@ -78,8 +81,8 @@ ActiveRecord::Schema.define(version: 20160707072942) do
     t.datetime "updated_at",      null: false
   end
 
-  add_index "messages", ["conversation_id"], name: "index_messages_on_conversation_id"
-  add_index "messages", ["user_id"], name: "index_messages_on_user_id"
+  add_index "messages", ["conversation_id"], name: "index_messages_on_conversation_id", using: :btree
+  add_index "messages", ["user_id"], name: "index_messages_on_user_id", using: :btree
 
   create_table "notifications", force: :cascade do |t|
     t.integer  "sender_id"
@@ -108,7 +111,7 @@ ActiveRecord::Schema.define(version: 20160707072942) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "projects", ["user_id"], name: "index_projects_on_user_id"
+  add_index "projects", ["user_id"], name: "index_projects_on_user_id", using: :btree
 
   create_table "questions", force: :cascade do |t|
     t.string   "title"
@@ -120,7 +123,7 @@ ActiveRecord::Schema.define(version: 20160707072942) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "questions", ["user_id"], name: "index_questions_on_user_id"
+  add_index "questions", ["user_id"], name: "index_questions_on_user_id", using: :btree
 
   create_table "relationships", force: :cascade do |t|
     t.integer  "follower_id"
@@ -129,9 +132,9 @@ ActiveRecord::Schema.define(version: 20160707072942) do
     t.datetime "updated_at",  null: false
   end
 
-  add_index "relationships", ["followed_id"], name: "index_relationships_on_followed_id"
-  add_index "relationships", ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
-  add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id"
+  add_index "relationships", ["followed_id"], name: "index_relationships_on_followed_id", using: :btree
+  add_index "relationships", ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true, using: :btree
+  add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id", using: :btree
 
   create_table "submit_requests", force: :cascade do |t|
     t.integer  "task_id"
@@ -143,8 +146,8 @@ ActiveRecord::Schema.define(version: 20160707072942) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "submit_requests", ["task_id"], name: "index_submit_requests_on_task_id"
-  add_index "submit_requests", ["user_id"], name: "index_submit_requests_on_user_id"
+  add_index "submit_requests", ["task_id"], name: "index_submit_requests_on_task_id", using: :btree
+  add_index "submit_requests", ["user_id"], name: "index_submit_requests_on_user_id", using: :btree
 
   create_table "task_comments", force: :cascade do |t|
     t.integer  "user_id"
@@ -154,8 +157,8 @@ ActiveRecord::Schema.define(version: 20160707072942) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "task_comments", ["task_id"], name: "index_task_comments_on_task_id"
-  add_index "task_comments", ["user_id"], name: "index_task_comments_on_user_id"
+  add_index "task_comments", ["task_id"], name: "index_task_comments_on_task_id", using: :btree
+  add_index "task_comments", ["user_id"], name: "index_task_comments_on_user_id", using: :btree
 
   create_table "tasks", force: :cascade do |t|
     t.integer  "user_id",                    null: false
@@ -170,7 +173,7 @@ ActiveRecord::Schema.define(version: 20160707072942) do
     t.integer  "project_id"
   end
 
-  add_index "tasks", ["user_id"], name: "index_tasks_on_user_id"
+  add_index "tasks", ["user_id"], name: "index_tasks_on_user_id", using: :btree
 
   create_table "teams", force: :cascade do |t|
     t.integer  "project_id"
@@ -179,9 +182,9 @@ ActiveRecord::Schema.define(version: 20160707072942) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "teams", ["mate_id"], name: "index_teams_on_mate_id"
-  add_index "teams", ["project_id", "mate_id"], name: "index_teams_on_project_id_and_mate_id", unique: true
-  add_index "teams", ["project_id"], name: "index_teams_on_project_id"
+  add_index "teams", ["mate_id"], name: "index_teams_on_mate_id", using: :btree
+  add_index "teams", ["project_id", "mate_id"], name: "index_teams_on_project_id_and_mate_id", unique: true, using: :btree
+  add_index "teams", ["project_id"], name: "index_teams_on_project_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -209,7 +212,22 @@ ActiveRecord::Schema.define(version: 20160707072942) do
     t.string   "profile_image_url"
   end
 
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  add_index "users", ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true, using: :btree
 
+  add_foreign_key "answers", "questions"
+  add_foreign_key "answers", "users"
+  add_foreign_key "comments", "blogs"
+  add_foreign_key "comments", "users"
+  add_foreign_key "goodjobs", "tasks"
+  add_foreign_key "goodjobs", "users"
+  add_foreign_key "messages", "conversations"
+  add_foreign_key "messages", "users"
+  add_foreign_key "projects", "users"
+  add_foreign_key "questions", "users"
+  add_foreign_key "submit_requests", "tasks"
+  add_foreign_key "submit_requests", "users"
+  add_foreign_key "task_comments", "tasks"
+  add_foreign_key "task_comments", "users"
+  add_foreign_key "tasks", "users"
 end

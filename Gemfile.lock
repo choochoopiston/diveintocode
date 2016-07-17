@@ -324,7 +324,6 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
-    sqlite3 (1.3.11)
     tapp (1.5.0)
       thor
     term-ansicolor (1.3.2)
@@ -413,14 +412,13 @@ DEPENDENCIES
   rails_12factor
   rambulance
   rest-client
-  rmagick
+  rmagick (= 2.15.4)
   rspec-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
   spring-commands-rspec
   sprockets-rails (= 2.3.3)
-  sqlite3
   tapp
   therubyracer
   timecop
