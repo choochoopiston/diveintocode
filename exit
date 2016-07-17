@@ -1,0 +1,1474 @@
+[33mcommit 049bcc90927ded641f4af4d6c9ec9b50d0a28ed3[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jul 11 05:57:24 2016 +0000
+
+    pusher initializer
+
+[33mcommit cba4671fae3fe27d7aff2f189919d97a61254b5d[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jul 11 05:52:39 2016 +0000
+
+    heroku pusher idpw変更
+
+[33mcommit 3c3ff3c4ea7f7f32917b2f591645982cb6f27890[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jul 11 05:45:50 2016 +0000
+
+    mouikkai
+
+[33mcommit 57d7d283e96f4459cd0b2e49cc824cc10948cc7e[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jul 11 05:42:30 2016 +0000
+
+    heroku de pusher
+
+[33mcommit bc4cd9d2b33002fdf8448846d5c71cb9680ed41f[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jul 11 05:33:15 2016 +0000
+
+    pusher heroku sai settei
+
+[33mcommit c32e1a34f133b5a9c39e8320a831d166794c7e3e[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jul 11 05:26:49 2016 +0000
+
+    pusher heroku settei
+
+[33mcommit 4ccd2804f7440e1f556f4ff072194abfc60d2a29[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jul 11 05:13:18 2016 +0000
+
+    precompile
+
+[33mcommit 4ae2e2c6512358d30f245008c8e9feb59aa0f619[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jul 11 05:10:12 2016 +0000
+
+    push通知
+
+[33mcommit 57fe4ff484d73335d8898c12417f03bb51ba28bf[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jul 6 10:52:57 2016 +0000
+
+    修正
+
+[33mcommit 6ae017c0ae8c508db35a2de3570ab11eafa3e717[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jul 6 10:31:29 2016 +0000
+
+    プッシュ通知
+
+[33mcommit e2a2dc0006aa542ede1cae585ad574155f2790c8[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jul 6 06:14:07 2016 +0000
+
+    message機能
+
+[33mcommit 167581e8e9988febba6f71ab79e46c441ab8a7fe[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sun Jul 3 04:38:14 2016 +0000
+
+    承認済みタスクの編集制限
+
+[33mcommit 1e8dbb47564eb379ad3a37d84fd47197b7ccf8c8[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sun Jul 3 02:38:17 2016 +0000
+
+    submit_requests/inbox修正
+
+[33mcommit cdfc4e90bcaf1e65b037601063557b4728371f58[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sun Jul 3 02:36:10 2016 +0000
+
+    submit_requests/inbox.html編集
+
+[33mcommit a017bf3d4baedbbe5b79de19efd20a7f1ca1fc61[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sun Jul 3 02:24:49 2016 +0000
+
+    日本語化
+
+[33mcommit 7111855cb07586abd9ba0f323d4567f7c5ad63b3[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sat Jul 2 01:38:03 2016 +0000
+
+    precompile
+
+[33mcommit 4510fe0b3fac2aa0c24fcdc514266b76b2c4efd9[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sat Jul 2 01:00:21 2016 +0000
+
+    SubmitRequest周り
+
+[33mcommit 771cf796246765fd09fc686c1bd9030db2b62825[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jun 27 02:10:02 2016 +0000
+
+    users/index 修正
+
+[33mcommit a93c2d908d4a4ed45ec073568339e3df52461960[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jun 27 01:20:18 2016 +0000
+
+    ユーザー一覧修正
+
+[33mcommit 61b081252a6b314f4f34d0f98ec8374af5c720f2[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sat Jun 25 08:46:17 2016 +0000
+
+    自分をメンバーにしたくない
+
+[33mcommit 8dd8be17b07f25571366a941b1b217e064f7d49a[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sat Jun 25 07:55:20 2016 +0000
+
+    project.member追加に自分を表示させない
+
+[33mcommit d993088a8bb0b23dc5e368137049d7b977a5fa80[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sat Jun 25 07:48:37 2016 +0000
+
+    task個別ページのhtml修正
+
+[33mcommit a034f0c6b5b4a3d6ccea985a00fc7760e4808dea[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sat Jun 25 07:44:36 2016 +0000
+
+    なぜかプロジェクト直下のタスク作成がうまくいかなかった
+
+[33mcommit 605660191085a4894cf3655bcc87e8af5bdb816d[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sat Jun 25 07:02:41 2016 +0000
+
+    ja はひとつじゃないとダメ
+
+[33mcommit db253563e879e66695ccaa5708a2ad48df905f4c[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sat Jun 25 06:50:33 2016 +0000
+
+    will_paginate
+
+[33mcommit 8745496b30e0e010ac8d4af39e2e1186bc6f8137[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sat Jun 25 06:16:59 2016 +0000
+
+    project member管理再修正
+
+[33mcommit eb91416aac1c56548d08b0175dcbded62a665221[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sat Jun 25 06:05:40 2016 +0000
+
+    project member管理
+
+[33mcommit 9fe5284e6cc135523e0dc0e2a6dbab2fd1567777[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Thu Jun 23 12:09:58 2016 +0000
+
+    production.rb gmail2
+
+[33mcommit d2c2824c8625376a09b4d9019e3bcbef1fe00181[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Thu Jun 23 12:05:43 2016 +0000
+
+    production.rb gmail
+
+[33mcommit f42fc36d009d24a06cabc5eed7bac44c3bdabb10[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Thu Jun 23 11:25:22 2016 +0000
+
+    mailgun2
+
+[33mcommit 5b3b992c06738f9d9621b32d66bbf75466a908fc[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Thu Jun 23 11:11:06 2016 +0000
+
+    mailgun
+
+[33mcommit f1a2d99aaa0cdd659e07f96e62ad7ad95be03abf[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Thu Jun 23 10:28:44 2016 +0000
+
+    shin heroku precompile
+
+[33mcommit 647ec2d11f5eeb90bf7ac3484bd3b71e742e8973[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Thu Jun 23 04:37:10 2016 +0000
+
+    task個別ページ
+
+[33mcommit 17226a810a2a51772ab05e9c2205954dfeb90127[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Thu Jun 23 02:34:34 2016 +0000
+
+    project member追加削除 ajax対応
+
+[33mcommit 2831d3506ae6a68b5e01b48d11883e94f489b711[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Thu Jun 23 00:55:42 2016 +0000
+
+    development.rb 再作成@master
+
+[33mcommit 570e73ef4f33d7374ed3904566fca578f947b83e[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Thu Jun 23 00:51:49 2016 +0000
+
+    development.rb master
+
+[33mcommit fc613928e8be185e8caa1c98c9bdd5a489dace55[m
+Merge: cb7e787 dd38ccd
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Thu Jun 23 00:49:40 2016 +0000
+
+    Merge branch 'develop'
+
+[33mcommit dd38ccd32a95278281887478b57b8a19a3cf99e4[m
+Merge: dc3edd8 cb7e787
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Thu Jun 23 00:48:43 2016 +0000
+
+    Merge branch 'master' into develop
+
+[33mcommit dc3edd8115824cfc473b940b3f74260a9025b305[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Thu Jun 23 00:41:19 2016 +0000
+
+    development.rb 再作成
+
+[33mcommit cb5ab730f556906151b5bf0278f0d6e22353b3bf[m
+Merge: 4d284bf cb7e787
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Thu Jun 23 00:13:50 2016 +0000
+
+    Merge branch 'master' into develop
+
+[33mcommit cb7e78799f2334799284572350b02eb7fc4621e9[m
+Merge: 434839c 4d284bf
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Thu Jun 23 00:13:19 2016 +0000
+
+    merge
+
+[33mcommit 434839cf3e0adbb728fece0cc59016f8132ffde3[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 22 23:45:18 2016 +0000
+
+    production.rb sengrid sai sakusei
+
+[33mcommit 6037ef9f9bbfe14b7636c32807e100065d97050a[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 22 23:36:21 2016 +0000
+
+    production.rb history sakujo
+
+[33mcommit d38403a3cfc49786459b0ac4ecf27b0f37a06abd[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 22 23:29:48 2016 +0000
+
+    sendgrid passward
+
+[33mcommit e623f22500c1267b2f82c57326cb649aea9d5c74[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 22 10:46:21 2016 +0000
+
+    project member 追加削除
+
+[33mcommit 9b38663c59104f8fb83acdc9cf0ed6b42036e466[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Tue Jun 21 13:26:15 2016 +0000
+
+    project周り作成
+
+[33mcommit ea334d3c57223ca528bf24317e50d859d92dfc63[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 15 06:00:26 2016 +0000
+
+    user.index 2 column - 20
+
+[33mcommit fdab275770414de1fceff07cd89fdf86b4057baf[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 15 05:59:41 2016 +0000
+
+    user.index 2 column
+
+[33mcommit 31c19b0fbdf53f9bffecc0c5d11e513f5e9a1cc4[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 15 04:46:58 2016 +0000
+
+    再kamikiri日本語化
+
+[33mcommit ac80d264b6daa7599f7d65304e9353648c972fa8[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 15 04:35:31 2016 +0000
+
+    kaminari nihogo ka
+
+[33mcommit cddf033d48e3018c085e9912b46b9c0d182f94e8[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 15 04:31:35 2016 +0000
+
+    相互フォローblogをすべて表示
+
+[33mcommit daae930a3ccb2a6db102274077db794be408fcd3[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 15 04:25:28 2016 +0000
+
+    user.index 並び順
+
+[33mcommit bd1553121821674057ece9d18aba0a9d142c643a[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 15 03:44:06 2016 +0000
+
+    heroku precompile
+
+[33mcommit 12d4631e5ff3f6b255eacef0b23d6a7ea9c2ab4b[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 15 03:39:51 2016 +0000
+
+    相互にしたため、ブログ周りを修正
+
+[33mcommit feae799325406661782e5eba818fb958e7ba4888[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 15 03:01:35 2016 +0000
+
+    user.showにfollow/unfollowボタン
+
+[33mcommit fbc8a9cd1dd8b374858b3a82a6ff665e3fd3cbc1[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sun Jun 12 05:24:59 2016 +0000
+
+    follow button set
+
+[33mcommit 892958175892670c4bb022a2a80317696c70e220[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sat Jun 11 09:14:22 2016 +0000
+
+    User model
+
+[33mcommit a921bd6f5ebdabf8ef25cdb7546d68c768299a94[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sat Jun 11 08:34:27 2016 +0000
+
+    relationship.model setting
+
+[33mcommit bec3b1cd8b52f937838b61e5ad51b70ae3ff27b5[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sat Jun 11 08:05:03 2016 +0000
+
+    relationships_controller.setting
+
+[33mcommit baff0ae83d4427b65f122cd6da2c95b4d49beae3[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sat Jun 11 07:51:19 2016 +0000
+
+    def following def followers
+
+[33mcommit 87c54ca50ac9b74a7c22704f691bf1f8cd820f14[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sat Jun 11 07:43:19 2016 +0000
+
+    フォロー周りroute.setting
+
+[33mcommit d0d84155c75b28b10d5efa562b97eb3a57b94fe9[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Thu Jun 9 01:57:43 2016 +0000
+
+    answer update error redirect先調整
+
+[33mcommit 4eaa4de7341ff9191459a8752d6d0fd512f914b0[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Thu Jun 9 01:32:17 2016 +0000
+
+    error message修正
+
+[33mcommit 1e37be8af5dbeacc5550779cb06467bd04b2b508[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 14:22:45 2016 +0000
+
+    question&answer validation日本語化
+
+[33mcommit afd7df1d5b02bf7420393173bb57592a82c34206[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 14:15:52 2016 +0000
+
+    validation周り修正
+
+[33mcommit a4ba735df79acac1a2025e5e854e3b3e72ac830c[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 13:43:28 2016 +0000
+
+    sameuser.iroirotest
+
+[33mcommit 364a44bbd528755b065480d000558d2e6c271dc9[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 13:17:30 2016 +0000
+
+    question&answer validation
+
+[33mcommit ff7ebdc1256d2cad4da38ed85ca3dd242673fc94[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 13:06:06 2016 +0000
+
+    sameuser.setting2
+
+[33mcommit ebd630b83480f117b9af84f60a20c7b0557e182f[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 13:04:56 2016 +0000
+
+    samuser.setting
+
+[33mcommit 2cd893dbf1555899a7541cb96b7426cea41ad9e6[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 11:05:46 2016 +0000
+
+    edit周り修正
+
+[33mcommit 85a115431206321afa10279ba30012f4ec07d861[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 11:00:00 2016 +0000
+
+    edit画面調整
+
+[33mcommit ebca10fb1819dd0579415925e136dc83ea5ec50c[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 10:36:25 2016 +0000
+
+    production sendgrid
+
+[33mcommit 3f722508316dee82e6980a9ac07ed0f924cd5a5c[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 10:22:30 2016 +0000
+
+    <<HEADを検索削除
+
+[33mcommit 6d2ccc961884fa926e979465060058a260d84ea3[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 10:08:31 2016 +0000
+
+    top.index.html update
+
+[33mcommit 3e94c9daab50ffa1d64c71802d5c9f848ec25b81[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 10:00:24 2016 +0000
+
+    gemfile update
+
+[33mcommit c16171693c9d500530748530adce0becdd624b56[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 09:46:02 2016 +0000
+
+    enviroments.development&production update2
+
+[33mcommit 4f14d3033b08eaa8008718b1e2368f9e7864ed46[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 09:42:26 2016 +0000
+
+    enviroments.development&production update
+
+[33mcommit 34c455f71592710df31aed84bb2c12bf9a1b3c1d[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 09:34:58 2016 +0000
+
+    application.html update2
+
+[33mcommit 7b9e4639f2169238094ddfae458d5989dcf6de78[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 09:30:58 2016 +0000
+
+    application.html update
+
+[33mcommit b05c6682aff271f9881a1c04203253f89fa284c1[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 09:28:56 2016 +0000
+
+    application.html update
+
+[33mcommit ba8e4acdb1c60df3aff688a70f705c0a2daa66d6[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 09:25:18 2016 +0000
+
+    blog.model update2
+
+[33mcommit 061bd5793c11aa085df99aa3293fea1949abc6f3[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 09:22:41 2016 +0000
+
+    blog.model update
+
+[33mcommit cc8acdda2d7a9d6fe238a8fb89b71acd9aaab39f[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 09:19:21 2016 +0000
+
+    blog.rb update
+
+[33mcommit e963b43a7a52b72628d1534b2048ab0cc4a05bcd[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 09:16:57 2016 +0000
+
+    inquiry_mailer update
+
+[33mcommit 149702c9cfa929b8f585c466524c62aa0a9125f1[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 09:15:20 2016 +0000
+
+    application_mailer update
+
+[33mcommit 0625b5740edf0cd6e980fc9afa3679d3b7da0c8f[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 09:13:01 2016 +0000
+
+    blogs.controller update
+
+[33mcommit 8032b311ab05a94c77cb0b07506b899ee004f3b2[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 09:10:48 2016 +0000
+
+    user.rb update
+
+[33mcommit 16d36c2cfc6b48b3de7244b19ccdb825fff9ce61[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 09:08:18 2016 +0000
+
+    route.rb update
+
+[33mcommit 63894b0082868ceeee58ea75a0e54bc5fd3e17e6[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 09:05:32 2016 +0000
+
+    enviroments.development&production update
+
+[33mcommit 79724331126cc9e6c3fe7120725e4fede80230e7[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 08:35:25 2016 +0000
+
+    gemfile update3
+
+[33mcommit 98bf8dc4a19cdb1850f070e8da7c8dca27c8afce[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 08:29:11 2016 +0000
+
+    bundle install
+
+[33mcommit 38ecc675e90dc994740957eab0b88da43a23f816[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 08:26:30 2016 +0000
+
+    gemfile update2
+
+[33mcommit b02f7f62fab37b4b1a24199878022ee69eb94afb[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 08:17:14 2016 +0000
+
+    gemfile update
+
+[33mcommit bb840cdf6f5f6d021c44660df3d9c11f8987ec8e[m
+Merge: b8ded4b dfcc14d
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 03:12:50 2016 +0000
+
+    迷宮
+
+[33mcommit b8ded4b02bed1136f380adf709ae9c2e56a6199f[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 02:49:52 2016 +0000
+
+    なぜかherorkuできない
+
+[33mcommit 6932b8c5d8c679fc460b01077fa221b5cbff2469[m
+Merge: c702372 f95d17a
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 11:37:49 2016 +0900
+
+    Merge pull request #5 from choochoopiston/develop
+    
+    Develop
+
+[33mcommit 4d284bf2c349d33ba289fd6c00c6da26d004e86c[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 02:35:52 2016 +0000
+
+    question.show.html周り修正
+
+[33mcommit f95d17a2933b33d94c21ebf3c9285e9c76dc10e3[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Wed Jun 8 02:35:52 2016 +0000
+
+    question.show.html周り修正
+
+[33mcommit 5c7435ca381d14eba6396a0e5765aad8a47027b9[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Tue Jun 7 08:14:59 2016 +0000
+
+    question.index.html周り修正
+
+[33mcommit afba59a59e9e64612b81848063bdb3673a38bebb[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Tue Jun 7 08:14:59 2016 +0000
+
+    question.index.html周り修正
+
+[33mcommit c70237223199c0c9c116214c2f7ba70e103f55ce[m
+Merge: 81944b4 22d3e8a
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jun 6 15:21:52 2016 +0900
+
+    Merge pull request #4 from choochoopiston/develop
+    
+    Develop
+
+[33mcommit a4a83ae1ed78e69d7fc90c4ec8e18831e0bbf16d[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jun 6 06:21:06 2016 +0000
+
+    AnswerMailer setting
+
+[33mcommit 22d3e8a539a818d27cd63af4960435fbc4753e33[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jun 6 06:21:06 2016 +0000
+
+    AnswerMailer setting
+
+[33mcommit 5be56c12d54bb4755842e3dd9f16077fddb5ea04[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jun 6 05:19:41 2016 +0000
+
+    question&answer destroy ajax set
+
+[33mcommit d2096f2cc32283c3f565980b01d7d9e80f651b41[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jun 6 05:19:41 2016 +0000
+
+    question&answer destroy ajax set
+
+[33mcommit c980d226dbe1e7bbfbaf0fc69dcecda33cf03eb5[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jun 6 04:56:39 2016 +0000
+
+    quesiton&answer 入力フォームをajaxにした
+
+[33mcommit 3786a607565077dc30177207aceb8623bbd2e6ad[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jun 6 04:56:39 2016 +0000
+
+    quesiton&answer 入力フォームをajaxにした
+
+[33mcommit 55ed100ce155d909cfa44056d0123860b0e277c9[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jun 6 03:57:35 2016 +0000
+
+    answer.create.method format.js追加
+
+[33mcommit 1175ffaea83dc038be4b4e245ca060473684cb8c[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jun 6 03:57:35 2016 +0000
+
+    answer.create.method format.js追加
+
+[33mcommit 79ac8acc00a5ed908b05784b56365eda77f63305[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jun 6 03:51:26 2016 +0000
+
+    answer.destroy.method redirect修正
+
+[33mcommit d45af17b8a9d508a8adabd17df5d110b313e3d3e[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jun 6 03:51:26 2016 +0000
+
+    answer.destroy.method redirect修正
+
+[33mcommit 986a514605226cc500ac034bc67eca3af4b077d9[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jun 6 03:48:16 2016 +0000
+
+    answer.edit.url修正、answer.edit/show.backlink修正
+
+[33mcommit 2835a76d1258bb7de8a15cae60bae747bbd25b37[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jun 6 03:48:16 2016 +0000
+
+    answer.edit.url修正、answer.edit/show.backlink修正
+
+[33mcommit e8b6d5ca862894711625fb03b15399659b6bde2e[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jun 6 03:39:38 2016 +0000
+
+    answer.update.method redirect修正
+
+[33mcommit 0ca0b3c94b8158577ee065fcb48b02295dd64b82[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jun 6 03:39:38 2016 +0000
+
+    answer.update.method redirect修正
+
+[33mcommit 652fa40abcdc69f1dce21c01d09d49002e06509f[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jun 6 03:39:00 2016 +0000
+
+    answer.create.method redirect修正
+
+[33mcommit 81126d4f64d6f0b8b8973a1af0678ab3fb516eaf[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jun 6 03:39:00 2016 +0000
+
+    answer.create.method redirect修正
+
+[33mcommit 3d12fb12683fcb4af4b24abc54c1220c7d719664[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jun 6 02:34:49 2016 +0000
+
+    question.show.html&answer.index.html修正
+
+[33mcommit bff5184f37deb7df398c69edd7e5e9f1d63e3523[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jun 6 02:34:49 2016 +0000
+
+    question.show.html&answer.index.html修正
+
+[33mcommit 0af25e8aed2e2e9c90af6cc4f69e11cc334c6626[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jun 6 02:05:56 2016 +0000
+
+    question.controller.show ni answers.index表示のための修正
+
+[33mcommit 4c60caba6c55f1fc3d3a9a41528d22a1a78cf664[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jun 6 02:05:56 2016 +0000
+
+    question.controller.show ni answers.index表示のための修正
+
+[33mcommit ec5616f26ad015e2b65febc038dbd2fbe8b4a07f[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jun 6 02:01:08 2016 +0000
+
+    question.show ni answer入力form
+
+[33mcommit 7a0ffc16dc3e955d30fe402a234fb9ded26a1bce[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jun 6 02:01:08 2016 +0000
+
+    question.show ni answer入力form
+
+[33mcommit f24e11e1352083ec0b2296ee2200310108973da2[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jun 6 01:43:17 2016 +0000
+
+    answer.model_mawari.setting
+
+[33mcommit 6a6d0f536a44e972086b7b0fc39d671db4646171[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jun 6 01:43:17 2016 +0000
+
+    answer.model_mawari.setting
+
+[33mcommit f901c3dac847fed75405c39dc84002c9837727bc[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jun 6 01:36:56 2016 +0000
+
+    question&answer.controller.setting
+
+[33mcommit 4c504995bf809bded915fe61b43e8468a4065033[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jun 6 01:36:56 2016 +0000
+
+    question&answer.controller.setting
+
+[33mcommit b10e0b4f04ef76c638c5103b5d0b6888cc2bedd5[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jun 6 01:01:49 2016 +0000
+
+    answer.route.setting
+
+[33mcommit 33ae6507c3700957a2b52535bb6c27983f99946c[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Mon Jun 6 01:01:49 2016 +0000
+
+    answer.route.setting
+
+[33mcommit e277807dfb5881539186a6d23a380907e7abee66[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sun Jun 5 10:56:08 2016 +0000
+
+    course&category_select, questions.show.html 修正
+
+[33mcommit e2562a3c2171ef127ceb4091cb58b58b6b4e7b7b[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sun Jun 5 10:56:08 2016 +0000
+
+    course&category_select, questions.show.html 修正
+
+[33mcommit 86da4fd84b777909b554fa197d31693c3cc2b9c9[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sun Jun 5 08:12:14 2016 +0000
+
+    question投稿機能作成　動的はまだ
+
+[33mcommit 4d4cdcab62562f6f21486eacc00df796c6f8c71f[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sun Jun 5 08:12:14 2016 +0000
+
+    question投稿機能作成　動的はまだ
+
+[33mcommit ed0f1fed9cea587c7cf677c7e1756b8a05ee7a2c[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sun Jun 5 06:35:45 2016 +0000
+
+    questionsテーブル作成&head navi修正
+
+[33mcommit eff8c954ac5bcc1d5d1bbc80045b679c71a9a06d[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sun Jun 5 06:35:45 2016 +0000
+
+    questionsテーブル作成&head navi修正
+
+[33mcommit 81944b4e83cdb68ff81395807fa524c81fc70194[m
+Merge: 4d755c2 f422607
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sun Jun 5 15:09:57 2016 +0900
+
+    Merge pull request #3 from choochoopiston/develop
+    
+    day 14 kadaimae
+
+[33mcommit 1437311f8a0ff6fe6bededb98dade54c8cb834d6[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sun Jun 5 06:08:44 2016 +0000
+
+    day 14 kadaimae
+
+[33mcommit f422607e3106199b47d3b59fc650d835cd2d93d5[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sun Jun 5 06:08:44 2016 +0000
+
+    day 14 kadaimae
+
+[33mcommit 4d755c251dbdb80e7fa02d0972dd3beec988ee55[m
+Merge: 7fcf8a2 4062468
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sun Jun 5 15:06:42 2016 +0900
+
+    Merge pull request #2 from choochoopiston/develop
+    
+    Develop
+
+[33mcommit ff4d33685bccaa21460a7ac1e603a55ba03fd233[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sun Jun 5 05:29:14 2016 +0000
+
+    editformをつくって、エラー回避
+
+[33mcommit 4062468a97ea3ac8024d25ede032764f49bed7c1[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sun Jun 5 05:29:14 2016 +0000
+
+    editformをつくって、エラー回避
+
+[33mcommit 07510681df6b952315a73cb5c1191cb59b56c697[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sun Jun 5 05:12:58 2016 +0000
+
+    Ajax.destroy
+
+[33mcommit 75545dc1d81791a1d7f1e4e2ac3ee4bd70d08c03[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sun Jun 5 05:12:58 2016 +0000
+
+    Ajax.destroy
+
+[33mcommit 92db5c31e7604dc452b2b96e85a768e7b9312371[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sun Jun 5 04:55:42 2016 +0000
+
+    Ajax.controller.destroy.set
+
+[33mcommit dd6ed539a6876abd07a866c6f50c461894713204[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sun Jun 5 04:55:42 2016 +0000
+
+    Ajax.controller.destroy.set
+
+[33mcommit 268cc9d89065d619fa6276f6a86a6a9e7e0a0582[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sun Jun 5 03:46:51 2016 +0000
+
+    Ajax.view.create
+
+[33mcommit 8f24eef779c1fbd2c43f4e5dc0526a99ddf5d518[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sun Jun 5 03:46:51 2016 +0000
+
+    Ajax.view.create
+
+[33mcommit ea0a6c5144be5a361b92a005076931abbd7f16fd[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sun Jun 5 02:12:00 2016 +0000
+
+    Ajax.controller.create
+
+[33mcommit eab6da063961413a77ee1b6002dc628441026c3c[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sun Jun 5 02:12:00 2016 +0000
+
+    Ajax.controller.create
+
+[33mcommit 3cf95202ea5bf2885675e434569ddb8ce496b377[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sun Jun 5 00:42:10 2016 +0000
+
+    destroy.url.solution
+
+[33mcommit fb82b0b7fe520c24ba6b15ad22a5aadabad674c6[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sun Jun 5 00:42:10 2016 +0000
+
+    destroy.url.solution
+
+[33mcommit 5bfd8c76ddeff7e7075bf5bf02f19a2ce2a58268[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sun Jun 5 00:30:45 2016 +0000
+
+    back.solution
+
+[33mcommit bafc1a4c290695b9375ba420a3359f9aa4342626[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sun Jun 5 00:30:45 2016 +0000
+
+    back.solution
+
+[33mcommit 577ba54a0173d513ecb4f258ec335a6cafeb3273[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sat Jun 4 10:57:57 2016 +0000
+
+    post.edit.route.revise
+
+[33mcommit 7a4ce29ccf9be186c29ce9f0c110e7b0470d4b26[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sat Jun 4 10:57:57 2016 +0000
+
+    post.edit.route.revise
+
+[33mcommit 369564c72093a6922db52f03f9ffc05f2e523492[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sat Jun 4 10:10:28 2016 +0000
+
+    blog.show.page.comment.show.setting
+
+[33mcommit 702be1b2da47f640f52072c34b106cf0588bf1e8[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sat Jun 4 10:10:28 2016 +0000
+
+    blog.show.page.comment.show.setting
+
+[33mcommit 1516a62138910b51c6cf2af228bb87e69b33519d[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sat Jun 4 09:43:26 2016 +0000
+
+    blog.show.page.setting
+
+[33mcommit 7d293037a4c3688be08252797d5bf096b3d04b5a[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sat Jun 4 09:43:26 2016 +0000
+
+    blog.show.page.setting
+
+[33mcommit f13dfed60bfa40c68bc2665747ff68624d1e46e8[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sat Jun 4 09:06:30 2016 +0000
+
+    comment.model.setting
+
+[33mcommit ac9f9ff871e0bc14035a5512c847828356a266ff[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sat Jun 4 09:06:30 2016 +0000
+
+    comment.model.setting
+
+[33mcommit db91dffc5c6c023e5a44f6a6351d9e8222b319ec[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sat Jun 4 09:02:25 2016 +0000
+
+    comment.controller.setting
+
+[33mcommit 0b7d5e503b57b5882ef0d2bf277eb04e1ac5ab3d[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sat Jun 4 09:02:25 2016 +0000
+
+    comment.controller.setting
+
+[33mcommit 873b03771103e9b3ae7f89caa12dce14eef95758[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sat Jun 4 08:49:58 2016 +0000
+
+    comment.route.setting
+
+[33mcommit 0aee76323c4c2d10d4220f367c4d177dcd6c771b[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Sat Jun 4 08:49:58 2016 +0000
+
+    comment.route.setting
+
+[33mcommit 29d8e05a31d95c87e498df29a861d46c33c15731[m
+Merge: 6a7dd30 8f02dc8
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Fri Jun 3 10:21:12 2016 +0900
+
+    Merge pull request #1 from choochoopiston/feature/trial
+    
+    README.rdoc日本語追記→確認OKです。
+
+[33mcommit 2298041be16e358eddcda0d66f25fadc2551086d[m
+Merge: 7fcf8a2 6e71d31
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Fri Jun 3 10:21:12 2016 +0900
+
+    Merge pull request #1 from choochoopiston/feature/trial
+    
+    README.rdoc日本語追記→確認OKです。
+
+[33mcommit 8f02dc8e571381d322228a2c4fd631f481c0de58[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Fri Jun 3 00:37:12 2016 +0000
+
+    README.rdoc日本語追記
+
+[33mcommit 6e71d316e267dfd0cef119f7571044f0d6e1b880[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Fri Jun 3 00:37:12 2016 +0000
+
+    README.rdoc日本語追記
+
+[33mcommit 7fcf8a29c7663558babffd4f9952cd312c8f647d[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Fri Jun 3 00:23:59 2016 +0000
+
+    git flow 初期設定前チェック
+
+[33mcommit 6a7dd30fa1c7151dd62b81fa99d1ad81152a0d3d[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Fri Jun 3 00:23:59 2016 +0000
+
+    git flow 初期設定前チェック
+
+[33mcommit 83cd7efe553b3a0ac135da3fa2c633b324fc80c2[m
+Author: castsmith <kcasting2016@gmail.com>
+Date:   Sun May 22 11:18:28 2016 +0000
+
+    index shusei2
+
+[33mcommit 2abb8f5f6fdbc40e1b96dad0374244674b4d7b70[m
+Author: castsmith <kcasting2016@gmail.com>
+Date:   Sun May 22 11:18:28 2016 +0000
+
+    index shusei2
+
+[33mcommit 4a2d3bdfdfef042c3fb346b06edf647b33866b07[m
+Author: castsmith <kcasting2016@gmail.com>
+Date:   Sun May 22 11:09:08 2016 +0000
+
+    development.rb fukkatsu
+
+[33mcommit dc667b7b2a727b9eba7d85555630a5fb014d4232[m
+Author: castsmith <kcasting2016@gmail.com>
+Date:   Sun May 22 11:09:08 2016 +0000
+
+    development.rb fukkatsu
+
+[33mcommit f7963c1c63b53f46c34588feb9fdd77889de99c9[m
+Author: castsmith <kcasting2016@gmail.com>
+Date:   Sun May 22 11:01:43 2016 +0000
+
+    index shusei
+
+[33mcommit d9a31a4623640e9f038227f81018225e33a690bf[m
+Author: castsmith <kcasting2016@gmail.com>
+Date:   Sun May 22 11:01:43 2016 +0000
+
+    index shusei
+
+[33mcommit b20ea5fcf8feb9d81070660d10fc2debec012614[m
+Author: castsmith <kcasting2016@gmail.com>
+Date:   Sun May 22 10:40:49 2016 +0000
+
+    production sakusei
+
+[33mcommit e9cb18773077a7e17ccd5c69c02a90fd357103e7[m
+Author: castsmith <kcasting2016@gmail.com>
+Date:   Sun May 22 10:40:49 2016 +0000
+
+    production sakusei
+
+[33mcommit a9d23aebe72db3dd19c0a1245d3a034c6a2bcc18[m
+Author: castsmith <kcasting2016@gmail.com>
+Date:   Sun May 22 10:18:45 2016 +0000
+
+    test file2 sakusei
+
+[33mcommit f6be38b7c3e2c37daf49198b3c0e5ddf136b6071[m
+Author: castsmith <kcasting2016@gmail.com>
+Date:   Sun May 22 10:17:29 2016 +0000
+
+    mailer sai settei
+
+[33mcommit 5b428b9ec9d2406d88b999872c7c4497524acbb6[m
+Author: castsmith <kcasting2016@gmail.com>
+Date:   Sun May 22 08:31:03 2016 +0000
+
+    production idpw
+
+[33mcommit dfcc14d6a1c79147e6917b0bab2d7736925720bd[m
+Author: castsmith <kcasting2016@gmail.com>
+Date:   Sat May 14 09:39:50 2016 +0000
+
+    precompile
+
+[33mcommit f283ca44158846113efa38c45112627371bb97d9[m
+Author: castsmith <kcasting2016@gmail.com>
+Date:   Sat May 14 09:36:28 2016 +0000
+
+    mailer
+
+[33mcommit 143aaf3e12bc5ace3ed21ea61a362faa694f6989[m
+Author: castsmith <kcasting2016@gmail.com>
+Date:   Sat Apr 23 07:07:31 2016 +0000
+
+    blog ichiranga hyojisarenai wo kaisho surutame sai heroku master
+
+[33mcommit 2ba95db81fcd454b6cc17c8899fa8146b46181f0[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sun Mar 20 07:08:38 2016 +0000
+
+    cloud9 gmail mail settei
+
+[33mcommit b1f8e26fedca401ad859715af2bf1e689fc06361[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sat Mar 12 05:05:18 2016 +0000
+
+    error message nihongo ka
+
+[33mcommit 3a964bf072e45c2966897e6997a31aa6f05b177b[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sat Mar 12 04:11:04 2016 +0000
+
+    user muke error gamen install
+
+[33mcommit 420c4cc5ef6804941c8f0d0c37e0234c6b07dc2e[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Fri Mar 11 10:05:52 2016 +0000
+
+    rambulance install
+
+[33mcommit b307bb4e4a4d996a03cb420ecba18bd5125232d4[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Tue Mar 8 11:40:56 2016 +0000
+
+    dropdown yameta2
+
+[33mcommit b854ec19bc17df0d84faf8261600c29fca2a609d[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Tue Mar 8 11:00:48 2016 +0000
+
+    dropdown yameta
+
+[33mcommit 6b3932bed0ab8a891717d1dc145aaa77da4eaa9b[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Tue Mar 8 09:44:54 2016 +0000
+
+    precompile
+
+[33mcommit 632ab8d2829cb05c13116376f90a3716402978d5[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Tue Mar 8 09:34:39 2016 +0000
+
+    sai push
+
+[33mcommit 4f999ce77092a37b5c34b382a309242d2a4198fd[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Tue Mar 8 08:32:26 2016 +0000
+
+    dropdown sakujo
+
+[33mcommit b6eeebc15b4017c0e397d9e6704e7c1ef475e065[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Tue Mar 8 08:21:12 2016 +0000
+
+    blog pass henkou
+
+[33mcommit 48d7d73e612c211a5d0cc103e7133972b4d9e957[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Tue Mar 8 07:02:33 2016 +0000
+
+    FB login email shusei
+
+[33mcommit ad35d696d537825bcf5cb0fec51b1b6ae7cf7a0a[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Tue Mar 8 05:43:11 2016 +0000
+
+    routing shusei
+
+[33mcommit 10b7ec816b4e1c9dae985012b449cf875e607fcb[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Tue Mar 8 05:37:31 2016 +0000
+
+    routing shusei
+
+[33mcommit 1c79702127b78b405874a3c85e3dc591cd34f4a3[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Tue Mar 8 05:18:52 2016 +0000
+
+    login gamen desing hekou
+
+[33mcommit 56b7a72b3c0ac0cf0aa9eed9d61e6070f048c23e[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Tue Mar 8 05:03:24 2016 +0000
+
+    Day7
+
+[33mcommit 3ebbb66cf268d3a1428d1624c69375037c7df45f[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Mon Feb 29 07:35:09 2016 +0000
+
+    toukousha settei
+
+[33mcommit 42bdad6fb353bd202355dcadfbca4424c8d15d41[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Mon Feb 29 05:09:35 2016 +0000
+
+    gem pry-rails uninstall
+
+[33mcommit 9eb5d5d7a7b71473aeaf28476072496c59c0d66e[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Wed Feb 17 10:50:54 2016 +0000
+
+    pry
+
+[33mcommit 2b95fb33d0bf576c634334c39d17ccd7c077e90f[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Wed Feb 17 10:48:38 2016 +0000
+
+    pry cloud9 only
+
+[33mcommit 2e50c076955cc6743379a349a28752e565e8bf1f[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Wed Feb 17 10:26:42 2016 +0000
+
+    migration file sakujo
+
+[33mcommit d86ebe3578eeafff95a31edb67025da51a30cd06[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Wed Feb 17 09:59:02 2016 +0000
+
+    12factor tshuika
+
+[33mcommit 813f987fc4ed2cf8eee8fdea335c344845a62811[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Wed Feb 17 09:49:20 2016 +0000
+
+    login design shusei
+
+[33mcommit 44ca32c60da030e3a9b63d2c4ece2d263b4ef58e[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Wed Feb 17 07:52:28 2016 +0000
+
+    login design henkou2
+
+[33mcommit 9bdf5ca324194240529e3e90178a738d95e95679[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Wed Feb 17 07:50:56 2016 +0000
+
+    login design henkou
+
+[33mcommit 217924049a10313360a01a7359cc418aaa1b17da[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Mon Feb 15 14:09:03 2016 +0000
+
+    user ichirann sakusei
+
+[33mcommit 9372065d0df4684bc936599648e8ecc1aedbb983[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Mon Feb 15 12:52:18 2016 +0000
+
+    header sakusei
+
+[33mcommit 0c1e9d6164d1b25371b8c051beaf534874960052[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sun Feb 14 23:02:52 2016 +0000
+
+    bootstrap install
+
+[33mcommit 77e6913b235ef6b1adad155a3d793098006c97d9[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sun Feb 14 14:17:11 2016 +0000
+
+    gem file henshu
+
+[33mcommit 6ce174efb1ae9e11f2fcf84660b2a393322dd326[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sun Feb 14 14:08:18 2016 +0000
+
+    devise nihongoka
+
+[33mcommit 50b17f8d927cf433be5a194333adbea3c97e5b94[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sun Feb 14 14:05:02 2016 +0000
+
+    devise nihongoka
+
+[33mcommit 7ee5a858893d8bbe3709dcdf8ea8e108404cc6d9[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sun Feb 14 12:49:20 2016 +0000
+
+    login username delete
+
+[33mcommit 45b11f31465506bd851a439b6fcda3ba4f6e5036[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sun Feb 14 12:22:17 2016 +0000
+
+    devise nihongoka 4
+
+[33mcommit db1db3067088b52481a554bdc0cea5e2d4c58735[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sun Feb 14 12:16:12 2016 +0000
+
+    devise nihongoka 3
+
+[33mcommit e36c083660d570f7608be8f864416e0f8bb704bb[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sun Feb 14 12:05:15 2016 +0000
+
+    devise nihongoka 3
+
+[33mcommit ecfc41cd3be771512a50b0f1caa7aeefd8e7a154[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sun Feb 14 11:43:16 2016 +0000
+
+    devise nihongoka
+
+[33mcommit c8083b1c133e33a7a192a98b9ee64ad64639f5fa[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sun Feb 14 11:09:44 2016 +0000
+
+    try2
+
+[33mcommit 6e47caaa728fcb5965b72e1fceacd6d1b0cad82f[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sun Feb 14 10:55:07 2016 +0000
+
+    login mawari nihongoka username tsuika
+
+[33mcommit 8dfb9b2c0e0d51951833b9a82dcfa9e959ea8ec1[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sun Feb 14 07:38:53 2016 +0000
+
+    confirmation mail nihongoka 2
+
+[33mcommit b37ced3f4a6343f395c779d9b6a0d076067c2bae[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sun Feb 14 07:33:44 2016 +0000
+
+    confirmation mail nihongoka
+
+[33mcommit 0ca0b2d3abe8f2119e2e36c8b18364efc24ddd0b[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sat Feb 13 09:58:07 2016 +0000
+
+    postgre ni kakikae
+
+[33mcommit c9789cc665a6cc73fd2db1f7d7fc5f349fb7692d[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sat Feb 13 09:30:23 2016 +0000
+
+    test
+
+[33mcommit ee832ffdf9a50be227c725d62ab9ab5aa7a44918[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Sat Feb 13 08:18:15 2016 +0000
+
+    SignUp自動メール送信設定
+
+[33mcommit 816672582b74b9babdcc4ffc845b1925ecad4933[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Thu Feb 11 06:27:51 2016 +0000
+
+    two form for
+
+[33mcommit f68fd00c251fecc4d7710b310a16a7a74921b9c0[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Wed Feb 10 13:51:13 2016 +0000
+
+    back to confirm
+
+[33mcommit 08e131c56da57ab650d225b3862032a2ffbad266[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Wed Feb 10 11:58:29 2016 +0000
+
+    back button
+
+[33mcommit 68d5c62f5a256a40371929e2229f809c702dfdf2[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Wed Feb 10 11:01:26 2016 +0000
+
+    pre compile wasure
+
+[33mcommit 992077708683642e3c234a6084622d352098fd7b[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Wed Feb 10 10:58:02 2016 +0000
+
+    error color
+
+[33mcommit aec1b7fcd3c639bd55b41c328e47b0a8b762ef21[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Wed Feb 10 10:46:45 2016 +0000
+
+    ja yml
+
+[33mcommit a5b71c93236abfbd4a1fb1ec45ab28d4e51effd9[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Wed Feb 10 09:19:29 2016 +0000
+
+    inquiry design4
+
+[33mcommit 9c56214505ef9dd630f28d4671c789b9c56b607e[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Wed Feb 10 09:14:51 2016 +0000
+
+    inquiry design3
+
+[33mcommit 3485e8cefe1dd3e223e22059bcdcfad1e777a788[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Wed Feb 10 09:08:40 2016 +0000
+
+    inuiqry design
+
+[33mcommit 69092bee5a0dbc8f895644019b9dd2e4abf729aa[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Mon Feb 8 08:44:26 2016 +0000
+
+    precompile2
+
+[33mcommit f927d24b6451de818c70cf9d05d38325eac19deb[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Mon Feb 8 08:13:04 2016 +0000
+
+    otoiawase
+
+[33mcommit 588ce7aab757ebea4d75741ca4445b50134fa3f0[m
+Author: takayuki hara <choochoopiston@gmail.com>
+Date:   Fri Feb 5 07:18:15 2016 +0000
+
+    content fukkatsu
+
+[33mcommit f97dd65ee3a74ff59df50d45a948a85b64f5dfb8[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Tue Dec 22 03:16:06 2015 +0000
+
+    database.yml登録
+
+[33mcommit cf91985c3f476f0e1b72d46bdb3d6f03fb24a9f4[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Tue Dec 22 02:55:37 2015 +0000
+
+    祝！初コミット
+
+[33mcommit 91d923cf4051441a173e6f48ddd3bb0b6894dc80[m
+Author: choochoopiston <choochoopiston@gmail.com>
+Date:   Tue Dec 22 02:51:31 2015 +0000
+
+    祝！初コミット
